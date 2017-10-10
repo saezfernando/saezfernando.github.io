@@ -1,0 +1,18 @@
+body {font-family: "Lucida Grande", Verdana, Arial, sans-serif; font-size: 0.9em; background: none;}
+a {color:#666;}
+.entry a, .inn a, .autor a {text-decoration:none; border-bottom: 1px dotted #666; font-weight:bold;}
+#encabezado a {color:#000; text-decoration:none}
+#encabezado h1 {margin:0; padding:0;}
+#encabezado h1 img {border:0;}
+#encabezado a {border:0 !important;}
+#enc_menu, #enc_buscador, #enc_sep, #enc_adsense {display:none;}
+#intcont iframe, #comentarios, #trackbacks-list, #formulario, #intmisc, .oculto, #calificacion {display:none;}
+.centro{display:block; margin: 0 auto; }
+.lateral { clear:right; float:right; margin:3px; padding:2px; }
+.codigo { padding-left:2em; border-left: 4px solid #aaa;}
+.autor img{ display:none;}
+.enc_mensaje, #publicidades, #pie_accesos, #pie_menu {display:none;}
+#pie_info{margin:0 auto; width:60%; font-size:0.7em; text-align:center; }
+#wpstats{margin: 0 auto;}
+#intmiscw {border: 2px solid #ddd; padding:0 10px;}
+#suscripcion, #comentarios, .formin, .link-autor, #q-ad-container, #emailsus, .no-print, .intmiscw-ad, #pie, .navigation, object, embed  {display:none;}

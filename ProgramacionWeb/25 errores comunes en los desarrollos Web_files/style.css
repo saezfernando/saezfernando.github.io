@@ -1,0 +1,175 @@
+/*
+Theme Name: Rockwell
+Theme URI: http://minid.net
+Description: Default theme for minid.net in 2008. It uses Rockwell font and Helvetica.
+Version: 1.0
+Author: Diego Martín Lafuente
+Author URI: http://minid.net
+Tags: white, black, minimal, clear, simple, 2 columns
+
+	ROCKWELL
+	 http://www.minid.net/
+
+	This theme was designed and built by Diego Martín Lafuente,
+	whose blog you will find at http://www.minid.net/
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+
+*/
+
+
+
+
+@import url(reset.css);
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+	a { text-decoration: underline; }
+	a:link { color: #000; }
+	a:visited { color: #000; }
+	a:active { color: #b00; }
+	a:hover { color: #36c; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a { text-decoration: none; }
+
+div.clear {
+	clear: both;
+}
+
+hr { display: none; }
+
+acronym, abbr { border-bottom: 1px dotted #000; cursor: help; }
+
+div#super {	padding: 20px 40px; }
+
+div#header { margin: 40px 0; }
+
+div#header h1 {	font: bold 18px/24px Rockwell, "Copperplate", "Arial Black", "Cooper Black", Helvetica, "Gill Sans", Arial, sans-serif;	padding: 0 25px 0 0; width: auto; float: left; }
+	
+	div#header h1 a { color: #000; }
+	
+	div#header p { color: #666; font-size: 12px; line-height: 28px; }
+		
+	.header-links { margin-bottom: 40px; }
+	.header-links p { font: 12px/18px Helvetica, Arial, sans-serif; color: #000; }
+	.header-links p a { padding-right: 20px; }
+		
+	h1, h2, h3, h4, h5, h6 { text-transform: uppercase; }
+
+/* posts */
+
+div.column { float: left; width: 500px; margin-right: 30px;}
+
+div.post { margin-bottom: 45px; }
+div.post h1 { font: bold 48px/54px Rockwell, "Copperplate", "Arial Black", "Cooper Black", Helvetica, "Gill Sans", Arial, sans-serif; margin: -6px 0 20px 0; }
+div.post h2 { font: bold 18px/24px Rockwell, "Cooper Black", "Arial Black", Helvetica, "Gill Sans", Arial, sans-serif; margin: 0 0 10px 0; }
+div.post h2 small { white-space: nowrap; color: #666; font: 11px/17px Helvetica, Arial, sans-serif; vertical-align: 1px; }
+div.post h3 { font: bold 14px/20px Rockwell, "Copperplate", "Arial Black", "Cooper Black", Helvetica, "Gill Sans", Arial, sans-serif; margin: 20px 0 10px 0; }
+div.post h4 { font: bold 12px/18px Rockwell, "Copperplate", "Arial Black", "Cooper Black", Helvetica, "Gill Sans", Arial, sans-serif; margin: 20px 0 10px 0; }
+div.post h5 { font: bold 12px/18px Rockwell, "Copperplate", "Arial Black", "Cooper Black", Helvetica, "Gill Sans", Arial, sans-serif; margin: 20px 0 10px 0; }
+
+div.post cite { font-style: italic; text-transform: none; }
+div.post h1 cite, div.post h2 cite, div.post h3 cite, div.post h4 cite, div.post h5 cite { font-style: italic; text-transform: none; }
+div.post del { text-decoration: line-through; }
+
+
+
+div.post p, div.post pre, div.post ol li, div.post ul li { font: 12px/20px Helvetica, Arial, sans-serif; color: #000; }
+div.post p + p { margin-top: 10px; }
+div.post p.postmetadata { color: #666; margin: 20px 0 0 0; }
+div.post blockquote { margin: 10px 20px; border-left: 3px solid #ccc; padding-left: 10px; }
+div.post em { font-style: italic; }
+strong { font-weight: bold !important; }
+div.post u { text-decoration: underline; }
+div.post ol, div.post ul { margin: 10px 0 10px 40px; }
+div.post ol li { list-style-type: decimal; }
+div.post ol li ol li { list-style-type: lower-alpha; }
+div.post ol li ol li ol li { list-style-type: lower-roman; }
+div.post ul li { list-style-type: disc; }
+div.post ul li ul li { list-style-type: circle; }
+div.post ul li ul li ul li { list-style-type: square; }
+div.post dl { margin: 10px 0; }
+div.post dl dt { font-weight: bold; font-size: 12px; box-sizing: border-box; -o-box-sizing: border-box; -khtml-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; width:80px; text-align: right; float: left; }
+div.post dl dd { box-sizing: border-box; -o-box-sizing: border-box; -khtml-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; width: 400px; float: left; margin-left: 10px; }
+div.post .right { float: right; clear: right; margin: 0 0 20px 20px; }
+div.post .center { text-align: center; }
+div.post p small.photo { font-size: 9px; text-transform: uppercase; text-align: right; display: block; }
+pre { margin: 15px 10px !important; }
+
+div.post table.compare { border: 1px solid #999; margin: 20px 5px; font-size: 12px; border-collapse: collapse; line-height: 18px; clear: both; }
+div.post table.compare thead tr th { background: #ffc; padding: 5px 10px; text-align: left; border-bottom: 1px solid #D3D1B8; color: #000; font-weight: bold; }
+div.post table.compare tbody tr td { padding: 8px 10px; text-align: left; border-bottom: 1px dotted #ccc; vertical-align: top; }
+div.post table.compare tbody tr td + td { border-left: 1px dotted #ccc; }
+div.post table.compare tbody tr th { padding: 8px 10px; text-align: right; border-bottom: 1px solid #EEECCF; white-space: nowrap; color: #f60; border-right: 1px solid #EEECCF; background: #fffffa; vertical-align: top; font-weight: bold;}
+div.post table.compare tfoot tr td { padding: 8px 10px; text-align: right; background: #f9f9f9; text-transform: uppercase; font-size: 10px; font-weight: bold; }
+		
+div.post object { margin: 20px auto; display: block; border: 8px solid #ccc; -moz-border-radius: 8px; -webkit-border-radius: 8px; }
+
+
+/* sidebar */
+
+div#sidebar { width: 220px; float: left; }
+div#sidebar h2 { font: bold 13px/18px Rockwell, "Copperplate", "Arial Black", "Cooper Black", Helvetica, "Gill Sans", Arial, sans-serif; margin: 0 0 0 0; text-transform: uppercase; }
+div#sidebar p { font-size: 12px; line-height: 18px; margin-bottom: 10px; }
+div#sidebar ul { margin-bottom: 20px; }
+div#sidebar ul li { font-size: 12px; line-height: 18px; }
+
+div.search { margin: 5px 0 20px 0px; }
+div.search input { font-size: 12px; padding: 3px 7px; background: #fff url(images/form.png) no-repeat; border: 1px solid #666; width: 80%; -webkit-border-radius: 5px; -moz-border-radius: 5px; }
+
+
+/* footer */
+
+div#footer { margin: 60px 0; }
+div#footer p { font-size: 12px; line-height: 18px; margin-bottom: 10px; }
+div#footer p em { font-size: 15px; font-family: "Minion Pro", "Times New Roman"; font-style: italic; }
+
+
+/* navigation */
+
+div.navigation { padding: 10px 0; margin: 30px 0; }
+div.navigation div { width: 245px; font-size: 12px; line-height: 18px; }
+div.navigation div.alignleft { float: left; }
+div.navigation div.alignright { float: right; text-align: right; }
+
+
+/* comments */
+div#comments h3 { font: bold 14px/20px Rockwell, "Cooper Black", "Copperplate", Helvetica, "Gill Sans", Arial, sans-serif; margin: 20px 0 10px 0; text-transform: uppercase; }
+div#comments label { color: #666; display: block; font-size: 12px; line-height: 18px; margin-bottom: 10px; }
+div#comments label input[type="text"], div#comments textarea { font-size: 12px; line-height: 18px; padding: 3px 7px; background: #fff url(images/form.png) no-repeat; border: 1px solid #666; width: 220px; -webkit-border-radius: 5px; -moz-border-radius: 5px; }
+div#comments input[type="submit"] { color: #fff; background: #222; cursor: pointer; font-weight: bold; font-size: 11px; padding: 4px 7px 5px 7px; border-top: 1px solid #999; border-right: 1px solid #000; border-bottom: 1px solid #000; border-left: 1px solid #999; -webkit-border-radius: 5px; -moz-border-radius: 5px; display: block; margin: 10px 0;}
+div#comments textarea { width: 483px; margin-bottom: 10px; }
+div#comments p { font-size: 12px; line-height: 18px; }
+div.comment-capsule { padding: 17px 0 50px 0; border-top: 1px solid #ccc; }
+div.autor-com, div.comment-text { box-sizing: border-box; -o-box-sizing: border-box; -khtml-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+div.autor-com img { display: block; margin: 3px 0 10px auto; }
+div.autor-com { width: 150px; float: left; text-align: right; font-size: 11px; line-height: 18px; }
+div.comment-text { width: 330px; float: right; font-size: 12px; line-height: 18px; }
+div.comment-text p { margin-bottom: 10px; }
+div.admin { background-color: #FCFCFC; color: #000; }
+div.admin a:link { color: #000; }
+div.admin a:visited { color: #000; }
+div.admin a:active { color: #000; }
+div.admin a:hover { color: #000; }
+
+
+
+/* linklog */
+
+ul.linklog { margin-bottom: 40px; padding-left: 30px; }
+ul.linklog li { font-size: 12px; line-height: 18px; margin-bottom: 5px;  list-style-type: disc !important; }
+
+/* listados */
+table.listados { width: 100%; margin: 15px 0; }
+table.listados tr td { padding: 0 10px 5px 0; }
+table.listados tr td a { font-size: 12px; line-height: 18px; font-weight: bold; }
+table.listados tr td small { display: block; }
+table.listados tr td small a { font-size: 10px; line-height: 16px; }
+table.listados tr td.ref { font-size: 11px; text-align: right; white-space: nowrap; }
+
+div#twitters { background: #000 url(images/twitter.png) no-repeat 10px 10px; padding: 10px 10px 10px 70px; margin: 3px 0 20px 0; min-height: 50px;-webkit-border-radius: 5px; -moz-border-radius: 5px; color: #fff; }
+div#twitters p { margin: 0; }
+div#twitters p { font-size: 11px !important; line-height: 14px;  }
+div#twitters p a { color: #fff; text-decoration: underline; font-weight: bold; word-wrap: break-word; }

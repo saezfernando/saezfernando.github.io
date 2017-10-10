@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/ -->
+<html lang="es-ES" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://blog.micayael.com/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://blog.micayael.com/wp-content/themes/twentyfifteen/js/html5.js"></script>
+	<![endif]-->
+	<script id="twitter-wjs" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/widgets.js"></script><script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Métodos GET vs POST del HTTP – micayael</title>
+<!-- Jetpack Site Verification Tags -->
+<meta name="google-site-verification" content="OdviofiCnQC3nrE4FsniaZwPZlPC0YjdvrnyemJ4kwU">
+<link rel="alternate" type="application/rss+xml" title="micayael » Feed" href="http://blog.micayael.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="micayael » RSS de los comentarios" href="http://blog.micayael.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="micayael » Métodos GET vs POST del HTTP RSS de los comentarios" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/blog.micayael.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.2"}};
+			!function(a,b,c){function d(a){var c,d=b.createElement("canvas"),e=d.getContext&&d.getContext("2d"),f=String.fromCharCode;return e&&e.fillText?(e.textBaseline="top",e.font="600 32px Arial","flag"===a?(e.fillText(f(55356,56806,55356,56826),0,0),d.toDataURL().length>3e3):"diversity"===a?(e.fillText(f(55356,57221),0,0),c=e.getImageData(16,16,1,1).data.toString(),e.fillText(f(55356,57221,55356,57343),0,0),c!==e.getImageData(16,16,1,1).data.toString()):("simple"===a?e.fillText(f(55357,56835),0,0):e.fillText(f(55356,57135),0,0),0!==e.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/wp-emoji-release.min.js" type="text/javascript"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="twentyfifteen-jetpack-css" href="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/twentyfifteen.css" type="text/css" media="all">
+<!-- `jetpack_related-posts` is included in the concatenated jetpack.css -->
+<link rel="stylesheet" id="twentyfifteen-fonts-css" href="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentyfifteen-style-css" href="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/style.css" type="text/css" media="all">
+<style id="twentyfifteen-style-inline-css" type="text/css">
+
+		/* Custom Header Background Color */
+		body:before,
+		.site-header {
+			background-color: #333333;
+		}
+
+		@media screen and (min-width: 59.6875em) {
+			.site-header,
+			.secondary {
+				background-color: transparent;
+			}
+
+			.widget button,
+			.widget input[type="button"],
+			.widget input[type="reset"],
+			.widget input[type="submit"],
+			.widget_calendar tbody a,
+			.widget_calendar tbody a:hover,
+			.widget_calendar tbody a:focus {
+				color: #333333;
+			}
+		}
+	
+
+		/* Custom Sidebar Text Color */
+		.site-title a,
+		.site-description,
+		.secondary-toggle:before {
+			color: #ffffff;
+		}
+
+		.site-title a:hover,
+		.site-title a:focus {
+			color: #ffffff; /* Fallback for IE7 and IE8 */
+			color: rgba( 255, 255, 255, 0.7);
+		}
+
+		.secondary-toggle {
+			border-color: #ffffff; /* Fallback for IE7 and IE8 */
+			border-color: rgba( 255, 255, 255, 0.1);
+		}
+
+		.secondary-toggle:hover,
+		.secondary-toggle:focus {
+			border-color: #ffffff; /* Fallback for IE7 and IE8 */
+			border-color: rgba( 255, 255, 255, 0.3);
+		}
+
+		.site-title a {
+			outline-color: #ffffff; /* Fallback for IE7 and IE8 */
+			outline-color: rgba( 255, 255, 255, 0.3);
+		}
+
+		@media screen and (min-width: 59.6875em) {
+			.secondary a,
+			.dropdown-toggle:after,
+			.widget-title,
+			.widget blockquote cite,
+			.widget blockquote small {
+				color: #ffffff;
+			}
+
+			.widget button,
+			.widget input[type="button"],
+			.widget input[type="reset"],
+			.widget input[type="submit"],
+			.widget_calendar tbody a {
+				background-color: #ffffff;
+			}
+
+			.textwidget a {
+				border-color: #ffffff;
+			}
+
+			.secondary a:hover,
+			.secondary a:focus,
+			.main-navigation .menu-item-description,
+			.widget,
+			.widget blockquote,
+			.widget .wp-caption-text,
+			.widget .gallery-caption {
+				color: rgba( 255, 255, 255, 0.7);
+			}
+
+			.widget button:hover,
+			.widget button:focus,
+			.widget input[type="button"]:hover,
+			.widget input[type="button"]:focus,
+			.widget input[type="reset"]:hover,
+			.widget input[type="reset"]:focus,
+			.widget input[type="submit"]:hover,
+			.widget input[type="submit"]:focus,
+			.widget_calendar tbody a:hover,
+			.widget_calendar tbody a:focus {
+				background-color: rgba( 255, 255, 255, 0.7);
+			}
+
+			.widget blockquote {
+				border-color: rgba( 255, 255, 255, 0.7);
+			}
+
+			.main-navigation ul,
+			.main-navigation li,
+			.secondary-toggle,
+			.widget input,
+			.widget textarea,
+			.widget table,
+			.widget th,
+			.widget td,
+			.widget pre,
+			.widget li,
+			.widget_categories .children,
+			.widget_nav_menu .sub-menu,
+			.widget_pages .children,
+			.widget abbr[title] {
+				border-color: rgba( 255, 255, 255, 0.1);
+			}
+
+			.dropdown-toggle:hover,
+			.dropdown-toggle:focus,
+			.widget hr {
+				background-color: rgba( 255, 255, 255, 0.1);
+			}
+
+			.widget input:focus,
+			.widget textarea:focus {
+				border-color: rgba( 255, 255, 255, 0.3);
+			}
+
+			.sidebar a:focus,
+			.dropdown-toggle:focus {
+				outline-color: rgba( 255, 255, 255, 0.3);
+			}
+		}
+	
+</style>
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfifteen-ie-css'  href='http://blog.micayael.com/wp-content/themes/twentyfifteen/css/ie.css?ver=20141010' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentyfifteen-ie7-css'  href='http://blog.micayael.com/wp-content/themes/twentyfifteen/css/ie7.css?ver=20141010' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="jetpack_image_widget-css" href="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/style(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack-top-posts-widget-css" href="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/style(2).css" type="text/css" media="all">
+<!-- `sharedaddy` is included in the concatenated jetpack.css -->
+<link rel="stylesheet" id="jetpack_css-css" href="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/jquery.js"></script>
+<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/jquery-migrate.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/related-posts.js"></script>
+<link rel="https://api.w.org/" href="http://blog.micayael.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.micayael.com/xmlrpc.php?rsd">
+<link rel="prev" title="Ajax y jQuery 2/6 – Implementando Hijax" href="http://blog.micayael.com/2011/02/08/ajax-y-jquery-ii-implementando-hijax/">
+<link rel="next" title="Ajax y jQuery 3/6 – Utilizando GET y POST" href="http://blog.micayael.com/2011/02/10/ajax-y-jquery-iii-utilizando-get-y-post/">
+<meta name="generator" content="WordPress 4.4.2">
+<link rel="canonical" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/">
+<link rel="shortlink" href="http://wp.me/p16iXp-7V">
+<link rel="alternate" type="application/json+oembed" href="http://blog.micayael.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblog.micayael.com%2F2011%2F02%2F09%2Fmetodos-get-vs-post-del-http%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://blog.micayael.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblog.micayael.com%2F2011%2F02%2F09%2Fmetodos-get-vs-post-del-http%2F&amp;format=xml">
+
+<link rel="dns-prefetch" href="http://jetpack.wordpress.com/">
+<link rel="dns-prefetch" href="http://s0.wp.com/">
+<link rel="dns-prefetch" href="http://s1.wp.com/">
+<link rel="dns-prefetch" href="http://s2.wp.com/">
+<link rel="dns-prefetch" href="http://public-api.wordpress.com/">
+<link rel="dns-prefetch" href="http://0.gravatar.com/">
+<link rel="dns-prefetch" href="http://1.gravatar.com/">
+<link rel="dns-prefetch" href="http://2.gravatar.com/">
+<style type="text/css">img#wpstats{display:none}</style><style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style>
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Métodos GET vs POST del HTTP">
+<meta property="og:url" content="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/">
+<meta property="og:description" content="Muchas veces tenemos una idea equivocada sobre la utilización de GET y POST. Tendemos a entender que cuando doy click a un link eso es GET y cuando envío un formulario es POST. Mucho peor, solemos …">
+<meta property="article:published_time" content="2011-02-09T11:49:48+00:00">
+<meta property="article:modified_time" content="2014-07-17T17:00:50+00:00">
+<meta property="og:site_name" content="micayael">
+<meta property="og:image" content="http://drive.google.com/uc?export=view&amp;id=0B2dRtLeD_v77dTdMSXh4M01ITmM">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:site" content="@juanardissone">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" type="text/css" href="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/shCore.css"><link rel="stylesheet" type="text/css" href="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/shThemeRDark.css"><style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<style id="custom-css-css">div.entry-content p em{background-color:#f9f02c}div.entry-content p a{color:#a72720}</style>
+<link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/services.css"><script type="text/javascript" charset="utf-8" async="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/timeline.0eae788bc4fdbe9cd3e72dca3bc26358.js"></script><script src="http://en.gravatar.com/2b99c333759f4f7f2fa8b1b1e1ca4804.json?callback=Gravatar.fetch_profile_callback" type="text/javascript"></script></head>
+
+<body class="single single-post postid-491 single-format-standard">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#content">Ir al contenido</a>
+
+	<div id="sidebar" class="sidebar" style="top: 1293.21875px;">
+		<header id="masthead" class="site-header" role="banner">
+			<div class="site-branding">
+										<p class="site-title"><a href="http://blog.micayael.com/" rel="home">micayael</a></p>
+											<p class="site-description">A Web Programmer and a Coffee Machine</p>
+									<button class="secondary-toggle">Menú y widgets</button>
+			</div><!-- .site-branding -->
+		</header><!-- .site-header -->
+
+			<div id="secondary" class="secondary">
+
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+				<div class="menu-menu-principal-container"><ul id="menu-menu-principal" class="nav-menu"><li id="menu-item-2102" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2102"><a href="http://blog.micayael.com/">Artículos</a></li>
+<li id="menu-item-1907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1907"><a rel="author" href="http://blog.micayael.com/juan-ardissone/">¿Quien Soy?</a></li>
+<li id="menu-item-2018" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2018"><a href="http://blog.micayael.com/2012/05/23/guia-de-symfony2-maestros-del-web-indice-de-capitulos/">Guía de Symfony2</a></li>
+<li id="menu-item-2019" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2019"><a href="http://blog.micayael.com/category/javascript/ajax/">Ajax &amp; jQuery</a></li>
+<li id="menu-item-2020" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2020"><a href="http://blog.micayael.com/category/patrones-de-casos-de-uso/">Casos de Uso</a></li>
+<li id="menu-item-1906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1906"><a href="http://blog.micayael.com/servicios/">Servicios</a></li>
+<li id="menu-item-1905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1905"><a href="http://blog.micayael.com/contacto/">Contacto</a></li>
+</ul></div>			</nav><!-- .main-navigation -->
+		
+		
+					<div id="widget-area" class="widget-area" role="complementary">
+				<aside id="rss_links-3" class="widget widget_rss_links"><h2 class="widget-title">RSS de los Artículos</h2><p><a target="_self" href="http://blog.micayael.com/feed/" title="Suscribirse a Entradas"><img src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/orange-large.png" alt="RSS Feed"></a></p>
+</aside><aside id="image-4" class="widget widget_image"><h2 class="widget-title">Guía de Symfony 2</h2><div class="jetpack-image-container"><figure style="width: 150px" class="wp-caption alignnone">
+					<a href="http://blog.micayael.com/category/guia-de-symfony2/"><img src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/uc" alt="Portada de la Guía de Symfony2 en Maestros del Web" title="Portada de la Guía de Symfony2 en Maestros del Web" width="150" height="194"></a>
+					<figcaption class="wp-caption-text">Descarga la Guía de Symfony2 que escribí para Maestro del Web</figcaption>
+				</figure></div>
+</aside><aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categorías</h2>		<ul>
+	<li class="cat-item cat-item-9"><a href="http://blog.micayael.com/category/analisis-y-arquitectura/">Análisis y Arquitectura</a> (6)
+</li>
+	<li class="cat-item cat-item-85"><a href="http://blog.micayael.com/category/android/">Android</a> (2)
+</li>
+	<li class="cat-item cat-item-48"><a href="http://blog.micayael.com/category/javascript/">JavaScript</a> (12)
+<ul class="children">
+	<li class="cat-item cat-item-44"><a href="http://blog.micayael.com/category/javascript/ajax/">Ajax</a> (10)
+</li>
+	<li class="cat-item cat-item-109"><a href="http://blog.micayael.com/category/javascript/jquery/">jQuery</a> (10)
+</li>
+	<li class="cat-item cat-item-62"><a href="http://blog.micayael.com/category/javascript/jquery-mobile/">jQuery Mobile</a> (2)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://blog.micayael.com/category/patrones-de-casos-de-uso/">Patrones de Casos de Uso</a> (4)
+</li>
+	<li class="cat-item cat-item-106"><a href="http://blog.micayael.com/category/php/">PHP</a> (38)
+<ul class="children">
+	<li class="cat-item cat-item-110"><a href="http://blog.micayael.com/category/php/doctrine/">Doctrine</a> (6)
+</li>
+	<li class="cat-item cat-item-11"><a href="http://blog.micayael.com/category/php/guia-de-symfony2/">Guía de Symfony2</a> (16)
+</li>
+	<li class="cat-item cat-item-16"><a href="http://blog.micayael.com/category/php/helpers-php/">Helpers</a> (2)
+</li>
+	<li class="cat-item cat-item-68"><a href="http://blog.micayael.com/category/php/silex/">Silex</a> (3)
+</li>
+	<li class="cat-item cat-item-105"><a href="http://blog.micayael.com/category/php/symfony/">Symfony1</a> (14)
+</li>
+	<li class="cat-item cat-item-63"><a href="http://blog.micayael.com/category/php/symfony2/">Symfony2</a> (21)
+</li>
+	<li class="cat-item cat-item-76"><a href="http://blog.micayael.com/category/php/twig/">Twig</a> (1)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-65"><a href="http://blog.micayael.com/category/rest/">Servicios REST</a> (3)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://blog.micayael.com/category/sin-categoria/">Sin Categoria</a> (1)
+</li>
+		</ul>
+</aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h2 class="widget-title">Artículos Recientes</h2>		<ul>
+					<li>
+				<a href="http://blog.micayael.com/2015/08/28/centralizacion-de-constantes-para-symfony2-y-twig/">Centralización de constantes para Symfony2 y Twig</a>
+							<span class="post-date">28 agosto, 2015</span>
+						</li>
+					<li>
+				<a href="http://blog.micayael.com/2015/06/22/enviar-logs-a-un-syslog-centralizado-con-symfony2-y-monolog/">Enviar logs a un syslog centralizado con Symfony2 y Monolog</a>
+							<span class="post-date">22 junio, 2015</span>
+						</li>
+					<li>
+				<a href="http://blog.micayael.com/2013/12/17/patrones-de-casos-de-uso-known-object/">Patrones de Casos de Uso 4/9 – Known Object</a>
+							<span class="post-date">17 diciembre, 2013</span>
+						</li>
+					<li>
+				<a href="http://blog.micayael.com/2013/12/08/patrones-de-casos-de-uso-property-list/">Patrones de Casos de Uso 3/9 – Property List</a>
+							<span class="post-date">8 diciembre, 2013</span>
+						</li>
+					<li>
+				<a href="http://blog.micayael.com/2013/12/02/patrones-de-casos-de-uso-object-manager/">Patrones de Casos de Uso 2/9 – Object Manager</a>
+							<span class="post-date">2 diciembre, 2013</span>
+						</li>
+				</ul>
+		</aside>		<aside id="top-posts-3" class="widget widget_top-posts"><h2 class="widget-title">Artículos Populares</h2><ul>				<li>
+										<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/" class="bump-view" data-bump-view="tp">
+						Métodos GET vs POST del HTTP					</a>
+									</li>
+							<li>
+										<a href="http://blog.micayael.com/2011/02/15/ajax-y-jquery-iv-mostrando-mensaje-de-cargando-loading/" class="bump-view" data-bump-view="tp">
+						Ajax y jQuery 4/6 – Mostrando mensaje de cargando					</a>
+									</li>
+							<li>
+										<a href="http://blog.micayael.com/2012/10/25/android-styles-themes-documentacion/" class="bump-view" data-bump-view="tp">
+						Android - Styles &amp; Themes					</a>
+									</li>
+							<li>
+										<a href="http://blog.micayael.com/2012/05/02/guia-de-symfony2-integrando-ajax/" class="bump-view" data-bump-view="tp">
+						Guía de Symfony2 - Capítulo 11 - Integrando AJAX					</a>
+									</li>
+							<li>
+										<a href="http://blog.micayael.com/2011/02/07/ajax-y-jquery-i/" class="bump-view" data-bump-view="tp">
+						Ajax y jQuery 1/6					</a>
+									</li>
+							<li>
+										<a href="http://blog.micayael.com/2011/02/10/ajax-y-jquery-iii-utilizando-get-y-post/" class="bump-view" data-bump-view="tp">
+						Ajax y jQuery 3/6 - Utilizando GET y POST					</a>
+									</li>
+							<li>
+										<a href="http://blog.micayael.com/2012/05/09/guia-de-symfony2-integrando-ajax-con-jquery/" class="bump-view" data-bump-view="tp">
+						Guía de Symfony2 - Capítulo 11-B - Integrando jQuery					</a>
+									</li>
+							<li>
+										<a href="http://blog.micayael.com/2013/12/02/patrones-de-casos-de-uso-object-manager/" class="bump-view" data-bump-view="tp">
+						Patrones de Casos de Uso 2/9 - Object Manager					</a>
+									</li>
+							<li>
+										<a href="http://blog.micayael.com/2013/11/23/patrones-de-casos-de-uso-introduccion/" class="bump-view" data-bump-view="tp">
+						Patrones de Casos de Uso 1/9 - Introducción					</a>
+									</li>
+							<li>
+										<a href="http://blog.micayael.com/2011/02/21/ajax-y-jquery-v-menu-ajax-implementando-hijax/" class="bump-view" data-bump-view="tp">
+						Ajax y jQuery 5/6 – Menú Ajax implementando Hijax					</a>
+									</li>
+			</ul></aside><aside id="twitter_timeline-3" class="widget widget_twitter_timeline"><h2 class="widget-title">Sígueme en Twitter</h2><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-timeline twitter-timeline-rendered" style="position: static; visibility: visible; display: inline-block; width: 225px; height: 565px; padding: 0px; border: none; max-width: 100%; min-width: 180px; margin-top: 0px; margin-bottom: 0px;" data-widget-id="374561049837445121"></iframe></aside><aside id="blog_subscription-3" class="widget jetpack_subscription_widget"><h2 class="widget-title">Suscríbete al blog por correo electrónico</h2>
+			<form action="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-3">
+				<div id="subscribe-text"><p>Introduce tu correo electrónico para suscribirte a este blog y recibir notificaciones de nuevas entradas.</p>
+</div><p>Únete a otros 131 suscriptores </p>
+					<p id="subscribe-email">
+						<label id="jetpack-subscribe-label" for="subscribe-field-blog_subscription-3" style="clip: rect(1px 1px 1px 1px); position: absolute; height: 1px; width: 1px; overflow: hidden;">
+							Dirección de email						</label>
+						<input type="email" name="email" required="required" class="required" value="" id="subscribe-field-blog_subscription-3" placeholder="Dirección de email">
+					</p>
+
+					<p id="subscribe-submit">
+						<input type="hidden" name="action" value="subscribe">
+						<input type="hidden" name="source" value="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/">
+						<input type="hidden" name="sub-type" value="widget">
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-3">
+												<input type="submit" value="Suscribir" name="jetpack_subscriptions_widget">
+					</p>
+							</form>
+
+			<script>
+			/*
+			Custom functionality for safari and IE
+			 */
+			(function( d ) {
+				// In case the placeholder functionality is available we remove labels
+				if ( ( 'placeholder' in d.createElement( 'input' ) ) ) {
+					var label = d.querySelector( 'label[for=subscribe-field-blog_subscription-3]' );
+						label.style.clip 	 = 'rect(1px, 1px, 1px, 1px)';
+						label.style.position = 'absolute';
+						label.style.height   = '1px';
+						label.style.width    = '1px';
+						label.style.overflow = 'hidden';
+				}
+
+				// Make sure the email value is filled in before allowing submit
+				var form = d.getElementById('subscribe-blog-blog_subscription-3'),
+					input = d.getElementById('subscribe-field-blog_subscription-3'),
+					handler = function( event ) {
+						if ( '' === input.value ) {
+							input.focus();
+
+							if ( event.preventDefault ){
+								event.preventDefault();
+							}
+
+							return false;
+						}
+					};
+
+				if ( window.addEventListener ) {
+					form.addEventListener( 'submit', handler, false );
+				} else {
+					form.attachEvent( 'onsubmit', handler );
+				}
+			})( document );
+			</script>
+				
+</aside><aside id="tag_cloud-3" class="widget widget_tag_cloud"><h2 class="widget-title">Etiquetas</h2><div class="tagcloud"><a href="http://blog.micayael.com/tag/actions/" class="tag-link-19" title="4 temas" style="font-size: 10.632478632479pt;">actions</a>
+<a href="http://blog.micayael.com/tag/ajax/" class="tag-link-107" title="11 temas" style="font-size: 15.179487179487pt;">Ajax</a>
+<a href="http://blog.micayael.com/tag/analisis/" class="tag-link-31" title="6 temas" style="font-size: 12.42735042735pt;">análisis</a>
+<a href="http://blog.micayael.com/tag/arquitectura/" class="tag-link-60" title="3 temas" style="font-size: 9.4358974358974pt;">arquitectura</a>
+<a href="http://blog.micayael.com/tag/asincronico/" class="tag-link-45" title="11 temas" style="font-size: 15.179487179487pt;">asincrónico</a>
+<a href="http://blog.micayael.com/tag/base-de-datos-2/" class="tag-link-34" title="3 temas" style="font-size: 9.4358974358974pt;">base de datos</a>
+<a href="http://blog.micayael.com/tag/cargando/" class="tag-link-54" title="2 temas" style="font-size: 8pt;">cargando</a>
+<a href="http://blog.micayael.com/tag/casos-de-uso/" class="tag-link-100" title="4 temas" style="font-size: 10.632478632479pt;">Casos de Uso</a>
+<a href="http://blog.micayael.com/tag/diseno/" class="tag-link-35" title="3 temas" style="font-size: 9.4358974358974pt;">diseño</a>
+<a href="http://blog.micayael.com/tag/dispositivos-moviles/" class="tag-link-61" title="4 temas" style="font-size: 10.632478632479pt;">Dispositivos móviles</a>
+<a href="http://blog.micayael.com/tag/doctrine/" class="tag-link-36" title="10 temas" style="font-size: 14.700854700855pt;">Doctrine</a>
+<a href="http://blog.micayael.com/tag/documentacion/" class="tag-link-101" title="4 temas" style="font-size: 10.632478632479pt;">documentación</a>
+<a href="http://blog.micayael.com/tag/estandarizacion/" class="tag-link-102" title="5 temas" style="font-size: 11.589743589744pt;">Estandarización</a>
+<a href="http://blog.micayael.com/tag/flash/" class="tag-link-22" title="2 temas" style="font-size: 8pt;">flash</a>
+<a href="http://blog.micayael.com/tag/form/" class="tag-link-14" title="4 temas" style="font-size: 10.632478632479pt;">form</a>
+<a href="http://blog.micayael.com/tag/framework/" class="tag-link-2" title="44 temas" style="font-size: 22pt;">Framework</a>
+<a href="http://blog.micayael.com/tag/get/" class="tag-link-46" title="10 temas" style="font-size: 14.700854700855pt;">GET</a>
+<a href="http://blog.micayael.com/tag/guia/" class="tag-link-72" title="16 temas" style="font-size: 16.974358974359pt;">guia</a>
+<a href="http://blog.micayael.com/tag/helpers-2/" class="tag-link-15" title="2 temas" style="font-size: 8pt;">helpers</a>
+<a href="http://blog.micayael.com/tag/hijax/" class="tag-link-53" title="3 temas" style="font-size: 9.4358974358974pt;">hijax</a>
+<a href="http://blog.micayael.com/tag/html/" class="tag-link-17" title="4 temas" style="font-size: 10.632478632479pt;">HTML</a>
+<a href="http://blog.micayael.com/tag/http/" class="tag-link-47" title="10 temas" style="font-size: 14.700854700855pt;">HTTP</a>
+<a href="http://blog.micayael.com/tag/javascript/" class="tag-link-108" title="10 temas" style="font-size: 14.700854700855pt;">JavaScript</a>
+<a href="http://blog.micayael.com/tag/jquery/" class="tag-link-40" title="13 temas" style="font-size: 16.017094017094pt;">jQuery</a>
+<a href="http://blog.micayael.com/tag/jquery-mobile/" class="tag-link-111" title="2 temas" style="font-size: 8pt;">jQuery Mobile</a>
+<a href="http://blog.micayael.com/tag/maestrosdelweb/" class="tag-link-73" title="16 temas" style="font-size: 16.974358974359pt;">maestrosdelweb</a>
+<a href="http://blog.micayael.com/tag/model-view-controller/" class="tag-link-4" title="31 temas" style="font-size: 20.324786324786pt;">Model-View-Controller</a>
+<a href="http://blog.micayael.com/tag/mvc/" class="tag-link-3" title="29 temas" style="font-size: 19.965811965812pt;">MVC</a>
+<a href="http://blog.micayael.com/tag/orm/" class="tag-link-37" title="5 temas" style="font-size: 11.589743589744pt;">ORM</a>
+<a href="http://blog.micayael.com/tag/parametrizacion/" class="tag-link-38" title="3 temas" style="font-size: 9.4358974358974pt;">parametrización</a>
+<a href="http://blog.micayael.com/tag/parametro/" class="tag-link-39" title="3 temas" style="font-size: 9.4358974358974pt;">parametro</a>
+<a href="http://blog.micayael.com/tag/patrones/" class="tag-link-103" title="4 temas" style="font-size: 10.632478632479pt;">Patrones</a>
+<a href="http://blog.micayael.com/tag/peticion/" class="tag-link-49" title="9 temas" style="font-size: 14.222222222222pt;">peticion</a>
+<a href="http://blog.micayael.com/tag/php/" class="tag-link-5" title="43 temas" style="font-size: 21.880341880342pt;">PHP</a>
+<a href="http://blog.micayael.com/tag/post/" class="tag-link-50" title="10 temas" style="font-size: 14.700854700855pt;">POST</a>
+<a href="http://blog.micayael.com/tag/put/" class="tag-link-64" title="2 temas" style="font-size: 8pt;">put</a>
+<a href="http://blog.micayael.com/tag/request/" class="tag-link-51" title="11 temas" style="font-size: 15.179487179487pt;">request</a>
+<a href="http://blog.micayael.com/tag/response/" class="tag-link-52" title="11 temas" style="font-size: 15.179487179487pt;">response</a>
+<a href="http://blog.micayael.com/tag/routing/" class="tag-link-74" title="3 temas" style="font-size: 9.4358974358974pt;">routing</a>
+<a href="http://blog.micayael.com/tag/sesiones/" class="tag-link-27" title="2 temas" style="font-size: 8pt;">sesiones</a>
+<a href="http://blog.micayael.com/tag/sfactions/" class="tag-link-20" title="3 temas" style="font-size: 9.4358974358974pt;">sfActions</a>
+<a href="http://blog.micayael.com/tag/sfuser/" class="tag-link-28" title="2 temas" style="font-size: 8pt;">sfUser</a>
+<a href="http://blog.micayael.com/tag/symfony/" class="tag-link-6" title="31 temas" style="font-size: 20.324786324786pt;">Symfony1</a>
+<a href="http://blog.micayael.com/tag/symfony2/" class="tag-link-112" title="19 temas" style="font-size: 17.811965811966pt;">Symfony2</a>
+<a href="http://blog.micayael.com/tag/twig-2/" class="tag-link-77" title="6 temas" style="font-size: 12.42735042735pt;">twig</a></div>
+</aside>			</div><!-- .widget-area -->
+		
+	</div><!-- .secondary -->
+
+	</div><!-- .sidebar -->
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+<article id="post-491" class="post-491 post type-post status-publish format-standard hentry category-ajax category-javascript category-jquery category-symfony tag-ajax tag-asincronico tag-framework tag-get tag-http tag-javascript tag-jquery tag-peticion tag-php tag-post tag-request tag-response">
+	
+	<header class="entry-header">
+		<h1 class="entry-title">Métodos GET vs POST del HTTP</h1>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<h2>Entendiendo el concepto de GET y POST</h2>
+<p>Muchas veces tenemos una idea equivocada sobre la utilización de GET y POST. Tendemos a entender que cuando doy click a un link eso es GET y cuando envío un formulario es POST. Mucho peor, solemos pensar que enviando peticiones POST los datos viajan seguros por no ir como parte de la URL como lo hace GET. Hay un error en este concepto que considero que cuando empezamos a aprender a usar tecnologías Web como por ejemplo PHP es entendible pero que a medida que vamos madurando debemos darnos cuenta que GET y POST no son la diferencia entre links y formularios.</p>
+<p>Se suele prestar a confusión ya que tanto GET como POST son métodos del protocolo HTTP el cual esta compuesto por un envío al servidor conocido como petición (request) y una respuesta a dicha solicitud (response).</p>
+<p><img src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/uc(1)" alt="Protocolo HTTP"></p>
+<p>Tanto GET como POST, justamente por ser métodos ambos de HTTP, ejecutan un request y response, y a mi criterio esto suele ser parte de la confusión sobre los objetivos reales de ambos métodos.</p>
+<p><span id="more-491"></span></p>
+<h2>Redefinamos los conceptos</h2>
+<p>El concepto GET es <em>obtener información</em> del servidor. Traer datos  que están en el servidor, ya sea en un archivo o base de datos, al cliente. Independientemente de que para eso tengamos que enviar (request) algún dato que será procesado para luego devolver la respuesta (response) que esperamos, como por ejemplo un identificador para obtener una noticia de la base de datos.</p>
+<p>POST sin embargo es <em>enviar información</em> desde el cliente para que sea procesada y actualice o agregue información en el servidor, como sería la carga o actualización en sí de una noticia. Cuando enviamos (request) datos a través de un formulario, estos son procesados y luego a través de una redirección por ejemplo devolvemos (response) alguna página con información.</p>
+<p>Ambos métodos solicitan una respuesta del servidor y ahí es donde parecen que los conceptos son iguales ya que con ambos se podría lograr los mismos objetivos. Yo podría, aunque estaría mal, enviar por GET ciertos datos en la URL y “actualizar o insertar” información en mi base de datos, pero eso le correspondería al método POST. De la misma manera podría solicitar una página diferente por medio de POST y simplemente mostrarla como respuesta aunque eso debería ser a través de una llamada GET.</p>
+<p>Las llamadas GET pueden ser cacheadas (historial del navegador), indexadas por buscadores, agregar los enlaces a nuestros favoritos o hasta pasar una url completa a otra persona para que directamente ingrese a esa página. Con el método POST sin embargo no se puede hacer esto.</p>
+<p>Generalmente usamos links para ejecutar llamadas GET ya que la idea del link es simplemente “solicitar” una información (página) al servidor y que sea devuelta como una respuesta. Mientras usamos formularios para actualizar datos de productos, clientes, noticias, etc, también teniendo en cuenta que por el método POST también se puede enviar mucha más cantidad de datos que por GET.</p>
+<p>Para entender finalmente la diferencia voy a darles un caso de análisis. Supongamos que tenemos en nuestro sitio ecommerce un listado de productos con un link que agregue ese producto al carrito de compras. Si hacemos que ese link ejecute el método GET, como generalmente lo usamos, usaríamos una URL parecida a esta: www.misitio.com/agregar_item_carrito.php?id=1. Al ser una llamada GET, Google podría indexar esa URL y podría aparecer en el buscador al buscar la palabra carrito. Cuando una persona le diera click automáticamente se ejecutaría esa página y agregaría el item con id 1 al carrito del sitio, lo cual les puedo asegurar que no es la idea ya que el visitante al buscar carrito debería querer simplemente entrar al sitio y no agregar un ítem que ni siquiera sabe cual es. Por lo tanto vemos que para este caso, por más que usemos un link, deberíamos de usar una llamada al método POST por ejemplo como lo usa el framework Symfony así:</p>
+<div><div id="highlighter_783677" class="syntaxhighlighter  htmlscript"><div class="toolbar"><span><a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="htmlscript plain">&lt;</code><code class="htmlscript keyword">a</code> <code class="htmlscript plain">onclick="</code><code class="htmlscript color1">f</code> <code class="htmlscript plain">= </code><code class="htmlscript string">document</code><code class="htmlscript plain">.createElement('form'); document.body.appendChild(f);</code></div><div class="line number2 index1 alt1"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript color1">f.method</code> <code class="htmlscript plain">= </code><code class="htmlscript string">'POST'</code><code class="htmlscript plain">; </code><code class="htmlscript color1">f.action</code> <code class="htmlscript plain">= </code><code class="htmlscript string">this</code><code class="htmlscript plain">.href; f.submit();return false;"</code></div><div class="line number3 index2 alt2"><code class="htmlscript spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="htmlscript color1">href</code><code class="htmlscript plain">=</code><code class="htmlscript string">"agregar_item_carrito.php?id=1"</code><code class="htmlscript plain">&gt;Agregar al carrito&lt;/</code><code class="htmlscript keyword">a</code><code class="htmlscript plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>Lo que hace este link es muy sencillo, por medio del evento onclick de JavaScript, crea dinámicamente un formulario, le dice que será POST (ya que por defecto sería GET), le asigna la URL del enlace al action del form, envía el formulario y retorna false para no ejecutar el link en sí. Para hacer esto con Symfony simplemente usamos el helper link_to agregando la opción post=true:</p>
+<div><div id="highlighter_791867" class="syntaxhighlighter  htmlscript"><div class="toolbar"><span><a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php script">&lt;?php</code> <code class="php functions">echo</code> <code class="php plain">link_to(</code><code class="php string">'Agregar al carrito'</code><code class="php plain">, </code><code class="php string">'agregar_item_carrito.php?id=1'</code><code class="php plain">, </code><code class="php string">'post=true'</code><code class="php plain">) </code><code class="php script">?&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>Otro ejemplo sencillo sería cuando en un administrador de noticias tenemos un listado de las noticias con un link “eliminar” para borrarlas una por una (situación muy común en sistemas Web). Deberíamos de hacer esta petición usando POST para no permitir, por seguridad, que esa URL creada sea indexada, enviada a otra persona, guardada en favoritos, ni mucho menos ejecutada por culpa del botón atrás del navegador ya que quedaría cacheada en el historial.</p>
+<p>Demos un ejemplo opuesto. Hay casos en los que los formularios de búsquedas al ser enviados por POST van a la página de resultados pero como estas llamadas no son cacheadas en el historial del navegador, no podemos volver usando la tecla atrás del navegador por lo que se suele dejar como llamadas GET a fin de ser cacheadas. Esto lo hacemos simplemente poniendo en el method del form la palabra get en lugar de post.</p>
+<p>Espero que con esto se haya entendido la diferencia real entre los métodos GET y POST del protocolo HTTP y que cuando vayamos a utilizar un link o un formulario nos detengamos a pensar dos veces cual método es el más apropiado para no arriesgar la seguridad ni la consistencia del sitio.</p>
+<p>Este es un <a href="http://www.htmleando.com/pregunta/cuando-utilizar-metodo-post-o-get">artículo</a> interesante para continuar con este tema.</p>
+<p>En el siguiente artículo vamos a hablar sobre la forma de utilizar estos dos métodos con Ajax y jQuery.</p>
+<p>Los comentarios son bienvenidos.</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Comparte este artículo:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-491" class="share-facebook sd-button share-icon" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?share=facebook&amp;nb=1" target="_blank" title="Haz clic para compartir en Facebook"><span>Facebook<span class="share-count">35</span></span></a></li><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-491" class="share-twitter sd-button share-icon" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?share=twitter&amp;nb=1" target="_blank" title="Haz clic para compartir en Twitter"><span>Twitter</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-491" class="share-google-plus-1 sd-button share-icon" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?share=google-plus-1&amp;nb=1" target="_blank" title="Haz clic para compartir en Google+"><span>Google</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-491" class="share-linkedin sd-button share-icon" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?share=linkedin&amp;nb=1" target="_blank" title="Haz clic para compartir en LinkedIn"><span>LinkedIn<span class="share-count">6</span></span></a></li><li><a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#" class="sharing-anchor sd-button share-more"><span>Más</span></a></li><li class="share-end"></li></ul><div class="sharing-hidden"><div class="inner" style="display: none;"><ul><li class="share-email share-service-visible"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?share=email&amp;nb=1" target="_blank" title="Hac clic para enviar por correo electrónico a un amigo"><span>Correo electrónico</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button share-icon" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#print" target="_blank" title="Haz clic para imprimir"><span>Imprimir</span></a></li><li class="share-end"></li><li class="share-pinterest"><a rel="nofollow" data-shared="sharing-pinterest-491" class="share-pinterest sd-button share-icon" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?share=pinterest&amp;nb=1" target="_blank" title="Haz clic para compartir en Pinterest"><span>Pinterest<span class="share-count">1</span></span></a></li><li class="share-pocket"><a rel="nofollow" data-shared="" class="share-pocket sd-button share-icon" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?share=pocket&amp;nb=1" target="_blank" title="Haz clic para compartir en Pocket"><span>Pocket</span></a></li><li class="share-end"></li><li class="share-tumblr"><a rel="nofollow" data-shared="" class="share-tumblr sd-button share-icon" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?share=tumblr&amp;nb=1" target="_blank" title="Haz clic para compartir en Tumblr"><span>Tumblr</span></a></li><li class="share-end"></li></ul></div></div></div></div></div>
+<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+	<h3 class="jp-relatedposts-headline"><em>Relacionado</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-minimal"><p class="jp-relatedposts-post jp-relatedposts-post0" data-post-id="731" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="http://blog.micayael.com/2011/03/08/ajax-y-jquery-vi-procesando-formularios-validaciones-hijax/" title="Ajax y jQuery 6/6 – Procesando formularios con validaciones
+
+Siguiendo con el ejemplo visto en el artículo anterior sobre la serie de Ajax y jQuery, usemos el mismo ejemplo en el cual habíamos creado un script super sencillo y genérico para hacer que nuestro menú utilice llamadas asíncronas al servidor y agreguemos la funcionalidad de envío a nuestro formulario…" rel="nofollow" data-origin="491" data-position="0">Ajax y jQuery 6/6 – Procesando formularios con validaciones</a></span><span class="jp-relatedposts-post-date">8 marzo, 2011</span><span class="jp-relatedposts-post-context">En "Ajax"</span></p><p class="jp-relatedposts-post jp-relatedposts-post1" data-post-id="396" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="http://blog.micayael.com/2011/02/07/ajax-y-jquery-i/" title="Ajax y jQuery 1/6
+
+jQuery es un framework JavaScript muy interesante a la hora de implementar Ajax en nuestros sitios ya que contiene gran parte del arduo trabajo de escribir código asíncrono desde cero. Con este artículo entenderemos el concepto de Ajax y veremos con un ejemplo sencillo como utilizarlo." rel="nofollow" data-origin="491" data-position="1">Ajax y jQuery 1/6</a></span><span class="jp-relatedposts-post-date">7 febrero, 2011</span><span class="jp-relatedposts-post-context">En "Ajax"</span></p><p class="jp-relatedposts-post jp-relatedposts-post2" data-post-id="504" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="http://blog.micayael.com/2011/02/10/ajax-y-jquery-iii-utilizando-get-y-post/" title="Ajax y jQuery 3/6 - Utilizando GET y POST
+
+Habiendo visto los artículos anteriores sobre la introducción a jQuery para la utilización de Ajax y sobre implementación de Hijax, y habiendo entendido la diferencia entre los métodos GET y POST, veremos como realizar llamadas asíncronas con la librería jQuery que nos facilita ampliamente el trabajo." rel="nofollow" data-origin="491" data-position="2">Ajax y jQuery 3/6 - Utilizando GET y POST</a></span><span class="jp-relatedposts-post-date">10 febrero, 2011</span><span class="jp-relatedposts-post-context">En "Ajax"</span></p></div></div>	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Publicado el </span><a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/" rel="bookmark"><time class="entry-date published" datetime="2011-02-09T08:49:48+00:00">9 febrero, 2011</time><time class="updated" datetime="2014-07-17T13:00:50+00:00">17 julio, 2014</time></a></span><span class="byline"><span class="author vcard"><span class="screen-reader-text">Autor </span><a class="url fn n" href="http://blog.micayael.com/author/_micayael_/">micayael</a></span></span><span class="cat-links"><span class="screen-reader-text">Categorías </span><a href="http://blog.micayael.com/category/javascript/ajax/" rel="category tag">Ajax</a>, <a href="http://blog.micayael.com/category/javascript/" rel="category tag">JavaScript</a>, <a href="http://blog.micayael.com/category/javascript/jquery/" rel="category tag">jQuery</a>, <a href="http://blog.micayael.com/category/php/symfony/" rel="category tag">Symfony1</a></span><span class="tags-links"><span class="screen-reader-text">Etiquetas </span><a href="http://blog.micayael.com/tag/ajax/" rel="tag">Ajax</a>, <a href="http://blog.micayael.com/tag/asincronico/" rel="tag">asincrónico</a>, <a href="http://blog.micayael.com/tag/framework/" rel="tag">Framework</a>, <a href="http://blog.micayael.com/tag/get/" rel="tag">GET</a>, <a href="http://blog.micayael.com/tag/http/" rel="tag">HTTP</a>, <a href="http://blog.micayael.com/tag/javascript/" rel="tag">JavaScript</a>, <a href="http://blog.micayael.com/tag/jquery/" rel="tag">jQuery</a>, <a href="http://blog.micayael.com/tag/peticion/" rel="tag">peticion</a>, <a href="http://blog.micayael.com/tag/php/" rel="tag">PHP</a>, <a href="http://blog.micayael.com/tag/post/" rel="tag">POST</a>, <a href="http://blog.micayael.com/tag/request/" rel="tag">request</a>, <a href="http://blog.micayael.com/tag/response/" rel="tag">response</a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+
+<div id="comments" class="comments-area">
+
+			<h2 class="comments-title">
+			32 comentarios sobre “Métodos GET vs POST del HTTP”		</h2>
+
+		
+		<ol class="comment-list">
+					<li id="comment-26" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-26" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/5101323e57a822fb84904942e55657af" srcset="http://2.gravatar.com/avatar/5101323e57a822fb84904942e55657af?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-5101323e57a822fb84904942e55657af-0">						<b class="fn">XeRGi0</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-26">
+							<time datetime="2011-03-18T09:16:24+00:00">
+								18 marzo, 2011 a las 9:16 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Muy interesante articulo. Es muy común confundir estos conceptos cuando se inicia en el tema del web development…</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=26#respond" onclick="return addComment.moveForm( &quot;div-comment-26&quot;, &quot;26&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a XeRGi0">Responder</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-27" class="comment byuser comment-author-_micayael_ bypostauthor odd alt depth-2">
+			<article id="div-comment-27" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/2b99c333759f4f7f2fa8b1b1e1ca4804" srcset="http://2.gravatar.com/avatar/2b99c333759f4f7f2fa8b1b1e1ca4804?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-2b99c333759f4f7f2fa8b1b1e1ca4804-0">						<b class="fn"><a href="http://blog.micayael.com/" rel="external nofollow" class="url">Juan Ardissone</a></b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-27">
+							<time datetime="2011-03-18T09:21:59+00:00">
+								18 marzo, 2011 a las 9:21 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Así mismo XeRGi0.</p>
+<p>Que bueno que te haya sido útil</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=27#respond" onclick="return addComment.moveForm( &quot;div-comment-27&quot;, &quot;27&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Juan Ardissone">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-28" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-28" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/f006dd09301e05bee6f19db24ec179a7" srcset="http://0.gravatar.com/avatar/f006dd09301e05bee6f19db24ec179a7?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-f006dd09301e05bee6f19db24ec179a7-0">						<b class="fn">arnaldi</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-28">
+							<time datetime="2011-09-28T11:23:42+00:00">
+								28 septiembre, 2011 a las 11:23 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Exelente aporte.<br>
+saludos</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=28#respond" onclick="return addComment.moveForm( &quot;div-comment-28&quot;, &quot;28&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a arnaldi">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-29" class="comment odd alt thread-even depth-1 parent">
+			<article id="div-comment-29" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/9d955822092938b95a152339f807a174" srcset="http://0.gravatar.com/avatar/9d955822092938b95a152339f807a174?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-9d955822092938b95a152339f807a174-0">						<b class="fn">Evelyn</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-29">
+							<time datetime="2012-01-25T04:41:10+00:00">
+								25 enero, 2012 a las 4:41 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Genial artículo, tengo mucho de no programar para web y estoy retomándolo, así que lo primero que vino a mi mente fue esta cuestión; ya no recordaba la explicación que me dieron en la escuela.<br>
+Me ayudó mucho, lo explicas de manera que no hay lugar a dudas.</p>
+<p>Bien.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=29#respond" onclick="return addComment.moveForm( &quot;div-comment-29&quot;, &quot;29&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Evelyn">Responder</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-30" class="comment byuser comment-author-_micayael_ bypostauthor even depth-2">
+			<article id="div-comment-30" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/2b99c333759f4f7f2fa8b1b1e1ca4804" srcset="http://2.gravatar.com/avatar/2b99c333759f4f7f2fa8b1b1e1ca4804?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-2b99c333759f4f7f2fa8b1b1e1ca4804-1">						<b class="fn"><a href="http://blog.micayael.com/" rel="external nofollow" class="url">Juan Ardissone</a></b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-30">
+							<time datetime="2012-01-25T07:13:49+00:00">
+								25 enero, 2012 a las 7:13 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Gracias por el comentario Evelyn</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=30#respond" onclick="return addComment.moveForm( &quot;div-comment-30&quot;, &quot;30&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Juan Ardissone">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-31" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-31" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/7ed987b65a704032981db5d92096f1dc" srcset="http://1.gravatar.com/avatar/7ed987b65a704032981db5d92096f1dc?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-7ed987b65a704032981db5d92096f1dc-0">						<b class="fn">Luis Carrasco</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-31">
+							<time datetime="2012-02-01T12:01:20+00:00">
+								1 febrero, 2012 a las 12:01 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Muy buen artículo.  Sobre todo muy didáctico y sencillo.  No soy programador sino que hago gestión.  Pero para entender lo que me estaban solicitando busqué, encontré tu artículo y ahora entiendo lo que me están pidiendo.  Muchas gracias.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=31#respond" onclick="return addComment.moveForm( &quot;div-comment-31&quot;, &quot;31&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Luis Carrasco">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-32" class="comment even thread-even depth-1">
+			<article id="div-comment-32" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/9f6ec1db5a79e29832f28af683fb9eb6" srcset="http://0.gravatar.com/avatar/9f6ec1db5a79e29832f28af683fb9eb6?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-9f6ec1db5a79e29832f28af683fb9eb6-0">						<b class="fn">Derlis Gonzalez</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-32">
+							<time datetime="2012-03-31T11:55:43+00:00">
+								31 marzo, 2012 a las 11:55 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Excelente la forma de explicar de forma precisa el tema. Me aclaro algunas dudas que tenia. Gracias</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=32#respond" onclick="return addComment.moveForm( &quot;div-comment-32&quot;, &quot;32&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Derlis Gonzalez">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-33" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-33" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/97fb1bc168c1fd9dce4a46e3d1e34b98" srcset="http://0.gravatar.com/avatar/97fb1bc168c1fd9dce4a46e3d1e34b98?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-97fb1bc168c1fd9dce4a46e3d1e34b98-0">						<b class="fn">heart</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-33">
+							<time datetime="2012-05-14T17:59:40+00:00">
+								14 mayo, 2012 a las 5:59 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Gracias, muy buen articulo</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=33#respond" onclick="return addComment.moveForm( &quot;div-comment-33&quot;, &quot;33&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a heart">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-34" class="comment even thread-even depth-1">
+			<article id="div-comment-34" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/4347386d19fe189ad52400d8c4020cbf" srcset="http://1.gravatar.com/avatar/4347386d19fe189ad52400d8c4020cbf?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-4347386d19fe189ad52400d8c4020cbf-0">						<b class="fn">kiko</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-34">
+							<time datetime="2012-08-07T17:36:17+00:00">
+								7 agosto, 2012 a las 5:36 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Genial el artículo, me encuentro en la misma situación que Evelyn, desentumeciendo neuronas después de una buena temporada sin programar. Es curioso, lo importante que puede ser una cosa que a simple vista parece tan simple como el método del formulario. </p>
+<p>Muchas gracias por tu aporte a la comunidad <img draggable="false" class="emoji" alt="😉" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/1f609.png"></p>
+<p>Seguiré de cerca tu blog.</p>
+<p>Un saludo!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=34#respond" onclick="return addComment.moveForm( &quot;div-comment-34&quot;, &quot;34&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a kiko">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-35" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-35" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/923c006b40b7ea1e8c93b9933c1649ff" srcset="http://0.gravatar.com/avatar/923c006b40b7ea1e8c93b9933c1649ff?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-923c006b40b7ea1e8c93b9933c1649ff-0">						<b class="fn">jesss</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-35">
+							<time datetime="2012-10-19T11:21:18+00:00">
+								19 octubre, 2012 a las 11:21 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>buenisimo vale me sirvio de mucho en la clase..</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=35#respond" onclick="return addComment.moveForm( &quot;div-comment-35&quot;, &quot;35&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a jesss">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-36" class="comment even thread-even depth-1">
+			<article id="div-comment-36" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/4e53dfc4fae5c940bff3ae01e31a81bc" srcset="http://1.gravatar.com/avatar/4e53dfc4fae5c940bff3ae01e31a81bc?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-4e53dfc4fae5c940bff3ae01e31a81bc-0">						<b class="fn">Rabel</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-36">
+							<time datetime="2012-10-31T08:47:14+00:00">
+								31 octubre, 2012 a las 8:47 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hola!<br>
+Gracias, muy útil.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=36#respond" onclick="return addComment.moveForm( &quot;div-comment-36&quot;, &quot;36&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Rabel">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-37" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-37" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/a9f3ae0de150817878584d5c3a65cf93" srcset="http://1.gravatar.com/avatar/a9f3ae0de150817878584d5c3a65cf93?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-a9f3ae0de150817878584d5c3a65cf93-0">						<b class="fn">ComingHome</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-37">
+							<time datetime="2013-01-08T02:09:56+00:00">
+								8 enero, 2013 a las 2:09 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>gracias! se me han aclarado las dudas</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=37#respond" onclick="return addComment.moveForm( &quot;div-comment-37&quot;, &quot;37&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a ComingHome">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-38" class="comment even thread-even depth-1">
+			<article id="div-comment-38" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/55d8983ab242dc397fd60a6922660178" srcset="http://2.gravatar.com/avatar/55d8983ab242dc397fd60a6922660178?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-55d8983ab242dc397fd60a6922660178-0">						<b class="fn">alias</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-38">
+							<time datetime="2013-05-01T23:15:15+00:00">
+								1 mayo, 2013 a las 11:15 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Muy interesante articulo que aunque ya tiene su tiempo sigue siendo muy util.<br>
+saludos y gracias, y agrege la web a favoritos</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=38#respond" onclick="return addComment.moveForm( &quot;div-comment-38&quot;, &quot;38&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a alias">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-39" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-39" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/614fc09f0fe4900cb90e76689b664f89" srcset="http://0.gravatar.com/avatar/614fc09f0fe4900cb90e76689b664f89?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-614fc09f0fe4900cb90e76689b664f89-0">						<b class="fn">mercedes</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-39">
+							<time datetime="2013-08-20T18:42:26+00:00">
+								20 agosto, 2013 a las 6:42 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>muy buen articulo de la que me salvaron!!!<br>
+muchas gracias <img src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;"></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=39#respond" onclick="return addComment.moveForm( &quot;div-comment-39&quot;, &quot;39&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a mercedes">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-40" class="comment even thread-even depth-1">
+			<article id="div-comment-40" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/c719d5fcca8f14a019c0ec20694a1166" srcset="http://0.gravatar.com/avatar/c719d5fcca8f14a019c0ec20694a1166?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-c719d5fcca8f14a019c0ec20694a1166-0">						<b class="fn">Pablo</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-40">
+							<time datetime="2013-09-02T11:43:27+00:00">
+								2 septiembre, 2013 a las 11:43 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Me fue útil, muchas gracias por compartir.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=40#respond" onclick="return addComment.moveForm( &quot;div-comment-40&quot;, &quot;40&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Pablo">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-41" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-41" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/9e29ed9ab438d6b19be2c293f014ad5d" srcset="http://0.gravatar.com/avatar/9e29ed9ab438d6b19be2c293f014ad5d?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-9e29ed9ab438d6b19be2c293f014ad5d-0">						<b class="fn"><a href="http://cazaplanetas.com/" rel="external nofollow" class="url">Dani</a></b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-41">
+							<time datetime="2013-11-14T07:19:38+00:00">
+								14 noviembre, 2013 a las 7:19 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Gracias por el articulo, esta muy claro y con muy buenos ejemplos.</p>
+<p>Aun así tengo una duda al respecto. ¿Por que se usa un link para añadir un articulo y después se genera un formulario con javascript y no se hace con un formulario desde el principio?</p>
+<p>Gracias de nuevo.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=41#respond" onclick="return addComment.moveForm( &quot;div-comment-41&quot;, &quot;41&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Dani">Responder</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-42" class="comment byuser comment-author-_micayael_ bypostauthor even depth-2 parent">
+			<article id="div-comment-42" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/2b99c333759f4f7f2fa8b1b1e1ca4804" srcset="http://2.gravatar.com/avatar/2b99c333759f4f7f2fa8b1b1e1ca4804?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-2b99c333759f4f7f2fa8b1b1e1ca4804-2">						<b class="fn"><a href="http://blog.micayael.com/" rel="external nofollow" class="url">Juan Ardissone</a></b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-42">
+							<time datetime="2013-11-14T07:43:46+00:00">
+								14 noviembre, 2013 a las 7:43 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Dani. Este caso de suele utilizar cuando en lugar de poner como link el texto que ahora figura “Agregar al carrito”, quieres usar una imagen y lo puedes hacer rápidamente aprovechando una funcionalidad que existía en la versión. </p>
+<p>De todas formas la idea es ilustrar que generalmente cuando vemos un link, pensamos en GET, pero en realidad tiene ver con el objetivo, y en ese caso es POST ya que se quiere agregar un recurso.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=42#respond" onclick="return addComment.moveForm( &quot;div-comment-42&quot;, &quot;42&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Juan Ardissone">Responder</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-44" class="comment odd alt depth-3">
+			<article id="div-comment-44" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/9e29ed9ab438d6b19be2c293f014ad5d" srcset="http://0.gravatar.com/avatar/9e29ed9ab438d6b19be2c293f014ad5d?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-9e29ed9ab438d6b19be2c293f014ad5d-1">						<b class="fn"><a href="http://www.cazaplanetas.com/" rel="external nofollow" class="url">Dani</a></b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-44">
+							<time datetime="2013-12-06T19:06:22+00:00">
+								6 diciembre, 2013 a las 7:06 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Aclarado. Muchas gracias de nuevo.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=44#respond" onclick="return addComment.moveForm( &quot;div-comment-44&quot;, &quot;44&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Dani">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-43" class="comment even thread-even depth-1">
+			<article id="div-comment-43" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/ec68fec4490d0f0dacf9a5b214ee09d0" srcset="http://2.gravatar.com/avatar/ec68fec4490d0f0dacf9a5b214ee09d0?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-ec68fec4490d0f0dacf9a5b214ee09d0-0">						<b class="fn">Ivan Ferrer</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-43">
+							<time datetime="2013-12-01T13:15:47+00:00">
+								1 diciembre, 2013 a las 1:15 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Gracias! La verdad es que cometía todos los fallos (confusiones) que mencionas.<br>
+Ahora, al entender que GET puede ser cacheado o compartido como enlace se me aclara absolutamente todo.<br>
+Oye… ¡que me has quitado una astilla que tenía clavada!<br>
+Un saludo.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=43#respond" onclick="return addComment.moveForm( &quot;div-comment-43&quot;, &quot;43&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Ivan Ferrer">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-45" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-45" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/07a9e0c91fecc8a7a1d3c0d23878fe0c" srcset="http://0.gravatar.com/avatar/07a9e0c91fecc8a7a1d3c0d23878fe0c?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-07a9e0c91fecc8a7a1d3c0d23878fe0c-0">						<b class="fn"><a href="http://www.gigabriones.com/" rel="external nofollow" class="url">Roberto Briones</a></b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-45">
+							<time datetime="2014-01-24T02:35:45+00:00">
+								24 enero, 2014 a las 2:35 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Gracias por la información, es cierto y parte del problema es que muchos de los tutoriales de HTML, PHP y demás te dan a entender que entre POST y GET no hay diferencia salvo que la información está visible en la URL con GET siendo lo contrario con POST.</p>
+<p>Una duda que me quedaría es; En el ejemplo final que das de eliminar las noticias de un listado mencionas que se usaría POST para ello, y yo me pregunto ¿No se debería utilizar la petición DELETE de HTTP? Pregunto esto porque en dado caso pienso que sería el uso correcto del protocolo HTTP de otra manera quizá estaríamos cayendo en el mismo error de utilizar peticiones HTTP como nos funcione y no para lo que fueron creadas.</p>
+<p>¿Estoy equivocado? </p>
+<p>Saludos.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=45#respond" onclick="return addComment.moveForm( &quot;div-comment-45&quot;, &quot;45&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Roberto Briones">Responder</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-46" class="comment byuser comment-author-_micayael_ bypostauthor even depth-2">
+			<article id="div-comment-46" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/2b99c333759f4f7f2fa8b1b1e1ca4804" srcset="http://2.gravatar.com/avatar/2b99c333759f4f7f2fa8b1b1e1ca4804?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-2b99c333759f4f7f2fa8b1b1e1ca4804-3">						<b class="fn"><a href="http://blog.micayael.com/" rel="external nofollow" class="url">Juan Ardissone</a></b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-46">
+							<time datetime="2014-01-26T21:34:43+00:00">
+								26 enero, 2014 a las 9:34 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Estas completamente en lo cierto Roberto. Lo correcto es usar los verbos HTTPP para todas las acciones como lo puedes ver en los artículos que escribí sobre servicios REST. Para este artículo tomo en cuenta el POST para insert, update y delete porque es un siguiente paso tomando en cuenta que hay ocasiones en donde existen problemas con los navegadores a la hora de querer usar un verbo diferente a GET y POST por ejemplo en el action de un form y no te queda otra que usar un POST.</p>
+<p>Cuando trabajas con servicios REST ya es más fácil ya que por lo general no es el navegador el que invoca a los servicios, sino el action de tu front-end, y este es invocado desde un form por ejemplo.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=46#respond" onclick="return addComment.moveForm( &quot;div-comment-46&quot;, &quot;46&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Juan Ardissone">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-47" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-47" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/75f78f6d7bfc9aa1b30465517f0535bd" srcset="http://1.gravatar.com/avatar/75f78f6d7bfc9aa1b30465517f0535bd?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-75f78f6d7bfc9aa1b30465517f0535bd-0">						<b class="fn">Víctor</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-47">
+							<time datetime="2014-03-08T08:20:11+00:00">
+								8 marzo, 2014 a las 8:20 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Muchas gracias por esta completa y sencilla explicación!<br>
+A favoritos que va!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=47#respond" onclick="return addComment.moveForm( &quot;div-comment-47&quot;, &quot;47&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Víctor">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-49" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-49" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/32112ebcfb11e629917358840636c0d8" srcset="http://0.gravatar.com/avatar/32112ebcfb11e629917358840636c0d8?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-32112ebcfb11e629917358840636c0d8-0">						<b class="fn">Romfab Vinces</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-49">
+							<time datetime="2014-06-25T23:58:47+00:00">
+								25 junio, 2014 a las 11:58 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Muy buen Artículo</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=49#respond" onclick="return addComment.moveForm( &quot;div-comment-49&quot;, &quot;49&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Romfab Vinces">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-50" class="comment odd alt thread-even depth-1 parent">
+			<article id="div-comment-50" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/85e4239ff9662bf8296083d98da17677" srcset="http://2.gravatar.com/avatar/85e4239ff9662bf8296083d98da17677?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-85e4239ff9662bf8296083d98da17677-0">						<b class="fn">chipo</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-50">
+							<time datetime="2014-07-14T20:16:43+00:00">
+								14 julio, 2014 a las 8:16 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Muchas gracias, sos groso. Hace tres días empecé a aprender Java EE porque en todos los trabajos me los están requiriendo y nada mejor que comenzar a aprender una nueva tecnología usando buenos prácticas desde el comienzo.</p>
+<p>Saludos!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=50#respond" onclick="return addComment.moveForm( &quot;div-comment-50&quot;, &quot;50&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a chipo">Responder</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-1911" class="comment even depth-2">
+			<article id="div-comment-1911" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/2079ba95bd82d716b4a8f8866b7f38ed" srcset="http://2.gravatar.com/avatar/2079ba95bd82d716b4a8f8866b7f38ed?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-2079ba95bd82d716b4a8f8866b7f38ed-0">						<b class="fn">Roots</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-1911">
+							<time datetime="2014-10-31T00:58:41+00:00">
+								31 octubre, 2014 a las 12:58 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Excelente articulo, gran aporte.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=1911#respond" onclick="return addComment.moveForm( &quot;div-comment-1911&quot;, &quot;1911&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Roots">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-3733" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-3733" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/ac1a5ba5dad46542b0e0ef16bb324209" srcset="http://1.gravatar.com/avatar/ac1a5ba5dad46542b0e0ef16bb324209?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-ac1a5ba5dad46542b0e0ef16bb324209-0">						<b class="fn">Eduardo</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-3733">
+							<time datetime="2014-11-25T16:33:10+00:00">
+								25 noviembre, 2014 a las 4:33 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Gracias por el articulo, lo encotre porque comenze a incursionar en el desarrollo WEB y estoy utilizando ASP.<br>
+En los ejemplos usan if(IsPost) y por mas que busco en la documentación solo dice que IsPost = false cuando es la primera vez que se obtiene la pagina y true en ocaciones subcecuentes.<br>
+Bueno, para no hacer el cuento largo la investigación me trajo a este articulo, y me surge una pregunta:<br>
+Si actualizo la página que estoy viendo (presionando f5), ¿se hace un get o un post?<br>
+De antemano gracias por la respuesta</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=3733#respond" onclick="return addComment.moveForm( &quot;div-comment-3733&quot;, &quot;3733&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a Eduardo">Responder</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-3734" class="comment byuser comment-author-_micayael_ bypostauthor even depth-2">
+			<article id="div-comment-3734" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/2b99c333759f4f7f2fa8b1b1e1ca4804" srcset="http://2.gravatar.com/avatar/2b99c333759f4f7f2fa8b1b1e1ca4804?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-2b99c333759f4f7f2fa8b1b1e1ca4804-4">						<b class="fn"><a href="http://www.micayael.com/" rel="external nofollow" class="url">micayael</a></b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-3734">
+							<time datetime="2014-11-25T16:39:28+00:00">
+								25 noviembre, 2014 a las 4:39 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Si actualizas el navegador con el botón de actualizar o con el F5 es una llamada GET <img src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/simple-smile.png" alt=":-)" class="wp-smiley" style="height: 1em; max-height: 1em;"> a menos que haya venido de un POST por un formulario y ese caso los navegadores te muestran un mensaje diciéndote que se intentarán enviar nuevamente los datos.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=3734#respond" onclick="return addComment.moveForm( &quot;div-comment-3734&quot;, &quot;3734&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a micayael">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-4497" class="pingback odd alt thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="https://aprendiendoarduino.wordpress.com/2014/11/18/tema-6-comunicaciones-con-arduino/" rel="external nofollow" class="url">Tema 6 – Comunicaciones con Arduino | Aprendiendo Arduino</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-6734" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-6734" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/5aac2fed853bfaa76f490b3752749cfe" srcset="http://2.gravatar.com/avatar/5aac2fed853bfaa76f490b3752749cfe?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-5aac2fed853bfaa76f490b3752749cfe-0">						<b class="fn">MIGUEL ANDRES PIÑEROS</b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-6734">
+							<time datetime="2015-04-27T13:32:45+00:00">
+								27 abril, 2015 a las 1:32 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>exelente explicación de estos métodos. gracias</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=6734#respond" onclick="return addComment.moveForm( &quot;div-comment-6734&quot;, &quot;6734&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a MIGUEL ANDRES PIÑEROS">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-7330" class="pingback odd alt thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://www.jorgeagundez.com/enlazar-directamente-a-un-punto-concreto-de-la-pagina-web-despues-de-enviar-formulario-en-symfony2/" rel="external nofollow" class="url">Enlazar directamente a un punto concreto de la página web después de enviar formulario en Symfony2 | Blog de Jorge Agundez Medina</a> 			</div>
+</li><!-- #comment-## -->
+		<li id="comment-7358" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-7358" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/6b3cf1c66bc75735676cbe9877f2b124" srcset="http://0.gravatar.com/avatar/6b3cf1c66bc75735676cbe9877f2b124?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-6b3cf1c66bc75735676cbe9877f2b124-0">						<b class="fn"><a href="http://susva.chemaclass.com/" rel="external nofollow" class="url">SusVa</a></b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-7358">
+							<time datetime="2015-08-02T12:07:40+00:00">
+								2 agosto, 2015 a las 12:07 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Ya no existe el artículo ni la página directamente “para continuar con este tema.” =&gt; <a href="http://www.htmleando.com/pregunta/cuando-utilizar-metodo-post-o-get" rel="nofollow">http://www.htmleando.com/pregunta/cuando-utilizar-metodo-post-o-get</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=7358#respond" onclick="return addComment.moveForm( &quot;div-comment-7358&quot;, &quot;7358&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a SusVa">Responder</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-7375" class="comment byuser comment-author-_micayael_ bypostauthor odd alt depth-2">
+			<article id="div-comment-7375" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/2b99c333759f4f7f2fa8b1b1e1ca4804" srcset="http://2.gravatar.com/avatar/2b99c333759f4f7f2fa8b1b1e1ca4804?s=112&amp;d=mm&amp;r=g 2x" class="avatar avatar-56 photo grav-hashed grav-hijack" height="56" width="56" id="grav-2b99c333759f4f7f2fa8b1b1e1ca4804-5">						<b class="fn"><a href="http://www.micayael.com/" rel="external nofollow" class="url">micayael</a></b> <span class="says">dice:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#comment-7375">
+							<time datetime="2015-08-03T14:14:28+00:00">
+								3 agosto, 2015 a las 2:14 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Lastimosamente ya no está arriba ese link. Es una pena. Tenía buena información.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/?replytocom=7375#respond" onclick="return addComment.moveForm( &quot;div-comment-7375&quot;, &quot;7375&quot;, &quot;respond&quot;, &quot;491&quot; )" aria-label="Responder a micayael">Responder</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+	
+			
+		<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">Comenta este artículo <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#respond" style="display:none;">Cancelar respuesta</a></small></h3>
+			<form id="commentform" class="comment-form">
+				<iframe src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/saved_resource.html" allowtransparency="false" style="width: 100%; height: 58px; border: 0px;" frameborder="0" scrolling="no" name="jetpack_remote_comment" id="jetpack_remote_comment"></iframe>
+			<input id="ak_js" name="ak_js" type="hidden" value="1460488191071"></form>
+		</div>
+
+		
+		<input type="hidden" name="comment_parent" id="comment_parent" value="">
+
+		
+</div><!-- .comments-area -->
+
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Navegación de entradas</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="http://blog.micayael.com/2011/02/08/ajax-y-jquery-ii-implementando-hijax/" rel="prev"><span class="meta-nav" aria-hidden="true">Anterior</span> <span class="screen-reader-text">Entrada anterior:</span> <span class="post-title">Ajax y jQuery 2/6 – Implementando Hijax</span></a></div><div class="nav-next"><a href="http://blog.micayael.com/2011/02/10/ajax-y-jquery-iii-utilizando-get-y-post/" rel="next"><span class="meta-nav" aria-hidden="true">Siguiente</span> <span class="screen-reader-text">Entrada siguiente:</span> <span class="post-title">Ajax y jQuery 3/6 – Utilizando GET y POST</span></a></div></div>
+	</nav>
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
+
+
+	</div><!-- .site-content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+						<a href="https://wordpress.org/">Creado con WordPress</a><!--SOFTACULOUS-->
+		</div><!-- .site-info -->
+	</footer><!-- .site-footer -->
+
+</div><!-- .site -->
+
+	<div style="display:none">
+	<div class="grofile-hash-map-5101323e57a822fb84904942e55657af">
+	</div>
+	<div class="grofile-hash-map-2b99c333759f4f7f2fa8b1b1e1ca4804">
+	</div>
+	<div class="grofile-hash-map-f006dd09301e05bee6f19db24ec179a7">
+	</div>
+	<div class="grofile-hash-map-9d955822092938b95a152339f807a174">
+	</div>
+	<div class="grofile-hash-map-7ed987b65a704032981db5d92096f1dc">
+	</div>
+	<div class="grofile-hash-map-9f6ec1db5a79e29832f28af683fb9eb6">
+	</div>
+	<div class="grofile-hash-map-97fb1bc168c1fd9dce4a46e3d1e34b98">
+	</div>
+	<div class="grofile-hash-map-4347386d19fe189ad52400d8c4020cbf">
+	</div>
+	<div class="grofile-hash-map-923c006b40b7ea1e8c93b9933c1649ff">
+	</div>
+	<div class="grofile-hash-map-4e53dfc4fae5c940bff3ae01e31a81bc">
+	</div>
+	<div class="grofile-hash-map-a9f3ae0de150817878584d5c3a65cf93">
+	</div>
+	<div class="grofile-hash-map-55d8983ab242dc397fd60a6922660178">
+	</div>
+	<div class="grofile-hash-map-614fc09f0fe4900cb90e76689b664f89">
+	</div>
+	<div class="grofile-hash-map-c719d5fcca8f14a019c0ec20694a1166">
+	</div>
+	<div class="grofile-hash-map-9e29ed9ab438d6b19be2c293f014ad5d">
+	</div>
+	<div class="grofile-hash-map-ec68fec4490d0f0dacf9a5b214ee09d0">
+	</div>
+	<div class="grofile-hash-map-07a9e0c91fecc8a7a1d3c0d23878fe0c">
+	</div>
+	<div class="grofile-hash-map-75f78f6d7bfc9aa1b30465517f0535bd">
+	</div>
+	<div class="grofile-hash-map-32112ebcfb11e629917358840636c0d8">
+	</div>
+	<div class="grofile-hash-map-85e4239ff9662bf8296083d98da17677">
+	</div>
+	<div class="grofile-hash-map-2079ba95bd82d716b4a8f8866b7f38ed">
+	</div>
+	<div class="grofile-hash-map-ac1a5ba5dad46542b0e0ef16bb324209">
+	</div>
+	<div class="grofile-hash-map-5aac2fed853bfaa76f490b3752749cfe">
+	</div>
+	<div class="grofile-hash-map-6b3cf1c66bc75735676cbe9877f2b124">
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"http:\/\/blog.micayael.com\/2011\/02\/09\/metodos-get-vs-post-del-http\/":491};
+	</script>
+		<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-linkedin' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+		});
+		</script>
+			
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-pocket' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcompocket', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-tumblr' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtumblr', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+		});
+		</script>
+		<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/form.js"></script>
+<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/shCore.js"></script>
+<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/shBrushJScript.js"></script>
+<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/shBrushXml.js"></script>
+<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/shBrushPhp.js"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://blog.micayael.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://blog.micayael.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeRDark.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['auto-links'] = false;
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.all();
+</script>
+<!-- `jetpack-subscriptions` is included in the concatenated jetpack.css -->
+<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/devicepx-jetpack.js"></script>
+<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/wpgroho.js"></script>
+<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/skip-link-focus-fix.js"></script>
+<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/comment-reply.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expande el men\u00fa inferior<\/span>","collapse":"<span class=\"screen-reader-text\">plegar men\u00fa inferior<\/span>"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/functions.js"></script>
+<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/twitter-timeline.js"></script>
+<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/wp-embed.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/sharing.js"></script>
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		if ( 0 === window.location.hash.indexOf( '#comment-' ) ) {
+			// window.location.reload() doesn't respect the Hash in IE
+			window.location.hash = window.location.hash;
+		}
+		</script>
+		<![endif]-->
+		<script type="text/javascript">
+			var comm_par_el = document.getElementById( 'comment_parent' ),
+			    comm_par = (comm_par_el && comm_par_el.value) ? comm_par_el.value : '',
+			    frame = document.getElementById( 'jetpack_remote_comment' ),
+			    tellFrameNewParent;
+
+			tellFrameNewParent = function() {
+				if ( comm_par ) {
+					frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=16279179&postid=491&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=mystery&greeting=Comenta+este+art%C3%ADculo&greeting_reply=Responder+a+%25s&color_scheme=light&lang=es-ES&jetpack_version=3.9.6&sig=4d27ef0dbb46fcc8c80e80ff18a16dc219637d0e#parent=http%3A%2F%2Fblog.micayael.com%2F2011%2F02%2F09%2Fmetodos-get-vs-post-del-http%2F" + '&replytocom=' + parseInt( comm_par, 10 ).toString();
+				} else {
+					frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=16279179&postid=491&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=mystery&greeting=Comenta+este+art%C3%ADculo&greeting_reply=Responder+a+%25s&color_scheme=light&lang=es-ES&jetpack_version=3.9.6&sig=4d27ef0dbb46fcc8c80e80ff18a16dc219637d0e#parent=http%3A%2F%2Fblog.micayael.com%2F2011%2F02%2F09%2Fmetodos-get-vs-post-del-http%2F";
+				}
+			};
+
+	
+			if ( 'undefined' !== typeof addComment ) {
+				addComment._Jetpack_moveForm = addComment.moveForm;
+
+				addComment.moveForm = function( commId, parentId, respondId, postId ) {
+					var returnValue = addComment._Jetpack_moveForm( commId, parentId, respondId, postId ), cancelClick, cancel;
+
+					if ( false === returnValue ) {
+						cancel = document.getElementById( 'cancel-comment-reply-link' );
+						cancelClick = cancel.onclick;
+						cancel.onclick = function() {
+							var cancelReturn = cancelClick.call( this );
+							if ( false !== cancelReturn ) {
+								return cancelReturn;
+							}
+
+							if ( !comm_par ) {
+								return cancelReturn;
+							}
+
+							comm_par = 0;
+
+							tellFrameNewParent();
+
+							return cancelReturn;
+						};
+					}
+
+					if ( comm_par == parentId ) {
+						return returnValue;
+					}
+
+					comm_par = parentId;
+
+					tellFrameNewParent();
+
+					return returnValue;
+				};
+			}
+
+	
+			if ( window.postMessage ) {
+				if ( document.addEventListener ) {
+					window.addEventListener( 'message', function( event ) {
+						if ( "https:\/\/jetpack.wordpress.com" !== event.origin ) {
+							return;
+						}
+
+						jQuery( frame ).height( event.data );
+					} );
+				} else if ( document.attachEvent ) {
+					window.attachEvent( 'message', function( event ) {
+						if ( "https:\/\/jetpack.wordpress.com" !== event.origin ) {
+							return;
+						}
+
+						jQuery( frame ).height( event.data );
+					} );
+				}
+			}
+		</script>
+
+	<script type="text/javascript" src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/e-201615.js" async="" defer=""></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:3.9.6',blog:'16279179',post:'491',tz:'-4',srv:'blog.micayael.com'} ]);
+	_stq.push([ 'clickTrackerInit', '16279179', '491' ]);
+</script>
+
+
+
+<div id="sharing_email" style="display: none;">
+		<form action="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/" method="post">
+			<label for="target_email">Enviar a dirección de correo electrónico</label>
+			<input type="email" name="target_email" id="target_email" value="">
+
+			
+				<label for="source_name">Su Nombre</label>
+				<input type="text" name="source_name" id="source_name" value="">
+
+				<label for="source_email">Tu dirección de correo electrónico</label>
+				<input type="email" name="source_email" id="source_email" value="">
+
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off">
+			<script> document.getElementById('jetpack-source_f_name').value = ''; </script>
+			
+			<img style="float: right; display: none" class="loading" src="http://blog.micayael.com/wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif" alt="loading" width="16" height="16">
+			<input type="submit" value="Enviar correo electrónico" class="sharing_send">
+			<a rel="nofollow" href="http://blog.micayael.com/2011/02/09/metodos-get-vs-post-del-http/#cancel" class="sharing_cancel">Cancelar</a>
+
+			<div class="errors errors-1" style="display: none;">
+				La entrada no fue enviada. ¡Comprueba tus direcciones de correo electrónico!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Error en la comprobación de email. Por favor, vuelve a intentarlo			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Lo sentimos, tu blog no puede compartir entradas por correo electrónico.			</div>
+		</form>
+	</div><img src="./muy buen art diferencia entre Métodos GET vs POST del HTTP – micayael_files/g.gif" id="wpstats"><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;"></iframe></body></html>

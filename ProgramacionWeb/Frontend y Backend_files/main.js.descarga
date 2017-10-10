@@ -1,0 +1,31 @@
+var topnav = false;
+
+$('.topnav__toggle').on('click', function (e){
+  e.preventDefault();
+  if ( topnav ) {
+    $('.topnav__ul').removeClass('topnav__open');
+    $( '.topnav__item__v2>a' ).css('color', '#fff');
+    topnav = false;
+  } else {
+    $('.topnav__ul').addClass('topnav__open');
+    $( '.topnav__item__v2 a' ).css('color', '#546672');
+    topnav = true;
+  }
+});
+
+$('.tab__item').on('click', function (e) {
+  e.preventDefault();
+  $('.tab__item, .tab__panel').removeClass('active');
+  $(this).add('#' + $(this).attr('id').replace(/\s*tab\s*/, 'panel')).addClass('active');
+  $(this).focus();
+});
+
+$('.tab__item_tag').on('click', function (e) {
+  e.preventDefault();
+  $('.tab__item_tag').removeClass('active');
+  var id = $(this).attr('id').replace(/\s*tab-\s*/, '');
+  $(this).add('.tag').addClass('deactivate');
+  $(this).add('.' + id).removeClass('deactivate');
+  $(this).addClass('active');
+  $(this).focus();
+});

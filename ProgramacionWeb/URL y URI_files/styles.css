@@ -1,0 +1,309 @@
+body{
+
+	padding: 0px;
+	margin: 0px;
+    font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+	font-size: small;
+	color: #333333;
+	background-color: #FCFBF9;
+
+}
+
+h1, h2, h3{
+color:#000000;
+font-family: 'Times New Roman', Times, serif;
+margin-top: 20px;
+		
+}
+#headcontainer{
+	width:750px;
+	border: solid 1px black;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	
+}
+
+#header{
+margin-top:0px;
+height:60px;
+background-image:url(im/headbar.jpg);
+background-position:bottom;
+
+}
+
+
+
+#head1{
+border-top:1px solid black;
+border-bottom:1px solid black;
+height:248px;
+}
+
+#head2{
+border-top:1px solid black;
+border-bottom:1px solid black;
+height:80px;
+background-image: url(im/headbar2.jpg);
+}
+
+
+#main{
+width:100%;
+float:left;
+background-color:#FFFFFF;
+}
+
+
+.quote{
+width: 410px;
+float: right;
+font-size: x-small;
+vertical-align: middle;
+color: rgb(160,160,160);
+font-family: "Times New Roman", Serif;
+padding: 15px;
+
+}
+
+.quoteauthor{
+display: block;
+font-weight: bold;
+text-align: right;
+padding-right: 20px;
+padding-top: 2px;
+}
+
+
+.leftcol{
+float:left;
+	width:178px;	
+}
+
+.leftcolbox{
+	width:177px;
+	height:350px;
+	border-right: solid 1px #B1A177;
+	border-bottom: solid 1px #B1A177;
+	border-top: solid 1px #DACA96;
+	background-color: #D1BD88;
+	color: #000000;
+	position:relative;
+}
+
+.leftcolbox_outer{
+	width:178px;
+	border-right: solid 1px black;
+	border-bottom: solid 1px black;
+	background-color: #D1BD88;
+	color: #000000;
+}
+
+.leftcolbox h1, .leftcolbox h2, .leftcolbox h3{
+margin:0px;
+padding-top:10px;
+padding-left: 5px;
+	color: white;
+}
+
+.leftcolbox a{
+padding-left:5px;
+padding-right:4px;
+padding-top:4px;
+margin-bottom:5px;
+text-decoration:none;
+position:relative;
+display:block;
+font-size:x-small;
+}
+
+.leftcolbox a:hover{
+padding-left:6px;
+padding-right:3px;
+margin-bottom:5px;
+text-decoration:underline;
+position:relative;
+display:block;
+font-size:x-small;
+}
+
+.leftcolboxim{
+border-top: solid 1px black;
+position:absolute;
+top:190px;
+color:#FFFFFF;
+text-align:right;
+line-height:25px;
+
+}
+
+.mainmenu{
+float:right;
+background-image:url(im/vertmenuback.jpg);
+width:556px;
+height:35px;
+line-height:35px;
+border-bottom:1px black solid;
+padding-left:15px;
+padding-top:3px;
+font-size: 14px;
+}
+
+.mainmenu a{
+padding:0px 7px 0px 7px;
+color:#FFFFFF;
+text-decoration:none;
+}
+.mainmenu a:hover{
+padding:1px 6px 0px 8px;
+color:#FFFFCC;
+text-decoration:underline;
+}
+
+.centercol{
+margin-left:179px;
+line-height: 1.35em;
+}
+
+.textcontent{
+padding: 10px 20px 10px 20px;
+
+}
+
+
+#homepromobox{
+margin:0px;
+height:152px;
+border-bottom:1px black solid;
+clear:right;
+}
+
+#hbp_left{
+width:240px;
+float:left;
+height:132px;
+border-right:1px black solid;
+padding: 10px 20px 10px 20px;
+
+}
+
+#hbp_right{
+width:240px;
+float:left;
+height:132px;
+padding: 10px 20px 10px 20px;
+}
+
+#hbp_left h3, #hbp_right h3 {
+font-size:20px;
+border-bottom:1px #CCCCCC solid;
+padding-bottom:5px;
+margin-bottom:5px;
+}
+
+#hbp_left a, #hbp_right a{
+font-size:smaller;
+}
+
+
+a{
+color:#664835;
+padding-right:1px;
+}
+a:hover{
+padding-left:1px;
+padding-right:0px;
+color:#422E22;
+}
+
+
+#search_control2 a{
+padding:0px;
+}
+
+
+.bullet{
+float:left;
+padding-top:3px;
+}
+
+
+.breadcrumb{
+text-align: right;
+font-size: x-small;
+}
+
+.small{
+font-size: smaller;
+}
+.center{
+text-align: center;
+}
+
+
+#footer{
+position: relative;
+clear:both;
+font-size:xx-small;
+background-color:#433C32;
+color:#FFFFFF;
+
+line-height:30px;
+height: 30px;
+padding-left: 5px;
+}
+
+
+object, embed{display:inline}
+
+
+
+
+
+
+
+
+.twocolumn{
+	width: 47%;
+	padding: 10px;
+	float: left;
+}
+img{
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+hr{
+	width: 100%;
+	height: 1px;
+	color: rgb(207,207,207);	
+	background-color: rgb(207,207,207);	
+	border: 0;
+}
+
+
+/*For form elements*/
+.felement {
+	margin-top: 10px;
+}
+
+.felement label{
+width:100px;
+text-align:right;
+display:block;
+float:left;
+padding: 4px;
+}
+
+.felement input, textarea{
+border:1px solid gray;
+background-color: #F5F5F5;
+color: #000000; 
+padding: 4px;
+}
+
+.felement span{ /*For errors*/
+color:red;
+font-weight:bold;
+}

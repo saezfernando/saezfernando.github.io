@@ -1,0 +1,15 @@
+var OX_ae551228 = '';
+OX_ae551228 += "<"+"SCRIPT LANGUAGE=\"JavaScript1.1\">\n";
+OX_ae551228 += "sas_tmstp=Math.round(Math.random()*10000000000);sas_masterflag=1;\n";
+OX_ae551228 += "function SmartAdServer(sas_pageid,sas_formatid,sas_target) {\n";
+OX_ae551228 += "if (sas_masterflag==1) {sas_masterflag=0;sas_master=\'M\';} else {sas_master=\'S\';};\n";
+OX_ae551228 += "document.write(\'<"+"SCR\'+\'IPT SRC=\"http://www2.smartadserver.com/call/pubj/\' + sas_pageid + \'/\' + sas_formatid + \'/\'+sas_master + \'/\' + sas_tmstp + \'/\' + escape(sas_target) + \'?\"><"+"/SCR\'+\'IPT>\');\n";
+OX_ae551228 += "}\n";
+OX_ae551228 += "<"+"/SCRIPT>\n";
+OX_ae551228 += "<"+"SCRIPT LANGUAGE=\"JavaScript1.1\">\n";
+OX_ae551228 += "sas_pageid=\'8509/65926\';		// Page : addoor/maestrosdelweb/maestrosdelweb/home\n";
+OX_ae551228 += "sas_formatid=1881;			// Format : 300x250 300x250\n";
+OX_ae551228 += "sas_target=\'\';			// Targeting\n";
+OX_ae551228 += "SmartAdServer(sas_pageid,sas_formatid,sas_target);\n";
+OX_ae551228 += "<"+"/SCRIPT><"+"div id=\'beacon_0f33f1daf4\' style=\'position: absolute; left: 0px; top: 0px; visibility: hidden;\'><"+"img src=\'http://d1.openx.org/lg.php?bannerid=94695&amp;campaignid=22611&amp;zoneid=47527&amp;loc=1&amp;referer=http%3A%2F%2Fwww.maestrosdelweb.com%2Feditorial%2Fdom%2F&amp;cb=0f33f1daf4\' width=\'0\' height=\'0\' alt=\'\' style=\'width: 0px; height: 0px;\' /><"+"/div>\n";
+document.write(OX_ae551228);

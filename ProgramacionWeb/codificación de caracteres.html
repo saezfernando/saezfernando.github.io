@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0070)http://www.w3.org/International/questions/qa-choosing-encodings.es.php -->
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>Selección &amp; aplicación de codificación de caracteres</title>
+		<meta name="keywords" content="i18n internacionalización internacionalización localización localización traducción codificación de caracteres unicode utf-8">
+		<meta name="description" content="¿Qué tipo de codificación de caracteres debo usar y cómo se debe aplicar al contenido que estoy creando?">
+<link rel="top" title="Página de inicio de internacionalización" type="text/html" hreflang="en" href="http://www.w3.org/International/">
+<link rel="up" title="Más recursos relacionados con la internacionalización." type="text/html" hreflang="en" href="http://www.w3.org/International/questions/">
+<link rel="copyright" href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#copyright">
+<script type="text/javascript" src="./w3c Selección & aplicación de codificación de caracteres_files/articletoc.js">//</script><link title="Deutsch" type="text/html" rel="alternate" hreflang="de" href="http://www.w3.org/International/questions/qa-choosing-encodings.de.php" lang="de" xml:lang="de"><link title="English" type="text/html" rel="alternate" hreflang="en" href="http://www.w3.org/International/questions/qa-choosing-encodings.en.php" lang="en" xml:lang="en"><link title="Português-BR" type="text/html" rel="alternate" hreflang="pt-br" href="http://www.w3.org/International/questions/qa-choosing-encodings.pt-br.php" lang="pt-br" xml:lang="pt-br"><link title="Svenska" type="text/html" rel="alternate" hreflang="sv" href="http://www.w3.org/International/questions/qa-choosing-encodings.sv.php" lang="sv" xml:lang="sv">
+<link href="./w3c Selección & aplicación de codificación de caracteres_files/css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="./w3c Selección & aplicación de codificación de caracteres_files/article-standards-v2.css" type="text/css">
+</head>
+
+	<body>
+		<span id="version-info" style="display: none;"><!-- #BeginDate format:IS1m -->2012-08-17  20:06<!-- #EndDate --></span> <div id="wai-start"><p>La tecla de acceso 'n' lleva a la navegación de la página. <a href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#contentstart">Ir al inicio del contenido.</a></p></div>
+<div id="site-navigation"> 
+		<a href="http://www.w3.org/International/"><img id="picture" alt="Mapa mundial" title="Mapa mundial" src="./w3c Selección & aplicación de codificación de caracteres_files/world.gif" width="150" height="61"></a>
+		<p class="noprint"><span title="Alemán"><a href="http://www.w3.org/International/questions/qa-choosing-encodings.de.php?changelang=de" lang="de" xml:lang="de">Deutsch</a></span>&nbsp; <span title="Inglés"><a href="http://www.w3.org/International/questions/qa-choosing-encodings.en.php?changelang=en" lang="en" xml:lang="en">English</a></span>&nbsp; <span title="Portugués brasileño"><a href="http://www.w3.org/International/questions/qa-choosing-encodings.pt-br.php?changelang=pt-br" lang="pt-br" xml:lang="pt-br">Português-BR</a></span>&nbsp; <span title="Sueco"><a href="http://www.w3.org/International/questions/qa-choosing-encodings.sv.php?changelang=sv" lang="sv" xml:lang="sv">Svenska</a></span>&nbsp; </p>
+		</div>
+<div id="disclaimer"><p>Este documento es una traducción. En caso de discrepancias o errores, la única versión normativa es el 
+<a href="http://www.w3.org/International/questions/qa-choosing-encodings.en">último original en inglés</a>.
+Los <a href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#copyright">derechos de autor originales</a> corresponden al W3C, como puede verse al final de la página.</p>
+<p>Traductor: <a rel="nofollow" href="http://www.trustedtranslations.com/spanish-translation.asp" title="Spanish Translation">Spanish Translation</a> Team, Trusted Translations, Inc.</p>
+</div>
+<div class="noprint" id="search"><form method="get" action="http://www.w3.org/International/site-search.php" enctype="application/x-www-form-urlencoded" style="margin: 0;">
+<div id="searchSite"><input name="q" type="text" value="Buscar en el sitio de internacionalización " onfocus="this.value=&#39;&#39;" id="searchField" accesskey="E" maxlength="255"></div>
+</form></div>
+<div class="sidebar"> 
+<p id="breadcrumbs"><a href="http://www.w3.org/International/">Inicio </a> &gt; <a href="http://www.w3.org/International/resources">Recursos</a> &gt; <a href="http://www.w3.org/International/articlelist#characters">Artículos</a></p>
+	<div class="noprint" id="toc">
+		<h2><a name="internal-links" id="internal-links" href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#internal-links">En esta página&nbsp; </a></h2>
+		<div id="toclocation"> <ol><li class="toc1"><a href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#question">Pregunta</a></li><li class="toc1"><a href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#background">Información preliminar</a></li><li class="toc1"><a href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#answer">Respuesta</a><ol><li class="toc2"><a href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#useunicode">Siempre que sea posible, use UTF-8</a></li><li class="toc2"><a href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#avoid">Codificaciones que se deben evitar</a></li><li class="toc2"><a href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#applyingencoding">Aplicación de una codificación al contenido</a></li><li class="toc2"><a href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#unrecognized">¿Por qué el navegador no reconoce la codificación?</a></li></ol></li><li class="toc1"><a href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#endlinks">Lecturas complementarias</a></li></ol></div>
+		</div>
+	<div class="noprint" id="relatedlinks">
+		
+		</div>
+	</div>
+<div id="boilerplate"><div id="siteicons"><a href="http://www.w3.org/" title="Ir a la página principal de W3C"><img border="0" src="./w3c Selección & aplicación de codificación de caracteres_files/w3c_home.gif" alt="s_gotoW3cHome" width="77" height="48" align="top"></a><a href="http://www.w3.org/International/" title="Ir a la página principal de actividades de internacionalización" id="i18n-name">
+	Internacionalización</a></div>
+<div id="sitelinks" class="noprint"><a href="http://www.w3.org/International/" title="Página principal de actividades de internacionalización.">Inicio</a>&nbsp; 
+<a href="http://www.w3.org/International/resources" title="Recursos informativos sobre el sitio de internacionalización.">Recursos</a>&nbsp;
+<a href="http://www.w3.org/International/technique-index" title="Índice de técnicas de internacionalización por tareas.">Técnicas</a>&nbsp;
+<a href="http://www.w3.org/International/resource-index" title="Temario de la información de este sitio.">Temas</a>&nbsp; 
+<a href="http://www.w3.org/International/log/description" title="Información sobre filtros de noticias y alimentadores RSS de internacionalización de W3C.">Noticias</a>&nbsp;
+<a href="http://www.w3.org/International/about#scope" title="Grupos que constituyen las actividades de internacionalización.">Grupos</a>&nbsp; 
+<a href="http://www.w3.org/International/about" title="Acerca de las actividades de internacionalización.">Acerca de</a>&nbsp; 
+&nbsp; </div><div id="line">&nbsp;</div></div>
+		<h1>Selección &amp; aplicación de codificación de caracteres</h1>
+
+		<div class="section"><a id="contentstart" name="contentstart"></a> 
+			<div id="audience"> 
+				<p><span class="leadin">Audiencia de destino:</span> codificadores de XHTML/HTML (que usen editores o lenguaje de script), desarrolladores de sistemas de escritura (PHP, JSP, etc.), codificadores de CSS, gerentes de proyectos web, y todo aquel que se inicie en el tema y quiera conocer los principios básicos del proceso de selección y aplicación de codificación de caracteres.</p>
+			<p class="outofdate"><strong>Nota:</strong> Desde la traducción de este documento se han producido modificaciones en el <a href="http://www.w3.org/International/questions/qa-choosing-encodings.en.php">original en Inglés</a>. <span class="searchkey"><a href="http://www.w3.org/blog/International?s=qa-choosing-encodings&sentence=sentence&blog=1&submit=Search">Consulte el registro de cambios.</a></span> </p>			</div>
+
+
+			<h2><a id="question" name="question" href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#question">Pregunta</a></h2>
+			<div class="section2"> 
+				<p class="question">¿Qué tipo de codificación de caracteres debo usar y cómo se aplica al contenido que estoy creando?</p>
+			</div>
+		</div>
+		
+	<!-- remove the following line if there is no background section -->
+		<p class="background-link noprint"><a href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#answer">[Pasar directamente a la respuesta]</a></p>
+	<div class="section"> 
+
+			<h2><a id="background" name="background" href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#background">Información preliminar</a></h2>
+		<!-- the text in the following sections illustrates some available features of the template -->
+		<p>El contenido está compuesto por una secuencia de caracteres. Los caracteres representan letras del alfabeto, signos de puntuación, etc. Sin embargo, el contenido se almacena en la computadora en forma de secuencias de bytes, que son valores numéricos. En algunos casos, se utiliza más de un byte para representar un solo carácter. Al igual que los códigos que se utilizan en el mundo del espionaje, la forma de convertir dicha secuencia de bytes en caracteres depende de la clave empleada para codificar el texto. En este contexto, dicha <i class="quote-term">clave</i> se denomina <b class="newterm">codificación de caracteres</b>. </p>
+	<p>Existen varios tipos de codificaciones de caracteres para elegir. En este artículo se incluyen algunas recomendaciones acerca de qué codificación de caracteres utilizar para cada tipo de contenido y cómo aplicarla, es decir, cómo producir efectivamente un documento en el que se emplee dicha codificación.</p>
+			<p>Para comprender en mayor profundidad el concepto de caracteres y codificación de caracteres, consulte el artículo <a href="http://www.w3.org/International/questions/qa-what-is-encoding"><cite>Codificación de caracteres para principiantes</cite></a>.</p>
+		</div>
+	<div class="section"> 
+
+		<h2><a id="answer" name="answer" href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#answer">Respuesta</a></h2>
+		<div class="section2">
+				<h3><a id="useunicode" name="useunicode" href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#useunicode">Siempre que sea posible, use UTF-8</a></h3>
+				<div class="sidenoteGroup">
+					<p>Una página HTML admite solamente una forma de codificación. No es posible codificar diferentes partes de un documento con distintas formas de codificación.</p>
+					<p>Una codificación Unicode, como UTF-8, soporta varios idiomas e incluso combinaciones de dichos idiomas en páginas y formularios. Su aplicación también permite eliminar la necesidad de lógica del lado del servidor para establecer individualmente la codificación de caracteres de cada página que se ejecuta o de cada formulario que se ingresa. Esto reduce significativamente la complejidad del manejo de sitios o aplicaciones plurilingües.</p>
+					<p>La codificación Unicode también permite combinar muchos más idiomas en una sola página que cualquier otra alternativa de codificación.</p>
+					<p>En la actualidad, prácticamente no existen barreras en el uso de la codificación Unicode. De hecho, en agosto de 2010, Google informó que de su muestra compuesta por miles de millones de páginas, más del 50% de la Web utilizaba actualmente la codificación UTF-8. Si consideramos, además, las páginas web codificadas exclusivamente en ASCII (ya que ASCII es un subgrupo de UTF-8), la cifra asciende aproximadamente al 70%.</p>
+					<p>Existen tres codificaciones de caracteres Unicode diferentes: UTF-8, UTF-16 y UTF-32 (consultar <a href="http://www.w3.org/International/articles/definitions-characters/#charsets">Set de caracteres, set de caracteres codificados y codificaciones</a>). De estas tres variantes, UTF-8 es la recomendada para utilizar con contenidos web.  De hecho, la versión preliminar de la especificación HTML5 actualmente establece: "Se alienta a los creadores de contenido a utilizar UTF-8. Los mecanismos de verificación deben desaconsejar el uso de métodos de codificación antiguos. Las herramientas de autoría deben emplear UTF-8 de manera predeterminada para la generación de documentos nuevos."</p>
+					<p>Se debe tener en cuenta, particularmente, que todos los caracteres ASCII en UTF-8 utilizan exactamente los mismos bytes que en la codificación ASCII, lo que generalmente favorece la interoperatividad y retrocompatibilidad. </p>
+					<div class="sidenote">
+						<p>El soporte para determinada codificación, especialmente un tipo de codificación como Unicode, no necesariamente implica que un agente de usuario pueda visualizar el texto de manera correcta. Muchos sistemas de escritura, como el árabe o el índico, requieren reglas adicionales para transformar la secuencia de caracteres en memoria en una secuencia adecuada de glifos de fuentes que se pueda visualizar.</p>
+					</div>
+				</div>
+				<!--p>Note that although there are other multi-script approaches (such as ISO-2022), Unicode generally provides the best combination of
+					extensibility and script support.</p-->
+				<p><span class="leadin">Si no usa Unicode. </span> Seleccione una codificación que permita maximizar la posibilidad de representar caracteres en forma directa y minimizar la necesidad de utilizar escapes de caracteres.</p>
+				<p>Cuando deba elegir específicamente un idioma, sistema de escritura o grupo de idiomas, seleccione la codificación que tenga el nivel de soporte más amplio y verifique que los agentes de usuario puedan soportar de manera adecuada el método de codificación elegido.</p>
+				<p>Opte por una solución que minimice la complejidad cuando trabaje con múltiples idiomas y sistemas de escritura.</p>
+		</div>
+		<div class="section2">
+			<h3><a id="avoid" name="avoid" href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#avoid">Codificaciones que se deben evitar</a></h3>
+			<!--p>Note that although there are other multi-script approaches (such as ISO-2022), Unicode generally provides the best combination of
+					extensibility and script support.</p-->
+			<p> La especificación HTML5 <a href="http://dev.w3.org/html5/spec/semantics.html#charset">señala</a> una serie de codificaciones que se deben evitar.</p>
+			<p> Los documentos no deben usar JIS_C6226-1983, JIS_X0212-1990, HZ-GB-2312, JOHAB (página de códigos 1361 de Windows), codificaciones basadas en ISO-2022 o en EBCDIC. Esto se debe a que los elementos mencionados permiten que los puntos de codificación ASCII representen caracteres distintos de ASCII, lo que genera un riesgo en términos de seguridad.</p>
+			<p>Los documentos <em>no deben</em> utilizar codificaciones CESU-8, UTF-7, BOCU-1, ni SCSU, ya que no fueron concebidas para contenido web.</p>
+			<p>La especificación mencionada también desaconseja el uso de UTF-32.</p>
+		</div>
+		<div class="section2">
+		<h3><a id="applyingencoding" name="applyingencoding" href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#applyingencoding">Aplicación de una codificación al contenido</a></h3>
+				<p>Como creador de contenido, debe verificar que el editor o sistema de escritura guarde el texto con la codificación seleccionada. </p>
+				<p>Los desarrolladores también deben asegurarse de que las diversas partes del sistema puedan comunicarse entre sí, comprender las codificaciones de caracteres que se utilizan y admitir todas las codificaciones y caracteres necesarios. </p>
+				<p>Es importante tener presente que, en general, el simple hecho de declarar una codificación dentro de un documento o en el servidor con uno de los métodos que se describen a continuación, no modificará los bytes. Es necesario <strong>guardar</strong> el texto con dicha codificación para poder aplicarla al contenido. (La declaración simplemente ayuda al navegador a interpretar las secuencias de bytes en las que se almacena el texto).</p>
+		<p>En el artículo <a href="http://www.w3.org/International/questions/qa-setting-encoding-in-applications"><cite>Cómo definir la codificación en aplicaciones de autoría web</cite></a> se incluyen recomendaciones sobre cómo guardar una página con determinada codificación en distintos entornos de edición.</p>
+				<p>Siempre que sea posible, lo más recomendable es definir en el editor una codificación como UTF-8 como configuración predeterminada para todo documento nuevo. La siguiente imagen muestra cómo definir esta alternativa dentro de las preferencias de un editor como DreamWeaver. </p>
+				<p><img src="./w3c Selección & aplicación de codificación de caracteres_files/dwprefs-encoding.png" alt="Entre las opciones de preferencias para documentos nuevos, DreamWeaver permite especificar una codificación predeterminada."></p>
+				<p>Es posible que también deba verificar que el servidor esté ejecutando los documentos con las declaraciones HTTP correctas; de lo contrario, se anulará la información del documento entrante (ver la siguiente sección). </p>
+		</div>
+			<div class="section2">
+				<h3><a id="unrecognized" name="unrecognized" href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#unrecognized">¿Por qué el navegador no reconoce la codificación?</a></h3>
+				<p>Supongamos, por ejemplo, que guardó los datos como UTF-8. Aunque haya guardado la información con la codificación correcta y haya incluido en la página la declaración correspondiente para indicar que la codificación utilizada era UTF-8, es posible que el servidor esté ejecutando la página con un encabezado HTTP que señale que se trata de otra cosa. </p>
+				<p>Cualquier declaración en el encabezado HTTP anulará la información incluida en la página, lo que generará problemas con el contenido.</p>
+				<p>Es posible que no tenga control sobre las declaraciones incluidas en el encabezado HTTP y que deba contactar al administrador del servidor para solicitar asistencia. Por otro lado, en algunos casos puede resolver usted mismo algunas cuestiones en el servidor si cuenta con acceso limitado a los archivos de configuración del servidor o si genera páginas mediante lenguajes de script. Por ejemplo, consulte <a href="http://www.w3.org/International/O-HTTP-charset"><cite>Configuración del parámetro charset de HTTP</cite></a> para más información acerca de cómo modificar los datos de codificación, ya sea en forma local para un grupo de archivos en un servidor o para contenido generado a partir de un lenguaje de script.</p>
+				<p>Generalmente, antes de hacerlo, debe verificar si esto es efectivamente la causa del problema o no. Puede usar la herramienta <a href="http://qa-dev.w3.org/i18n-checker/">Verificador de codificación de W3C</a> para detectar qué codificación de caracteres se encuentra especificada en el encabezado HTTP, si la hubiera. Además, el artículo <a href="http://www.w3.org/International/questions/qa-headers-charset"><cite>Verificación de encabezados HTTP</cite></a> indica otras herramientas para verificar la información de codificación que procesa el servidor.</p>
+			</div>
+		</div>
+	<div class="section" id="survey">
+<div class="container">
+		<div class="topright">
+			<p>Dinos qué piensas (en Inglés).</p>
+			<form action="http://www.w3.org/International/2007/06/surveyform-130422.php" method="post">
+			<p><label class="interaction"><input src="./w3c Selección & aplicación de codificación de caracteres_files/mailus.gif" alt="" type="image"> Envíanos un comentario</label></p>
+			<input type="hidden" name="docname" value="/International/questions/qa-choosing-encodings.es.php">
+			<input type="hidden" name="referer" value="none">
+			<input type="hidden" name="lang" value="es"> 
+			</form>
+			</div>
+			<div class="bottomleft">
+				<div class="bottomright">
+					<p>Suscripción a feed RSS.</p>
+					<p><a class="interaction" href="http://www.w3.org/blog/xmlsrv/rdf.php?blog=11&cat=20" title="Te notifica la primera vez que se publica un nuevo recurso."><img src="./w3c Selección & aplicación de codificación de caracteres_files/rss.gif" alt=""> Nuevos recursos</a></p>
+					<p><a class="interaction" href="http://www.w3.org/blog/xmlsrv/rdf.php?blog=11" title="Todos los elementos mostrados en la página de inicio."><img src="./w3c Selección & aplicación de codificación de caracteres_files/rss.gif" alt=""> Noticias de la página de inicio</a></p>
+					<p>Twitter (Noticias de la página de inicio)</p>
+					<p><a class="interaction" href="http://www.twitter.com/webi18n" title="Twitter: @webi18n"><img src="./w3c Selección & aplicación de codificación de caracteres_files/twitter-bird.png" style="vertical-align: middle;" alt=""> ‎@webi18n</a></p>
+			  		</div>
+				</div>
+			</div>
+	</div>	<div class="section noprint">
+		<h2><a id="endlinks" name="endlinks" href="http://www.w3.org/International/questions/qa-choosing-encodings.es.php#endlinks">Lecturas complementarias</a></h2>
+		<ul id="full-links">
+			<li>
+				<p>Primeros pasos,    <a href="http://www.w3.org/International/getting-started/characters"><cite>Introducción a las codificaciones y a los sets de caracteres</cite></a> <span class="uri">http://www.w3.org/International/getting-started/characters</span></p>
+			</li>
+			<li>
+				<p>Tutorial, <a href="http://www.w3.org/International/tutorials/tutorial-char-enc/"><cite>Cómo procesar codificaciones de caracteres en HTML y CSS</cite></a> <span class="uri">http://www.w3.org/International/tutorials/tutorial-char-enc/</span></p>
+			</li>
+			<li>
+				<p>Enlaces vinculados, <cite>Autoría de HTML &amp; CSS</cite> – <a href="http://www.w3.org/International/techniques/authoring-html#charset">Caracteres</a> <span class="uri">http://www.w3.org/International/techniques/authoring-html#charset</span> – <a href="http://www.w3.org/International/techniques/authoring-html#choosing">Cómo seleccionar una codificación de caracteres</a> <span class="uri">/International/techniques/authoring-html#choosing</span> – <a href="http://www.w3.org/International/techniques/authoring-html#changing">Cómo modificar la codificación de un documento</a> <span class="uri">/International/techniques/authoring-html#changing</span> – <a href="http://www.w3.org/International/techniques/authoring-html#checkenc">Verificación de la codificación de un documento</a> <span class="uri">/International/techniques/authoring-html#checkenc</span></p>
+			</li>
+		</ul>
+	</div>
+	<div id="author"> 
+	<p>De: Richard Ishida, W3C.   Traductor: <a rel="nofollow" href="http://www.trustedtranslations.com/spanish-translation.asp" title="Spanish Translation">Spanish Translation</a> Team, Trusted Translations, Inc..</p>
+	</div>
+<div class="smallprint">
+	<div id="logos" class="noprint"><a href="http://validator.w3.org/check/referer"><img src="./w3c Selección & aplicación de codificación de caracteres_files/valid-xhtml10" alt="XHTML 1.0 válido" height="31" width="88" border="0" title="XHTML 1.0 válido"></a><br><a href="http://jigsaw.w3.org/css-validator/"><img src="./w3c Selección & aplicación de codificación de caracteres_files/valid-css" alt="CSS válido" height="31" width="88" border="0" title="CSS válido"></a><br><a href="http://www.unicode.org/"><img border="0" src="./w3c Selección & aplicación de codificación de caracteres_files/UniEncTrans-small.gif" alt="Codificado en UTF-8" width="84" height="33" title="Codificado en UTF-8"></a></div>
+	<p>Traducido del inglés con fecha 2010-08-12. Traducción modificada por última vez el 2010-10-12  16:48 GMT.</p>
+	<p>Para ver el historial de cambios del documento, busque
+<span class="searchkey"><a href="http://www.w3.org/blog/International?s=qa-choosing-encodings&sentence=sentence&blog=1&submit=Search">qa-choosing-encodings</a></span>
+en la bitácora de internacionalización.</p>
+	<p class="copyright" lang="en" xml:lang="en"><a rel="Copyright" href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright" name="copyright" id="copyright">Copyright</a> © 2010 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.eu/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, <a rel="Copyright" href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> and <a rel="Copyright" href="http://www.w3.org/Consortium/Legal/copyright-software">software licensing</a> rules apply. Your interactions with this site are in accordance with our <a href="http://www.w3.org/Consortium/Legal/privacy-statement#Public">public</a> and <a href="http://www.w3.org/Consortium/Legal/privacy-statement#Members">Member</a> privacy statements.</p>
+	</div>
+<script type="text/javascript">if (document.getElementById('toclocation')) { createtoc(); }</script>
+	
+
+</body></html>

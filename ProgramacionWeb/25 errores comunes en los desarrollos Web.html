@@ -1,0 +1,2998 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="es-ES"><head profile="http://gmpg.org/xfn/11">
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Minid.net » Blog Archive » 25 errores comunes en los desarrollos Web</title>
+
+
+<meta name="verify-v1" content="eJHQ+RTiOLgc1kUZp/eDMn2xZ3RL8zSrzFBh38k+tlg=">
+<link rel="stylesheet" href="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="Minid.net RSS Feed" href="http://www.minid.net/feed/">
+<link rel="pingback" href="http://www.minid.net/xmlrpc.php">
+<link rel="openid.server" href="http://openid.es/index.php/serve">
+<link rel="openid.delegate" href="http://minid.openid.es/">
+
+
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.minid.net/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.minid.net/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 2.7.1"></head><body>
+	
+<div id="super">
+	
+	<div class="header-links">
+		<p><a href="http://www.minid.net/"><strong>Inicio</strong></a>  <a href="http://www.minid.net/autor">Autor</a> <a href="http://www.minid.net/contactar">Contacto</a></p>
+	</div>
+	
+<div id="header">
+		<h1><a href="http://www.minid.net/">Minid.net</a></h1>
+		<p>Weblog de tecnología, diseño y temas en general</p>
+		<div class="clear"></div>
+</div>
+
+<hr>
+
+	<div id="content" class="column">
+
+	
+		<div class="post" id="post-1190">
+			<h1>25 errores comunes en los desarrollos Web</h1>
+
+			<div class="entry">
+				<p>Conoce
+25 errores típicos en desarrollos Web, desde problemas en el
+entendimiento de lo que es el HTML hasta típicos errores de
+arquitectura, pensamiento de sistemas.</p>
+<p>Un popurrí de problemas, que todavía en el año 2003 teniendo tanta
+tecnología apta de buena calidad para desarrollar cosas sin problemas y
+en el menor tiempo, se sigan viendo ejemplos mediocres.</p>
+<p>Como este es un artículo largo, recomiendo que lo imprimas, puedes
+hacerlo libremente sin apretar en ningún enlace raro que contenga
+Javascript, PHP, o cosas que interfieran, basta con buscar la opción de
+imprimir en tu navegador y esperar a que la impresora termine su
+trabajo.</p>
+<ol>
+<li><a href="#problema1">Error 1: Peso en la página</a></li>
+<li><a href="#problema2">Error 2: DTD inexistentes</a></li>
+<li><a href="#problema3">Error 3: Páginas sin el idioma especificado</a></li>
+<li><a href="#problema4">Error 4: Títulos de página molestos y enigmáticos</a></li>
+<li><a href="#problema5">Error 5: Sin imágenes navegar una página es imposible</a></li>
+<li><a href="#problema6">Error 6: URL matemáticas, casi imposibles de entender y recordar</a></li>
+<li><a href="#problema7">Error 7: Código prehistórico reemplazable con CSS</a></li>
+<li><a href="#problema8">Error 8: Olvidarse de la semántica, los documentos son una pila de información sin clasificar…</a></li>
+<li><a href="#problema9">Error 9: Sin estilos la página no se entiende, ni tiene significado…</a></li>
+<li><a href="#problema10">Error 10: Documentos Web que son enemigos de la impresora</a></li>
+<li><a href="#problema11">Error 11: Ventanas emergentes, inútiles, sin sentido y no muy accesibles.</a></li>
+<li><a href="#problema12">Error 12: Instale Flash, o de lo contrario no podrá navegar el sitio Web</a></li>
+<li><a href="#problema13">Error 13: Javascript supera todas las tecnologías de lenguajes, HTML, CSS, PHP, Javascript es la hostia…</a></li>
+<li><a href="#problema14">Error 14: HTML no es un lenguaje de modelaje de páginas</a></li>
+<li><a href="#problema15">Error 15: HTML comentado, es igual a más peso en la página</a></li>
+<li><a href="#problema16">Error 16: Utilizar hojas de estilo en línea o embebidas en los documentos</a></li>
+<li><a href="#problema17">Error 17: Javascript no modularizado</a></li>
+<li><a href="#problemas18">Error 18: Elementos Meta inservibles…</a></li>
+<li><a href="#problema19">Error 19: Mapa Web del sitio</a></li>
+<li><a href="#problema20">Error 20: Buscador ciego… buscador inútil</a></li>
+<li><a href="#problema21">Error 21: La Web no es la televisión</a></li>
+<li><a href="#problema22">Error 22: Frames no, <em lang="ca">si us plau</em>.</a></li>
+<li><a href="#problema23">Error 23: Formularios inaccesibles</a></li>
+<li><a href="#problema24">Error 24: Tipografías mal aplicadas</a></li>
+<li><a href="#problema25">Error 25: Archivos multimedia, PDF, etc.</a></li>
+</ol>
+<h3 id="problema1">Error 1: Peso en la página</h3>
+<p>Por mucho <acronym title="Asymmetric Digital Subscriber Line" lang="en">ADSL</acronym>
+que podamos tener instalado, simplemente tener una página de 150 KB a
+200 KB es un crimen. Por ende el peso ideal tiene que rondar los 50 KB
+a 80 KB como mucho, aunque mucha gente posee <acronym title="Asymmetric Digital Subscriber Line" lang="en">ADSL</acronym>,
+mucha gente también está bajando archivos, escuchando música en radios
+online, y la cuota de velocidad de descarga empieza a descender.</p>
+<p>Incluso en entornos de trabajo, donde hay una red de más de 5
+máquinas utilizando 1 línea de ADSL podemos notar un grave descenso de
+la velocidad, así que el factor “ADSL” afecta y mucho.<br>
+Las páginas deben pesar lo mínimo posible, esto podemos solucionarlo
+con código estándar, bien programado, sin necesidad de eliminar
+atributos importantes como el <code>alt="…"</code> o el <code>title="…"</code>, ni quitar demasiadas imágenes.</p>
+<p>Un ejemplo de sitios muy pesados:</p>
+<ul>
+<li>Banco Santander: 140 KB</li>
+<li>Correos de España: 110 KB</li>
+<li>ELPAIS.es 204 KB</li>
+<li>BBVA.es 132 KB</li>
+<li>Administracion.es 214 KB</li>
+<li>ya.com 135 KB</li>
+</ul>
+<p>Esto por supuesto es una medida hecha en la página de inicio de cada
+URL, pero con el paso de las revisiones, vemos que se repiten muchas
+cosas como porciones de código, y más errores los cuales hacen que el
+peso de la página crezca a lo largo de toda una trayectoria de estancia.</p>
+<p>Esto significa que cada usuario en vez de descargar el mínimo
+posible de bytes, cada vez que ingresa a una página descarga código
+extra.</p>
+<p>En un caso ideal, puedo recomendar que en la página de inicio se
+carguen los archivos más esenciales, como las hojas de estilos (luego
+hablaremos de ella) y algunas imágenes vitales, de modo que el usuario
+pueda descargar por ejemplo 700 Kb de información visitando 20 páginas
+y no 1,3 MB como en algunos exámenes que hemos verificado.</p>
+<p>Esto sin dudas optimiza la cantidad de ancho de banda que la empresa
+que mantiene el sitio se ahorra, sino que cada usuario se descarga los
+elementos necesarios.</p>
+<p>Menor peso, mejor estancia.</p>
+<h2 id="problema2">Error 2: DTD inexistentes</h2>
+<p>Es común ver que todos los documentos de un sitio no tienen una DTD
+que los identifique positivamente como un documento HTML, de hecho,
+cada navegador al no encontrarse con un DTD se limita a cualquier cosa.</p>
+<p>Esto en el ambiente de desarrolladores, se conoce como <dfn title="Modo de compatibilidad para los estándares" lang="en">Quirck Mode</dfn>, y cuando un navegador entra en <dfn title="Modo de compatibilidad para los estándares" lang="en">Quirck Mode</dfn>,
+utiliza en su totalidad todo su motor de armado de páginas, incluye un
+soporte de visualización de navegadores, viejos, nuevos.</p>
+<p>Explicado de una forma más cotidiana, imaginen que un amigo te
+regala algo, y tu amigo dice que te traerá algo de sorpresa y que
+tienes que prepararte, ahora… ¿Qué haces? ¿Sacas todos los muebles de
+la casa? ¿Limpiarás la cochera?</p>
+<p>En realidad no sabes lo que te espera, puede que te regalen un
+tremendo coche, o algo como una torta de cumpleaños de 20 centímetros
+de diámetro, esto hace <strong>que tengas incertidumbre</strong> y
+termines preparando toda tu casa para algo que no sabes que va a ser…
+pero si tu amigo te hubiera dicho que te traía un cuadro de 2 x 2
+metros, hubiéras preparado el mejor lugar y la pared justa para
+colgarlo sin tener que remover en toda la casa.</p>
+<p>Los navegadores actúan de forma similar, cuando reciben un documento
+que no posee una DTD que lo identifique el navegador automáticamente se
+hace <strong>un lío utilizando su motor en su totalidad</strong>,
+técnicamente esto tiene muchas desventajas, por ejemplo la utilización
+de todo el motor del navegador es como si tuviéramos que utilizar el
+100% de nuestra capacidad cerebral para comprender una simple oración,
+cuando deberíamos utilizar solamente nuestros conocimientos de lengua
+castellana.</p>
+<p>Al utilizar un DTD uno no sólo se define en qué tipo de documento
+desarrolla, ayuda a otros desarrolladores a saber qué tipo de código
+deben escribir, sino que también ayudan al navegador a utilizar sólo
+una porción de su motor, por ende el beneficio es mayor, y el
+rendimiento del navegador es ultra óptimo.</p>
+<p>Una de las cosas que sorprende, es que por ejemplo el Banco
+Santander Central Hispano no tiene DTD, es algo tan simple como poner <strong>121 bytes de texto</strong> al principio de cada documento:</p>
+<blockquote><p><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"<br>“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”&gt;</code></p>
+</blockquote>
+<p>Pues tanto como el Santander Central Hispano no lo hace, tampoco lo
+hace BBVA, ni tampoco lo hace el sitio de la Administración de España
+de forma correcta, por que utiliza la versión sin referencia al DTD de
+la W3C, esto hace entrar en modo de compatibilidad (lo que antes
+mencionamos como “quirck mode”).</p>
+<blockquote><p><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;</code></p>
+</blockquote>
+<p>Por ende la solución es ponerle a todos los documentos los DTD
+correspondientes, primero fijarse sobre qué versión de HTML o XHTML se
+está trabajando, de esta forma, evitaremos poner un DOCTYPE equivocado,
+si programamos en HTML 4.01 utilizar el DOCTYPE de HTML 4.01 en la
+versión que más nos plazca.</p>
+<h2 id="problema3">Error 3: Páginas sin el idioma especificado</h2>
+<p><em lang="ca">Benvinguts!</em>. Seguro que no identifican a simple vista que significa esta palabra, <strong>pues imaginen los parentescos entre palabras</strong>
+que puede haber en una página, y el significado distinto que te puedes
+encontrar, uno puede buscar la palabra “home” y recibir una página en
+inglés con la palabra “home” que significa <em>casa</em>, pero… si “home” significa “hombre” en catalán, pero… ¿Qué hago mal?</p>
+<p><strong>Define idiomas en el comienzo de cada documento</strong>, es fácil, todos los elementos de HTML heredan el idioma, solo basta ponerlo en elemento <code>&lt;html&gt;</code> y todos los tags dentro de <code>&lt;html&gt;…&lt;/html&gt;</code> contendrán contenido en un idioma específico.</p>
+<p>Ejemplo:</p>
+<blockquote><p><code>&lt;html xmlns="http://www.w3.org/1999/xhtml" <strong>xml:lang=”es” lang=”es”</strong>&gt;</code></p>
+</blockquote>
+<p>Si especificamos un idioma <strong>estamos mejorando la semántica del documento</strong>, diciéndole a un motor de búsqueda que quiere indexarnos <em>que nuestro contenido está plagado de palabras en idioma castellano</em>, pero puede que dentro de ese documento se encuentren palabras en inglés, catalán, francés.</p>
+<p>Un lector de pantallas o un navegador sonoro para gente con
+discapacidad auditiva, pronunciará mejor o utilizará una voz de
+sintetizador distinta cuando se encuentre una palabra en otro idioma,
+de esta forma se pronuncian las palabras de forma correcta, de lo
+contrario podrá escuchar una voz de sintetizador con pronunciación
+inglesa relatando texto en castellano, y eso se traduce a un caos de
+pronunciación, acentos distintos y hasta la incomprensión total de una
+simple oración.</p>
+<p>Si dispones de navegadores auditivos, puedes hacer la prueba
+entrando a cualquier sitio Web que no tiene lenguajes especificados y
+comprobar como suena todo.</p>
+<p>Cuando una palabra tiene un idioma distinto al especificado en el elemento raíz del documento (<code>&lt;html&gt;</code>) debemos incluir el atributo correspondiente <code>lang="…"</code>:</p>
+<blockquote><p>Los documentos fueron encontrados por <cite lang="en">John Walker</cite> y gracias a él pudimos hacer el <em lang="en">printing</em>.</p>
+</blockquote>
+<h2 id="problema4">Error 4: Títulos de página molestos y enigmáticos</h2>
+<p>Muchos ejemplos de los que he revisado tienen títulos de páginas
+totalmente molestos y no muy explicativos. Un caso muy peculiar que ha
+realizado la gente de administración.es en su portal:</p>
+<blockquote><p><code>::::::::::: administracion.es | el portal del ciudadano ……………………</code></p>
+</blockquote>
+<p>Esto no solamente es un gasto de peso (se utilizan caracteres) sino
+que es totalmente inconcluso para los lectores de pantalla, por ejemplo
+un lector de pantalla leería algo así como:</p>
+<blockquote><p>(dos puntos) (dos puntos) (dos puntos) (dos puntos) (dos
+puntos) (dos puntos) (dos puntos) (dos puntos) (dos puntos) (dos
+puntos) (dos puntos)(espacio) (administración)(punto)(es)(barra
+vertical)(el) (portal) (del) (ciudadano) (punto) (punto) (punto)
+(punto) (punto) (punto) (punto) (punto) (punto) (punto) (punto) (punto)
+(punto) (punto) (punto) (punto) (punto) (punto) (punto) (punto) (punto)
+(punto) (punto) (punto)</p>
+</blockquote>
+<p>Algunos de los que leen esto ahora comenzarán a entender de lo que
+hablo, cuando uno utiliza un sintetizador de voz, cada vez que ingresa
+a un documento lo primero que se lee es el título de una página, por
+ende, a más cosas escriban, más inútil y largo será el relato, el
+ejemplo antes mencionado tarda 34 segundos en relatarse.</p>
+<p>34 segundos para luego proseguir <em>a relatar otras partes del documento</em>. O sea que el usuario podría <strong>gastar todo un día para leer una simple página</strong> o navegar la Web institucional, ¿se imaginan qué desepción?</p>
+<p>Otras de las cosas que me causan gracia <strong>es la usabilidad de estos títulos</strong>, por ejemplo observen esta imagen:</p>
+<p><img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/barradetareas-mala.htm" alt="Barra de tareas Windows" title="En esta imagen se aprecia un mal ejemplo del atributo title=&quot;…&quot;"></p>
+<p>Como podrán observar mucha gente no utiliza una sola ventana de
+navegador, puede incluso tener 10 ventanas en la barra de tareas de
+Windows, de modo que encontrar algo en la barra a simple vista cuesta
+mucho más que si utilizaran en primer lugar el nombre del sitio.</p>
+<p><img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/barradetareas-buena.htm" class="center" alt="Barra de tareas Windows" title="En esta imagen se aprecia un buen ejemplo del atributo title=&quot;…&quot;"></p>
+<p>Esto sin dudas abre un nuevo paréntesis en usabilidad, no solo
+dentro del navegador, sino que fuera del navegador existen problemas
+también, incluso yo, un usuario avanzado cuando tengo muchas ventanas
+de navegadores abiertas, me cuesta recordar o reconocer de entre las 5
+o 10 cuál pueda ser la que busco…</p>
+<p>Incluso pasa en los avanzados elementos que nos ayudan, como las
+pestañas del Mozilla, que son la maravilla hecha realidad, pero aún
+así, cuando tengo una ventana de navegador con 15 pestañas abiertas,
+cuesta mucho reconocer una página con el elemento title malformado.</p>
+<blockquote><p><code><img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/pestanas-malas.png" class="center" alt="Pestañas del Mozilla" title="En esta imagen se aprecia una pestaña con el atributo title malformado"></code></p>
+</blockquote>
+<h2 id="problema5">Error 5: Sin imágenes navegar una página es imposible</h2>
+<p>No debería de ser necesario la presencia de imágenes para navegar,
+aunque le agregan un sentido gráfico y proporcionan una ayuda visual
+muy grande, existe gente que <strong>tiene discapacidad</strong> y <em>no puede apreciar las imágenes</em>, también puede que el servidor al cual se accede no termina de enviar las imágenes, <em>dando un error</em>,
+cuando pasa esto, la página queda cargada parcialmente, y se puede
+navegar en modo texto, si las imágenes tuvieran especificado el
+atributo <code>alt="…"</code> se podrían diferenciar muchas cosas, sin tener que recargar las imágenes o esperar a que el servidor Web funcione.</p>
+<p>El Banco Santander Central Hispano <em>lo hace de una forma casi perfecta</em>, la Web se puede navegar sin imágenes dentro de todo se merece un aplauso, la gran mayoría de las imágenes <strong>tienen explicaciones coherentes</strong> y cortas, faltaría especificar los atributos <code>title="…"</code> en cada enlace o cada imagen para desplegar un cuadro amarillo de ayuda conocido como <dfn title="Mensaje de aviso" lang="en">Tooltip</dfn>.</p>
+<p>La web de La Moncloa, más allá si la información es interesante o no para algunos, es innavegable sin imágenes.</p>
+<p><img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/moncloa.htm" alt="Muestra de atributos alt" title="Imagen donde se aprecia el efecto de una página sin imágenes, y aún es navegable" class="center"></p>
+<p>En la web de <cite lang="ca">La Caixa</cite>, ubica el atributo alt a sus imágenes pero no define un atributo <code>title="…"</code> de modo que esto solo beneficia los navegadores Internet Explorer.</p>
+<p><img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/no-title.htm" alt="Muestra de atributos alt" title="Aqui los atributos alt están bien aplicados pero faltan los title" class="center"></p>
+<p>El <cite>Banco Santander Central Hispano</cite> lo realiza de forma perfecta, incluye en la totalidad de sus imágenes ambos atributos.</p>
+<p><img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/santander-bien.htm" alt="Muestra de atributos alt" title="Aqui los atributos alt están bien aplicados y también están los title" class="center"></p>
+<h2 id="problema6">Error 6: URL matemáticas, casi imposibles de entender y recordar</h2>
+<p>Si, matemáticas, algunas URLs son <strong>tan complejas de entender</strong>
+que si no disponemos de una ayuda visual, solemos tener problemas para
+navegar, en todas las páginas cuando se posa el cursor del ratón en una
+dirección podemos ver en la barra de tareas del navegador a qué URL
+vamos a ir si hacemos clic, se imaginan leer una url como esta:</p>
+<blockquote><p><code>http://www.la-moncloa.es/web/gob01.htm</code></p>
+</blockquote>
+<p>¿Adónde voy a parar? ¿Cómo se llama la sección esa? ¿Web o Gobierno? <strong>No entiendo</strong>, y a que vosotros tampoco os daréis cuenta… esto se debe a <strong>que no posee ninguna ayuda visual</strong>,
+ni tampoco las imágenes son accesibles debido a su carencia de
+atributos alt=”…” y title=”…”, entonces al depender de elementos como
+las imágenes, es raro que podamos navegar con URLs de este tipo.</p>
+<blockquote><p><code>http://www.elpais.es/articulo.html?xref=20030923elpepucul_1&amp;br /&gt;type=Tes&amp;anchor=elpporcul</code></p>
+</blockquote>
+<p>¿A que sección del diario irá? ¿Cómo se llama el artículo?</p>
+<p>Muchos lectores de pantalla, leen o relatan las direcciones de los
+enlaces, estos enlaces se crean de una forma terriblemente matemática
+haciendo casi imposible un relato entendible, y ni hablar de recordar
+esta dirección.</p>
+<p>Algo como intuitivo y decente sería:</p>
+<blockquote><p><code>http://www.elpais.es/secciones/politica/el_psoe_confirma_la_ruptura_definitiva.php</code></p>
+</blockquote>
+<p>Muchos sistemas de contenido tienen la posibilidad de crear este
+tipo de enlaces, algunos se basan en los títulos del artículo, otros
+tienen campos con los que arman las URLs a gusto del editor.</p>
+<p>En minid.net por ejemplo, podréis apreciar que las URLs son <strong>más intuitivas</strong>, de hecho <em>ha mejorado notablemente el indexado en los buscadores</em>, dado que también los enlaces tienen connotaciones semánticas para Google.</p>
+<blockquote><p><code>http://www.minid.net/archivos/categorias/internet/idiotas_en_el_espacio.php</code></p>
+</blockquote>
+<p>O también pueden entrar al sitio del diario El País (www.elpais.es) y encontrarse con una dirección como esta:</p>
+<blockquote><p><code>http://www.elpais.es/clientes/SuscripcionPortada.html?<br>backURL=http%3A%2F%2Fwww.el<br>pais.es%2Farticulo.html%3Fd_date%3D%26<br>xref%3D20030923elpepuint_3%26type%3DTes%26<br>anchor%3Delpprint</code></p>
+</blockquote>
+<p>Y entonces el lector de pantalla tarda un buen rato en relatar todo.</p>
+<p>No veo razón para que esta dirección Web sea así:</p>
+<blockquote><p>http://www.elpais.es/clientes/suscripcion.php</p>
+</blockquote>
+<p>O también podemos decir:</p>
+<blockquote><p><code>http://www.elpais.es/suscripcion/</code></p>
+</blockquote>
+<p>URL fáciles de reconocer aumentan la navegabilidad, indexación y comprensión del sitio.</p>
+<h2 id="problema7">Error 7: Código prehistórico reemplazable con CSS</h2>
+<p>En muchos casos se pueden ver cosas, como en la Web de correos de España, donde utilizan el tag <code>&lt;font&gt;</code> con una clase de CSS para hacer las letras en <b>negrita</b>, lo hace de esta forma:</p>
+<blockquote><p><code>&lt;p&gt;&lt;font class="txtNegrita"&gt;Lugares y medios de exposición.&lt;/font&gt;&lt;br /&gt;<br>
+En las Jefaturas Provinciales de Correos y Telégrafos, Ceuta y Melilla…&lt;/p&gt;</code></p>
+</blockquote>
+<p>Cuando deberían haber hecho:</p>
+<blockquote><p><code><strong>&lt;h3&gt;</strong>Lugares y medios de exposición<strong>&lt;/h3&gt;</strong><br>
+&lt;p&gt;En las Jefaturas Provinciales<br>
+de Correos y Telégrafos, Ceuta y Melilla…&lt;/p&gt;</code></p>
+</blockquote>
+<p>Luego en una plantilla CSS darle el aspecto gráfico que quieras,
+este ha sido un ejemplo, imaginen si sacaran todos los elementos
+innecesarios y se ubicaran los elementales se ahorrarían mucho peso
+entre páginas.</p>
+<p>Otro ejemplo mal aplicado lo podemos ver en la Web de correos,
+cuando quieren hacer una negrita o un énfasis en una palabra utilizan
+de nuevo el tag <code>&lt;font&gt;</code> con una clase, cuando podrían usar el tag <code>&lt;b&gt;</code> o el tag <code>&lt;strong&gt;</code> para dar más significado semántico al asunto:</p>
+<blockquote><p><code>&lt;p&gt;Junto a este viaje al pasado, el &lt;font
+class="txtNegrita"&gt;Museo Postal y Telegráfico&lt;/font&gt; abre una
+ventana al futuro con la exposición de una maqueta del satélite
+Hispasat.&lt;/p&gt;</code></p>
+</blockquote>
+<p>Nótese la cantidad de veces que tendrán que escribir en cada documento la clase <code>class="txtNegrita"</code> en cada página donde requieran negritas y títulos, si comparamos <code>class="txtNegrita"</code>
+con la cantidad de caracteres que pueda llevar escribir los elementos
+de un título por ejemplo notaremos un ahorro tremendo de caracteres
+como por ejemplo <code>&lt;h3&gt;&lt;/h3&gt;</code> son 9 caracteres <strong>contra 18 caracteres</strong> de <code>class="txtNegrita"</code>
+si se quitaran todas estas clases inútiles podrían ahorrar hasta 1 MB
+de caracteres de atributos basura, caracteres de más a toda la
+totalidad de documentos.</p>
+<p>El ejemplo correcto sería:</p>
+<blockquote><p><code>&lt;p&gt;Junto a este viaje al pasado, el
+&lt;strong&gt;Museo Postal y Telegráfico&lt;/strong&gt; abre una
+ventana al futuro con la exposición de una maqueta del satélite
+Hispasat.&lt;/p&gt;</code></p>
+</blockquote>
+<p>Y en la plantilla de CSS ponerle el color o el tipo de letra que desees.</p>
+<h2 id="problema8">Error 8: Olvidarse de la semántica, los documentos son una pila de información sin clasificar…</h2>
+<p>Eso mismo, una pila de información sin clasificar, la semántica es una de las áreas de los estándares Web que <strong>más importancia tiene que haber</strong> en las páginas que ofrecen contenidos y servicios públicos, de hecho en <em>todas las páginas debería haber un mínimo de semántica</em>, uno de los problemas que observo es que muchas empresas grandes que tienen <strong>suficiente dinero</strong> para hacer estas cosas bien, <em>lo hacen al revés</em>,
+cuando la semántica no sólo nos permite darle un significado “esto es
+un título”, “esto es un párrafo”, “esto es una cita” sino también que
+nos dan clasificación y jerarquía dentro de un documento, por ende
+puede retornar más beneficios.</p>
+<p>La jerarquía viene de los elementos como los títulos, listas,
+definiciones, y la clasificación nos permite editar esas jerarquías
+desde CSS, en pocas palabras que a mejor jerarquizado y clasificado
+esté el código, más fácil es controlarlo con un CSS.</p>
+<p>Ejemplo horrendo de la Web de <a href="http://www.correos.es/" title="Correos.es">Correos de España</a>, para hacer un título y un párrafo utilizan todo este código:</p>
+<blockquote><p><code>&lt;tr valign="bottom"&gt;&lt;!-- 1--&gt;<br>
+&lt;td height=”24″ valign=”bottom”&gt;&lt;a href=”/identidad/”
+class=”TitSeccionBold”&gt;Una nueva imagen, una nueva
+identidad&lt;/a&gt;&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+	&lt;td height=”6″ valign=”top”&gt;&lt;img src=”/comun/img/lin_g_sep_largo.png” width=”310″ height=”1″&gt;&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr class=”txtNormal”&gt;<br>
+&lt;td height=”25″ valign=”top” class=”txtNormal”&gt; Correos rediseña
+su marca y todos sus elementos clave de identificación visual
+&nbsp;&lt;a href=”/00/img/nuevaimg.avi” class=”txtLink”&gt;Ver
+vídeo&lt;/a&gt;&lt;/td&gt;<br>
+&lt;/tr&gt;</code></p>
+</blockquote>
+<p>Como podemos apreciar en el código, <strong>prevalecen las ganas de armarlo todo en el mismo documento de HTML</strong>, cuando podría estar mucho más limpio, semántico y controlado por unas pocas reglas de CSS, no entiendo por qué utilizan <strong>el lado más complejo</strong>, es como pintar un edificio entero con un aerógrafo para maquetas.</p>
+<p>Yo podría lograr que <strong>el código quede incluso más accesible todavía</strong>, debido a que esta gente utiliza “tablas” para representar contenidos cuando deberían jerarquizarlos con <em>cabeceras y párrafos</em>, ellos <strong>han optado por hacer todo en el mismo HTML</strong>,
+y utilizando técnicas super nocivas de CSS, malaprovechando cualquier
+recurso a mano, que podríamos mejorarlo de esta forma, en el HTML
+poner…:</p>
+<blockquote><p><code>&lt;div id="contenido"&gt;&lt;h2&gt;&lt;a
+href="/identidad/" class="TitSeccionBold"&gt;Una nueva imagen, una
+nueva identidad&lt;/a&gt;&lt;/h2&gt;</code></p>
+<p>&lt;p&gt;Correos rediseña su marca y todos sus elementos clave de
+identificación visual. → &lt;a href=”/00/img/nuevaimg.avi”
+class=”txtLink”&gt;Ver vídeo&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</p>
+</blockquote>
+<p>¿Notan la cantidad de caracteres, imágenes y código mal utilizado que he ahorrado?</p>
+<p>…y en el CSS, creo una regla para que no se tengan que repetir ni usar más clases indebidamente:</p>
+<pre>#contenido h2 {
+	color: #ccc;
+	font: 1em Arial, Verdana, sans-serif;
+	border-bottom: 1px solid #ccc;
+	margin: 0 0 0px 0;
+}
+
+#contenido p {
+	font: 1em Arial, Verdana, sans-serif;
+	color: #000;
+}
+</pre>
+<p>Con esta simple regla de CSS y un código de HTML coherente, no
+deberé escribir más código de más en el HTML, ni clases, ni usar
+imágenes para hacer líneas o “subrayados” en los títulos, tampoco
+usarán imágenes transparentes para “acomodar” elementos (uno entre otro
+o para separarlos), por que con el uso debido de CSS se puede controlar
+el posicionamiento de cada elemento que se encuentre en el documento.</p>
+<h2 id="problema9">Error 9: Sin estilos la página no se entiende, ni tiene significado…</h2>
+<p>Volvemos a otro error que deriva y tiene mucha relación con <a href="#problema8" title="Error 8: Olvidarse de la semántica, los documentos son una pila de información sin clasificar…">el error 8</a>,
+la clasificación y jerarquías de los elementos de un documento, sin
+esta práctica el documento no se puede navegar con facilidad sin hojas
+de estilo, por ejemplo los muchachos que hicieron administración.es
+tuvieron la demente idea de hacer un sitio aparte para los
+discapacitados, “una versión texto”, una pérdida total de tiempo, pero
+ya que estamos, esta versión cuando no se visualizan los estilos queda
+algo así:</p>
+<p><img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/sin-estilos-admin.htm" alt="Captura de pantalla administracion.es" title="Imagen del sitio administracion.es sin hojas de estilos" class="center"></p>
+<p>No se imaginen la versión con imágenes como se podría ver sin hojas de estilo… mejor ni intentarlo que me deprime…</p>
+<p>¿Pero cómo se hace bien entonces? Pues la respuesta es utilizando etiquetas correspondientes, sin navegan mined.net sin estilos <strong>notarán que se puede navegar de manera más ordenada</strong>, y los títulos son <em>títulos gráficamente y semánticamente</em>,
+no hace falta envolver los títulos con caracteres inapropiados como
+corchetes [título] ni nada parecido a –título–, por que volviendo al
+tema accesibilidad, las personas con discapacidades escuchan cualquier
+cosa menos castellano, sino que escucharán una mezcla de chino básico
+matemático mezclando el inglés relatado por un español (así como si
+fueran a decir espíderman en vez de spider man)</p>
+<p>Un ejemplo digno de seguir es:</p>
+<p><img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/sin-estilos-minid.htm" alt="Captura de pantalla minid.net" title="Imagen del sitio minid.net sin hojas de estilos" class="center"></p>
+<p>Mi página web por ejemplo, no requiere de un esfuerzo visual para
+comprender entre lo que es un título y un párrafo, de hecho, cuando
+vemos una página de este modo podemos comprender la forma en que un
+lector de pantalla lee…</p>
+<h2 id="problema10">Error 10: Documentos Web que son enemigos de la impresora</h2>
+<p>Leer en la pantalla es muy molesto según indican las pruebas con
+usuarios, de hecho casi todos los días en el metro puedo ver como la
+gente lee páginas Web o documentos impresos desde el navegador, y la
+calidad de ellos es de regular a muy mala cuando debería ser buena,
+apta para la lectura.</p>
+<p>Un error común es ver el típico “imprimir página”, dado que todos
+los navegadores tienen incorporado la versión de imprimir (iconos,
+botones, accesos directos) esto me supone más que una ayuda una
+molestia más, un botón más al que hay que prestarle atención en una
+página, otro botón más que se confunde entre la maraña de enlaces y
+botones hechos en el documento Web, y además de funcionar con
+Javascript, lo cual le quita ya la ventaja de ser accesible.</p>
+<p>Otro error común es hacer una “versión apta para impresión” <strong>la cual no tiene nada de apta</strong>, como la que han hecho los profesionales desarrolladores de administración.es, en un navegador, <strong>ingresa esta dirección y hagan un “vista preliminar”</strong> desde el menú de impresión de su navegador favorito (<em>el autor no quiere que gasten papel ni tinta de impresora</em>):</p>
+<p><a href="http://www.administracion.es/portadas/perfiles/ciudadano/familia/matrimonio_familia-idcat.html">http://www.administracion.es/portadas/perfiles/ciudadano/familia/matrimonio_familia-idcat.html</a></p>
+<p>Podrán observar que <strong>de imprimible no tiene nada</strong>, de
+nada. ¿Para qué hacer otra versión más? Si ni siquiera contiene
+información vital como medidas en puntos para las tipografías, <strong>y existen elementos que estorban la lectura</strong>… podría utilizar CSS para aprovechar un poco mejor el panorama de la impresión.</p>
+<p>Otro error es directamente <strong>no hacer nada</strong>, <em>ni una versión inútil para imprimir, ni una hoja de estilos</em>, la solución para esto es agarrar de la oreja a los desarrolladores y explicarles un ejemplo como este:</p>
+<p>Hacer una hoja de estilos que adapte a la impresión, en la cabecera,
+poner esa hoja de estilos identificando como si fuera apta para
+impresión (usando <code>media="print"</code>) luego con el “vista preliminar” del navegador <strong>hacer las pruebas e ir quitando elementos innecesarios</strong>,
+como imágenes de navegación inútiles, barras de navegación, menús de
+navegación, banners, etc. dejar sólo los títulos y textos e imágenes de
+importancia.</p>
+<p>Pueden ir a este ejemplo en esta misma Web, este mismo artículo
+hacer “vista preliminar” o “imprimir” y tendrán mejores resultados que
+los que hemos visto.</p>
+<p><strong>Cosas de este estilo se ven a montones</strong>, la cantidad
+de documentos que no se pueden imprimir por una cuestión de dejadez o
+de hacer las cosas sin saberlas, sin estudiarlas.</p>
+<blockquote><p><strong>Cuesta más en tema dinero, tiempo, cantidad de gente</strong> para producir versiones “paralelas” para imprimir, <strong>que hacer 1 documento</strong> que controle la impresión de todo un mar de documentos en el sitio.</p>
+</blockquote>
+<h2 id="problema11">Error 11: Ventanas emergentes, inútiles, sin sentido y no muy accesibles.</h2>
+<p>Otro tumor en la Web son las ventanas emergentes, las cuales
+conocemos por “popups”. Éstas no son más que un tumor que molesta,
+permanentemente y no agrega nada de valor.</p>
+<p>Es preferible abrir una ventana de un navegador (que posee todos los
+controles) a abrir una ventana emergente “popup” de 350 píxeles de
+ancho por 400 píxeles de alto, otra vez en la mira del cañón está
+administración.es que es un sitio de gran magnitud, “el portal del
+ciudadano”, podrán observar una tontería como esta:</p>
+<p><img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/popup-idiota.htm" alt="Ventana emergente" title="Ejemplo de una ventana emergente con todas las características de inutilidad" class="center"></p>
+<p>¿Alguno de vosotros observa alguna barra de navegación del propio
+navegador? ¿Un menú para imprimir? ¿Cómo era la combinación de teclas
+para imprimir? ¿Cómo hago para leer todo el texto?</p>
+<p><em>Pues yo tampoco</em>. Sigo, como observáis existe una gran cantidad de texto en una ventana <strong>no muy amplia</strong>, <strong>no hay barra de desplazamiento</strong> “scroll” <strong>la letra es de menos de 11 píxeles de alto</strong> (calculo que 10 píxeles) y un porrón de contenido sin clasificar, <strong>sin jerarquías</strong>, <strong>sin semántica</strong>… por ende, <strong>100% inútil</strong>.</p>
+<p>No quiero creer que siguen a estas alturas pensando en hacer un
+popup para estos casos, cuando pueden hacer un documento mejor
+desarrollado, por ejemplo como la página del <a href="http://www.santander.com/pagina/indice/0,,565_1_2,00.html">Banco Santander de aviso legal</a>. La cual no está del todo bien pero por lo menos <strong>no es un popup</strong>.</p>
+<p>De lo contrario, daos una vuelta por el <a href="http://www.w3c.org/">W3C</a>,
+y chequeen su página de Copyright, está mejor ordenada semánticamente,
+pero… con un poco de gusto y mano de CSS quedaría un documento <strong>semántico y prolijo</strong>, y práctico para leer e imprimir.</p>
+<h2 id="problema12">Error 12: Instale Flash, o de lo contrario no podrá navegar el sitio Web</h2>
+<p>Uno de los errores más comunes y que todavía se pueden apreciar en la Web. Me deleita un montón ver ejemplo como <a href="http://www.2advanced.com/">2advanced</a>, que no ofrecen su contenido <em>siquiera en una versión alternativa</em>,
+por ejemplo saber que puedo ver sus producciones de video (ya tengo
+quicktime instalado) o por ejemplo leer sus noticias, y así no tengo
+que instalar otro programa más.</p>
+<p>Puede que sea un poco cerrado el pensamiento, pero la idea es poner (aunque sea) un acceso a algo un “saltar introducción”, <a href="http://www.kursor.tv/">Kursor.tv</a>
+parece no importarle y todo su negocio depende de una película en
+Flash, basta que alguien no tenga Flash instalado para que se vaya a
+otra Web de su competencia. Pueden ver que en la página <a href="http://www.kursor.tv/intro.htm">Kursor.tv</a> no hay indicios de accesos a versiones en HTML, tampoco hay teléfonos a mano…</p>
+<p>Si utilizan Flash, hay que pensar por la gente que no lo tiene
+instalado, puede que esa misma gente incluso no tenga javascript o no
+tenga la versión correcta del plug-in de Flash, suele ocurrir que todo
+funciona mal o no se esperan los resultados, los plugins de detección
+no averiguan a la perfección que tipo de plugin versión
+00000000.000000222 tenías instalada…</p>
+<p>Otra de las cosas es utilizar Flash y no ofrecer una réplica de tu
+sitio indexable y navegable para personas con discapacidad motora por
+ejemplo (usan el teclado para moverse en un sitio…) e<em>s otro error tirando a crimen.</em></p>
+<h2 id="problema13">Error 13: Javascript supera todas las tecnologías de lenguajes, HTML, CSS, PHP, Javascript es la hostia…</h2>
+<p><strong>No abuse del Javascript</strong>, amigo desarrollador, <em>estoy realmente agotado</em> de ver como funcionan los scripts en los navegadores, que si tengo que usar Internet Explorer para <strong>ver un menú importante</strong>, para acceder a mi cuenta bancaria… <strong>basta ya de abusar de Javascript</strong>.</p>
+<p><strong>No quiero decir que dejes de utilizarlo</strong>, sino <strong>haz las cosas con precaución y por favor, examina los resultados</strong> en otro ordenador que no sea tu mega-ordenador con Internet Explorer <em title="modelo de construcción" lang="en">build</em>
+6.001324, por que con mi Portátil PC Asus y Windows 2000 con Internet
+Explorer 5.993888 no puedo usarlo correctamente, y mi amigo Juan con su
+Internet Explorer 5.5 (5.789000) tampoco puede… Javascript no es
+idéntico entre navegadores, menos entre <em>Internetes Exploretes</em>,
+de hecho he podido comprobarlo utilizando 6 PCs distintas con
+diferentes Explorers y notar diferencias que entre algunas eran
+abismales.</p>
+<blockquote><p>Ni hablar de usar otra cosa que no sea el alabado
+Internet Explorer, pongamos Opera, Netscape 7 o Mozilla, no… ¿para
+qué?… Tampoco hablar de utilizar Internet Explorer para Mac, no… ¿para
+qué?</p>
+</blockquote>
+<p><strong>Javascript no es un lenguaje perfecto</strong> para ser el esqueleto de un website, ni mucho menos para controlar <strong>la interacción entre documentos</strong>, os digo algo, si desactivo Javascript en mi navegador el sitio de <a href="http://www.correos.es/">Correos de España</a>
+se navegable en un 20%, no llego siquiera a enviar una postal desde la
+página de “Envíe una postal por Internet”, desepcionante.</p>
+<p>Por eso, fuera de chistes e ironías y sin ánimos de ofender a nadie, abusar de esa forma de Javascript, no es ideal.</p>
+<h2 id="problema14">Error 14: HTML no es un lenguaje de modelaje de páginas</h2>
+<p>Algo que cuesta de entender, es que, HTML no es un lenguaje de
+moldeo de páginas, de hecho el HTML no tiene estética alguna, solo
+significado, es un lenguaje para clasificar contenidos, que luego con
+otra tecnología se editarán los factores visuales, es por eso, que es
+estúpido utilizarlo para desarrollar layouts, colorear páginas,
+posicionar elementos… para esas cosas se ha creado CSS.</p>
+<p>Podremos ver que el gran porcentaje de sitios utilizan tablas para hacer layouts, esto no está bien, pueden ver el ejemplo del <a href="#problema8" title="Error 8: Olvidarse de la semántica, los documentos son una pila de información sin clasificar…">Error 8</a>,
+las tablas son elementos que fueron creados para representar datos, no
+para crear esquemas o maquetar un sitio entero, es como si utilizáramos
+gasolina de avión en nuestro coche, la gasolina quizás haga que nuestro
+motor funcione, pero tarde o temprano funcionará mal, por que la
+gasolina de avión tiene más octanos y está diseñada para motores
+grandes, motores de aviones.</p>
+<h2 id="problema15">Error 15: HTML comentado, es igual a más peso en la página</h2>
+<p>He visto cosas aberrantes, pero hay cosas que no se pueden creer,
+por ejemplo, es común en desarrollos comentar ciertas partes de un
+código, en programación puede incluso ahorrar mucho tiempo por que
+cuando se comenta no se borran cosas, o simplemente se comentan para
+probar cosas… pero en HTML, cuando se comenta una línea, el servidor
+Web procesa la página, y el código comentado, enviándolo al ordenador
+cliente, de modo que el mismo navegador es el que no procesa este
+código comentado.</p>
+<p>Un error básico es utilizar los comentarios de HTML para comentar
+largas porciones de código HTML, los comentarios de HTML están hechos
+para realizar ayudas, o para hacer anotaciones.<br>
+El problema comienza cuando se comenta 10 líneas de código en HTML éste
+sigue apareciendo y siendo procesador por el servidor, debería comentar
+esto con otro tipo de lenguaje, de modo que sea procesado directamente
+en el servidor Web y no en el navegador.</p>
+<p>Ejemplo de una porción de código encontrada en la web de correos:</p>
+<blockquote><p><code>&lt;!--&lt;tr&gt; &lt;!-- 4--&gt;<br>
+&lt;!--&lt;td height="24" valign="bottom"&gt; &lt;a
+href="/01/02/0102_b.asp" onclick="javascript:pulseExt('men01');"
+class="TitSeccionBold"&gt;<br>
+            Cartas Certificadas&lt;/a&gt; &lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;tr&gt;<br>
+          &lt;td height="6" valign="top"&gt;&lt;img src="/comun/img/lin_g_sep.png" width="310" height="1"&gt;&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;tr&gt;<br>
+&lt;td class="txtNormal" height="25" valign="top"&gt;Para enviar con
+total tranquilidad sus comunicaciones especialmente importantes, con
+entrega bajo firma.&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;tr&gt;<br>
+           &lt;td height="5"&gt;&lt;img src="/comun/img/pix_fondo.png" width="1" height="1"&gt;&lt;/td&gt;<br>
+        &lt;/tr&gt;--&gt;<br>
+&lt;!-- 5--&gt;<br>
+		&lt;!--&lt;tr&gt;<br>
+           &lt;td height="24" valign="bottom"&gt; &lt;a href="/00/04/0004.asp" class="TitSeccionBold"&gt;<br>
+            Acceso a Internet&lt;/a&gt; &lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;tr&gt;<br>
+          &lt;td height="6" valign="top"&gt;&lt;img src="/comun/img/lin_g_sep.png" width="310" height="1"&gt;&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;tr&gt;<br>
+          &lt;td class="txtNormal" height="25" valign="top"&gt;Acceda a internet mediante<br>
+            línea de alta velocidad. Disponible en más de 35 oficinas<br>
+            distribuidas por todo el territorio.&lt;/td&gt;<br>
+        &lt;/tr&gt;--&gt;</code></p>
+</blockquote>
+<p>Esto nos ahorrar tener que enviarle al ordenador cliente, código que
+nunca procesará e utilizará, unos cuantos KB menos de peso en cada
+página. Esto se logra no utilizando los comentarios normales de HTML <code>&lt;!-- --&gt;</code> sino utilizando algún lenguaje de scripting normal como PHP o ASP.</p>
+<p>Otra de las cosas que recomiendo <strong>es no comentar largas porciones de código</strong>, sino <em>directamente borrarlas o extraerlas a otro documento de repositorio</em>.</p>
+<h2 id="problema16">Error 16: Utilizar hojas de estilo en línea o embebidas en los documentos</h2>
+<p>Un factor importante en los documentos Web debe ser la separación
+del contenido de la presentación, de modo que el HTML sea para contener
+y el CSS para presentar, por eso, utilizar hojas de estilos embebidas
+en el mismo documento no es sano.</p>
+<p>En muchas páginas institucionales vemos como embeben el código de
+las hojas de estilos en la cabecera, en vez de tener 1 hoja de estilos
+externa con la información para la estructura y posicionamiento de los
+elementos principales, y otra hoja de estilos que varía de sección en
+sección, 1 para todas las páginas, con la información mínima, y la otra
+es una información unica para realizar un posicionamiento de un
+elemento o algo que se encuentre en 2 o 3 páginas, aquí estamos
+dividiendo recursos, y economizando trabajo. Algo cómun que vemos en la
+Web de Correos de España y el diario El País:</p>
+<blockquote><p><code>&lt;head&gt;<br>
+&lt;style&gt;<br>
+.TA<br>
+{<br>
+scrollbar-3dlight-color:#666666;<br>
+scrollbar-arrow-color:#666666;<br>
+scrollbar-base-color:#666666;<br>
+scrollbar-darkshadow-color:#666666;<br>
+scrollbar-face-color:#e2e2e2;<br>
+scrollbar-highlight-color:#e2e2e2;<br>
+scrollbar-shadow-color:#c0bebe<br>
+}<br>
+&lt;/style&gt;<br>&lt;/head&gt;</code></p>
+</blockquote>
+<p>Nótese que esta estupidez solo hace que un documento de HTML
+contenga caracteres que no se puedan cachear de ninguna forma
+tradicional, de hecho cada vez que el usuario recurra a esta página,
+tendrá que descargarse y procesar esta porción de código, que es poca
+si, pero cuenten unos 70 documentos, y hagan el cálculo de cuantos
+KiloBytes llevan sumando.<br>
+En la Web de Correos, se pueden observar cosas como porciones masivas
+de código CSS en todos los documentos, no sólo ubicada entre los
+elementos sino en el medio del documento mismo, cosa que no está
+permitido, ni es una práctica muy sana… </p>
+<p>Tampoco es sano ver que un tag bold tiene estilos en línea, por ejemplo, observamos en la página del diario El País:</p>
+<blockquote><p><code>&lt;div id="lClipping" class="TA" style="overflow:
+auto; position: absolute; left: 0px; top: 0px; width: 187px; height:
+208px; z-index: 5; visibility: hidden;"&gt;&lt;/div&gt;<br>
+</code></p>
+</blockquote>
+<p>Algo <strong>bien hecho</strong> hubiera sido como esto (aprovechando que utilizan el id “lClipping”)</p>
+<blockquote><p><code>&lt;div id="lClipping" class="TA"&gt;&lt;/div&gt;<br>
+</code></p>
+</blockquote>
+<p>Esto es código de HTML que se procesa una y otra vez, se envía y se
+descargar cada vez que alguien requiere la página, ¿No es mejor
+asignarle una clase especial a ese tipo de módulos? ¿Y de esta manera
+se aprovecha todas las clases en múltiples páginas a tener que cargar
+en línea siempre la misma cantidad de código? Esto está mal.</p>
+<h2 id="problema17">Error 17: Javascript no modularizado</h2>
+<p>Otro grave error parecido, al caso de las hojas de estilo es que no
+se modularíza el código Javascript, de ninguna forma, ni usando un
+lenguaje de scripting siquiera.</p>
+<p>Esto es muy común cuando utilizan javascript para menús, que se
+repita siempre la misma historia de siempre, se repiten incansablemente
+porciones gigantes de código Javascript, ¿No es mejor modularizar esto
+de esta forma?</p>
+<blockquote><p><code>&lt;script type="text/javascript" src="js/GestionaPestana_arrays.js"&gt;&lt;/script&gt;</code></p>
+</blockquote>
+<p>Si modularizas código de Javascript, éste se descargará una vez y
+será cacheado por el cliente y re-utilizado cada vez que se necesite.</p>
+<h2 id="problemas18">Error 18: Elementos Meta inservibles…</h2>
+<p>Si hay algo que deben enterarse medio millón de desarrolladores es
+que, los elementos metas prácticamente son inservibles, de hecho los
+buscadores como Google ya no procesan ni indexan gracias a los
+elementos meta, dado que nadie los desarrolla bien, dado que los meta
+keywords y meta description no definen de forma correcta los contenidos
+principales de un sitio, Google los pasa por alto, y muchos buscadores
+también lo hacen así.</p>
+<p>Las tecnologías de ahora permiten buscar mejor en el contenido, que
+fiarse en dos elementos creados por un departamento de marketing.</p>
+<p>La solución es dejar los elementos meta que sirven a los
+navegadores, como los que especifican la codificación del archivos (si
+es <code>UTF-8</code> u <code>ISO-8859-1</code>), los que controlan los robots de los buscadores, y nada más. El resto sobra.</p>
+<p>La solución es implementar más los elementos <code>&lt;link&gt;</code> que realmente ayudan más distribuir contenidos de un sitio que los tags meta.</p>
+<h3>Ejemplos de metas inservibles</h3>
+<blockquote><p><code>&lt;meta name="generator" content="BBEdit 6.5.2"&gt;<br>&lt;meta name=”origen” content=”EL PAÍS”&gt;<br>
+&lt;meta name=”description” content=”El principal periódico europeo en español”&gt;<br>
+&lt;meta name=”author” content=”El País S.L. - Prisacom S.A.”&gt;<br>
+&lt;meta name=”organization” content=”El País S.L.”&gt;<br>
+&lt;meta name=”locality” content=”Madrid, España”&gt;<br>
+&lt;meta name=”lang” content=”es”&gt;<br>
+&lt;meta http-equiv=”Content-Type” content=”text/html; charset=iso-8859-1″&gt;<br>&lt;meta
+name=”keywords” content=”El pais, diario, periodico, newspaper, prensa,
+press, noticia, news, internacional, international, world, nacional,
+national, nation, españa, spain, información general”&gt;<br>&lt;meta content=”900″ http-equiv=”REFRESH”&gt;<br>&lt;meta name=”rating” content=”safe for kids”&gt;<br>&lt;meta name=”Author” content=”Filmac centre s.l.”&gt;<br>&lt;meta name=”Language” content=”es”&gt;<br>&lt;meta name=”revisit-after” content=”30 Days”&gt;<br>&lt;meta name=”audience” content=”general”&gt;<br>&lt;meta name=”privacy” content=”http://bancaja.es/legal/notalegal.asp”&gt;<br></code></p>
+</blockquote>
+<h2 id="problema19">Error 19: Mapa Web del sitio</h2>
+<p>¿Para qué hace falta una página con un millar de enlaces? ¿El
+usuario no puede encontrar lo que busca? Entonces eso sucede por 2
+factores:</p>
+<ol>
+<li>Página mal organizada</li>
+<li>Posee un buscador que no hace nada útil.</li>
+</ol>
+<p>Esta claro, en el 100% de los casos noto que el mapa del sitio es
+algo inútil, no ayuda en nada, el usuario no tiene por qué mirar entre
+un millar de enlaces, no hace falta, tampoco le ofrece la solución
+instantánea.</p>
+<p>La solución es un buen buscador, de modo que ni bien entro a un
+sitio, no tengo que estar 1 hora inspeccionando una página con 700
+enlaces, hacer un mapa del sitio de un sitio de banco es prácticamente
+una salvajada, igualmente para aquellos sitios que poseen 3 secciones y
+su página Web consta de 50 documentos.</p>
+<p>Nada mejor que un buen buscador y una buena arquitectura de la información.</p>
+<h2 id="problema20">Error 20: Buscador ciego… buscador inútil</h2>
+<p>No existe nada más inútil que un buscador que ¡no puede buscar!, de
+hecho, si entramos a un website normal como el diario El País y busco
+artículos, no sale nada útil, ni la categoría.<br>
+Para empresas que disponen de presupuestos grandes, no tener un buscador decente es un punto en contra.</p>
+<p>El contenido esencial de minid.net está 100% indexado y se puede buscar a la perfección, usar <dfn title="patrones concurrentes" lang="en">grep patterns</dfn> incluso.</p>
+<h2 id="problema21">Error 21: La Web no es la televisión</h2>
+<p>Responsables de un sitio Web, Internet no es una televisión, es por
+eso, que entrar a un sitio es como el diario El Pais es para ver los
+titulares, no para encontrarse una pantalla negra, con una publicidad
+de Wanadoo ADSL de 700 píxeles por 700 píxeles, como si fuera un
+anuncio publicitario de televisión.</p>
+<p>Lo que más me enerva de estos casos, es que uno no puede hacer nada, sólo tiene que esperar a que el comando <dfn title="Redirección" lang="en">redirect</dfn> entre en acción.</p>
+<p>Muy mal. ¿No basta con cobrar el servicio que tienen que poner este tipo de cosas todavía?</p>
+<h2 id="problema22">Error 22: Frames no, <em lang="ca">si us plau</em>.</h2>
+<p>Los frames <strong>no son más que una molestia</strong> para el desarrollo, <strong>no una comodidad</strong>, habiendo 150 artículos dedicados a hablar <em>sobre las desventajas de los frames</em>, todavía se siguen utilizando, ¿Qué anda mal?</p>
+<p>Si <strong>lo que desean es ahorrarse la carga de un documento</strong>, <em>utilizad includes de algún lenguaje de scripting</em>
+como lo es PHP, ASP, JSP, o Python, da igual que lenguaje, pero es
+mejor que utilizar un Frame que trae cientos de problemas a tus
+clientes, para imprimir son un parto, para desarrollar también, que si
+tengo que controlar lo que pasa en un lugar, y en otro frame, que si
+utilizo Javascript para colorear algo, no basta de frames, son una
+pérdida de dinero terrible.</p>
+<p>Si quieren ver el primer problema de un frame, entonces vayan a
+cualquier página de Correos de España, y pongan vista preliminar, ya se
+darán cuenta de lo que hablo.</p>
+<h2 id="problema23">Error 23: Formularios inaccesibles</h2>
+<p>Un detalle normal, como si estuviéramos hablando de contaminación
+global, son los formularios inaccesibles. En muchos sitios se hacen
+formularios inaccesibles, de tal forma y color que se tornan
+inservibles, hace falta un ratón e Internet Explorer 6 para que
+funcionen.</p>
+<p>Además algo muy común es ver cosas como que un botón no es un botón
+de formulario, sino una imagen o una tabla de HTML que tiene celdas que
+a su vez contienen imágenes y un pequeño código Javascript que envía
+los datos de ese formulario.</p>
+<p>Ahora yo me pregunto. ¿Por qué tanta complejidad? ¿Qué hace el HTML
+para que se lo deje de lado? ¿Es Javascript la mejor opción para hacer
+formulario? Pues la respuesta es no. Primero por que sin Javascript
+activado, éste no tiene validez ya, o sea, no existe “degradación”, si
+fuera posible que sin Javascript el formulario es procesable, vaya y
+pase… pero como esto no es posible, entonces no deberían utilizar
+Javascript para los formularios.</p>
+<p>Otro punto importante es la accesibilidad de los formularios, que carecen de etiquetas esenciales como <label> y otros materiales de accesibles que hacen de llenar un formulario una delicia, como los atributos <code>tabindex="…"</code>, <code>accesskey="…"</code>, <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code>, etc.</label></p>
+<p>No solo visualmente tienen una repercusión grande, sino que
+accesiblemente seas ciego, sordo, mudo o una persona sana y vibrante es
+una ayuda indispensable.</p>
+<p>Si se dirigen al 95% de los sitios mencionados aquí en este tutorial
+y revisan los formularios notarán que son prácticamente inusables, como
+el caso del buscador de la web de Correos de España, que sin Javascript
+no se puede buscar en el sitio, desepcionante.</p>
+<h3 id="problema24">Error 24: Tipografías mal aplicadas</h3>
+<p>Una de las cosas que podemos notar es que, la gran mayoria de los
+desarrolladores no sabe como aplicar las tipografías en la Web. El
+primer problema es encontrarse ejemplos como Administración.es, que
+utiliza tipografías demasiado pequeñas para un portal donde el espectro
+de gente debe ser más amplio, recuerda que en este tipo de sitios, el
+99% de la gente no será de 20 años con una salud espléndida.</p>
+<p>El segundo problema es mala utilización de medidas, por ejemplo
+podemos notar que en muchos casos, utilizan medidas en puntos (pt) para
+tipografías que se visualizan en pantallas, cuando los (pt) son ideales
+para sistemas de impresión.</p>
+<p>También una de las malas prácticas es utilizar medidas en píxeles,
+lo cual elimina a Internet Explorer (sea 3, 4, 5, 5.5 o 6) de que pueda
+controlar el tamaño de las tipografías, esto se resume que si un
+usuario quiere ver las tipografías un nivel más del normal, no puede,
+no pasa nada, con otros navegadores la cosa es diferente, pero hey… el
+95% de los damnificados utilizan Internet Explorer… ¿Qué putada no :)?</p>
+<p>Mejor es utilizar medidas aptas para pantallas. Como por ejemplo em,
+porcentajes o tamaños predefinidos por el navegador (xsmall, small,
+médium, etc.)</p>
+<p>La mejor es utilizar em, ya que tiene menos problemas que los
+porcentajes, y también tiene menos problemas que los tamaños
+predefinidos, por que cada navegador sigue un cauce distinto a la hora
+de controlar las tipografías.</p>
+<h3 id="problema25">Error 25: Archivos multimedia, PDF, etc.</h3>
+<p>Otra de las locuras es abusar de los archivos multimedia para
+representar datos en la Web, es casi insano tener 400 PDFs en un sitio
+Web, cuando esos archivos pueden estar hechos en HTML, el PDF no fue
+hecho para reemplazar al HTML, no se mezquinen con estas tecnologías.</p>
+<p>Antes de presentar un PDF, asegurarse de que ese documento está
+hecho en HTML, si no tiene nada que ver con la información avisarle al
+usuario que se le va a servir un archivo PDF, utilizad íconos y enlaces
+de texto, y proporcionarle al usuario un medio para llegar a la
+instalación del Adobe Acrobat en caso de que el no posea el plug-in.</p>
+<p>He visto cosas, en la Web de Correos de España por ejemplo, como
+utilizan muchos frames, algunos PDFs se cargan en los frames
+interiores, logrando así una compleja lectura, ya es una pesadilla que
+el PDF se cargue en la misma ventana.</p>
+
+								
+			</div>
+		</div>
+		
+		<div class="navigation">
+			<div class="alignleft">« <a href="http://www.minid.net/2003/09/23/ya-hay-ms-usuarios-de-jabber-que-de-icq/">Ya hay más usuarios de Jabber que de ICQ</a></div>
+			<div class="alignright"><a href="http://www.minid.net/2003/09/25/un-gran-paso-hacia-una-europa-sin-patentes-de-software/">Un gran paso hacia una Europa sin patentes de software</a> »</div>
+			<div class="clear"></div>
+		</div>
+
+	
+<!-- You can start editing here. -->
+
+<div id="comments">
+	
+	
+	
+
+		<h3>89 Respuestas a la entrada “25 errores comunes en los desarrollos Web”</h3>
+
+	
+		<div class="comment-capsule" id="comment-9743">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/c21ffcdf4c2988203119c2c5e49dea95.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong>Alex</strong><br><a href="#comment-9743" title="">Septiembre 24th, 2003 at 7:19 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Diego, aún no he terminado de leer el artículo entero pero YA debo felicitarte. Magistral! (alimento para el ego, hermano).<br>
+Esta es la clase de artículos que ayudan y motivan a mejorar y poner el
+ojo en los detalles, porque después de todo que sería del desarrollo
+web sin los detalles, no?<br>
+Gracias.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9744">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/32261b6ca43b6da568884e6722341399.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.wad-net.org/" rel="external nofollow" class="url">Miguel</a></strong><br><a href="#comment-9744" title="">Septiembre 24th, 2003 at 7:40 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Vaya
+que los sitios que se pueden dejar toda la pasta del mundo en hacer sus
+webs perfectas pillan a uno de una ETT y les hace en frontpage xD</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9745">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong><a href="http://www.tierradenomadas.com/" rel="external nofollow" class="url">sysifus</a></strong><br><a href="#comment-9745" title="">Septiembre 24th, 2003 at 7:48 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Un pequeño apunte a lo que dice Mini-D en el apartado “Sin imágenes navegar una página es imposible”:</p>
+<p>bq. El Banco Santander Central Hispano lo realiza de forma perfecta, incluye en la totalidad de sus imágenes ambos atributos. </p>
+<p>Pero, por lo que se ve en la imagen, se trata de la misma
+información para ambos atributos. Para imágenes que son rótulos,
+personalmente no me queda muy clara la utilidad del atributo <code>title</code>, sobre todo si su valor es el mismo que el del atributo <code>alt</code>.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9746">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong><a href="http://www.tierradenomadas.com/" rel="external nofollow" class="url">sysifus</a></strong><br><a href="#comment-9746" title="">Septiembre 24th, 2003 at 7:51 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Miguel dice que:</p>
+<p>bq. “Vaya que los sitios que se pueden dejar toda la pasta del mundo
+en hacer sus webs perfectas pillan a uno de una ETT y les hace en
+frontpage”</p>
+<p>O pillan a DoubleYou… y se cometen los mismos errores.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9747">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/a5fd81d6bf51c588b66dcafca4b83960.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.fabio.com.ar/" rel="external nofollow" class="url">Fabio</a></strong><br><a href="#comment-9747" title="">Septiembre 24th, 2003 at 7:55 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>muy buen resumen y las explicaciones con ejemplos sirven de mucho <img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/icon_wink.gif" alt=";)" class="wp-smiley"> </p>
+<p>Diego, ya que estoy. Yo tengo un estilo heredado del PHPNuke, que como sabrás usan tablas hasta para ir al baño.<br>
+Me encantan las tablas para logos por ejemplo, así cuando tengo que
+cambiar sólo una parte de este funciona ok. Pero el problema es… un
+logo como el de mi site… ¿existe forma de hacerlo en CSS? obviamente…
+no quiero morir en el intento.</p>
+<p>Hoy estuve practicando un poco y decidí ver si podía pasar mi site a
+CSS. Definitivamente hay cosas que no me cierran, todavía no pude hacer
+un layout de tres columnas con tamaño fijo (si, quiero tamaño fijo) y
+me queda cualquier cosa…</p>
+<p>Eso sí que es más fácil definirlo con una tabla de tres columnas y
+adentro de cada una mando el contenido. Hasta Korochi tiene armado así
+en una extraña mezcla de código nuevo-viejo.</p>
+<p>¿alguna herramienta para crear webs que no cometa todos esos errores? lo dudo..</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9748">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9748" title="">Septiembre 24th, 2003 at 8:04 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Según
+tengo entendido, Lucas cuando quizo rediseñar su site tenía problemas
+para hacerlo todo en CSS y Divs… y se cansó de intentar pruebas así que
+lo terminó armando con tablas.</p>
+<p>De todas formas él modularizó mucho el contenido de su weblog la
+arquitectura que tiene le permitiría mudarse a div y css en unos
+minutos.</p>
+<p>Fabio, lo que tu debes dominar es el “Box
+Model”:http://www.w3.org/TR/REC-CSS2/box.html esto te permitirá
+comprender como posicionar elementos en una página sin depende de una
+tabla.</p>
+<p>sysifus, una de las cosas que he notado, es que quizás el Banco
+Santander Central Hispano necesita mejorar en la rotulación de todas
+sus imágenes, por eso he dicho:</p>
+<p>bq. …El Banco Santander Central Hispano lo hace de una forma casi
+perfecta, la Web se puede navegar sin imágenes dentro de todo se merece
+un aplauso…</p>
+<p>Dentro de todo son detalles, como habíamos hablado hace unas semanas atrás con el tema de si @alt@ por @title@ y vice.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9749">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/32261b6ca43b6da568884e6722341399.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.wad-net.org/" rel="external nofollow" class="url">Miguel</a></strong><br><a href="#comment-9749" title="">Septiembre 24th, 2003 at 8:12 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Fabio, tu web en css no debería ser demasiado complicadar, consigue topstyle pro, y verás que maravilla <img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/icon_wink.gif" alt=";)" class="wp-smiley"> </p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9750">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>neural</strong><br><a href="#comment-9750" title="">Septiembre 24th, 2003 at 9:27 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p><q>pitón</q>? …<br>
+la otra vez vi <q>guión-java</q><br>
+esta bueno el articulo, se podria convertir en el gran libro de la evangelizacion web</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9751">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong><a href="http://www.tierradenomadas.com/" rel="external nofollow" class="url">sysifus</a></strong><br><a href="#comment-9751" title="">Septiembre 24th, 2003 at 9:30 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Fabio comenta que: </p>
+<p>bq. …todavía no pude hacer un layout de tres columnas con tamaño fijo </p>
+<p>¿Cuáles son exactamente los problemas que has encontrado?</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9752">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/e582f5562e4ce914869f44ef546d6a83.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://indiferencia.net/" rel="external nofollow" class="url">A. Rivadulla</a></strong><br><a href="#comment-9752" title="">Septiembre 24th, 2003 at 10:29 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>magnífico, como todos.</p>
+<p>deberías escribir un pequeño post acerca del uso de tamaño en las
+tipografias. Yo uso px, y no sé que es exactamente el que tu
+recomiendas.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9753">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong><a href="http://meddle.dzygn.com/" rel="external nofollow" class="url">Sergi</a></strong><br><a href="#comment-9753" title="">Septiembre 24th, 2003 at 11:01 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Fabio,  aqui tienes dos joyas para tus problemas:<br>
+<a href="http://www.thenoodleincident.com/tutorials/box_lesson/boxes.html" rel="nofollow">http://www.thenoodleincident.com/tutorials/box_lesson/boxes.html</a><br>
+<a href="http://www.bluerobot.com/web/layouts/" rel="nofollow">http://www.bluerobot.com/web/layouts/</a></p>
+<p>Diego:<br>
+MUY BUENO, en serio. Dos comments:</p>
+<p>Apartado 8: creo que class=”TitSeccionBold” sobra, tienes elementos
+de sobra para darle estilo al h2. Por cierto, se supone que antes del
+h2 se ha definido un h1, no?</p>
+<p>Apartado 24: Yo pensaba que em y % hacian lo mismo.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9754">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>Anónimo</strong><br><a href="#comment-9754" title="">Septiembre 24th, 2003 at 11:10 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Fabio, pienso que <a href="http://es.geocities.com/d4mr0d/Design/layouth3cp.html" rel="nofollow">este enlace</a> puede interesarte (mira el código fuente para el CSS).</p>
+<p>Habrá mejores maneras de hacerlo, supongo, pero son tres columnas con cabecera y pie; ancho fijo.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9755">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong><a href="http://blogia.com/navegaseguro" rel="external nofollow" class="url">D4</a></strong><br><a href="#comment-9755" title="">Septiembre 24th, 2003 at 11:11 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Fabio, pienso que <a href="http://es.geocities.com/d4mr0d/Design/layouth3cp.html" rel="nofollow">este enlace</a> puede interesarte (mira el código fuente para el CSS).</p>
+<p>Habrá mejores maneras de hacerlo, supongo, pero son tres columnas con cabecera y pie; ancho fijo.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9756">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong><a href="http://blogia.com/navegaseguro" rel="external nofollow" class="url">D4</a></strong><br><a href="#comment-9756" title="">Septiembre 24th, 2003 at 11:11 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Fabio, pienso que <a href="http://es.geocities.com/d4mr0d/Design/layouth3cp.html">este enlace</a> puede interesarte (mira el código fuente para el CSS).</p>
+<p>Habrá mejores maneras de hacerlo, supongo, pero son tres columnas con cabecera y pie; ancho fijo.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9757">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong><a href="http://blogia.com/navegaseguro" rel="external nofollow" class="url">D4</a></strong><br><a href="#comment-9757" title="">Septiembre 24th, 2003 at 11:15 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Ups, de verdad que siento el comentario triplicado. Pensaba que había detenido el envío de datos a tiempo.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9758">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>iban</strong><br><a href="#comment-9758" title="">Septiembre 24th, 2003 at 11:38 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>En
+general me parece todo bien, pero… algo huele a podrido en Dinamarca.
+Me explico: no todo en Internet ha de ser usabilidad, como en la vida.
+Al final pareceremos todos informÃ&nbsp;ticos que no entienden la
+velleza de la imagen… Hay espacios web que requieren flash (a otros les
+sobra), otros tablas (porque hoy es hoy), otros javaScript a saco
+porque necesitan expresarse de otro modo. No és tanto la herramienta,
+sino el uso que se haga. Digo yo, puedo estar equivocado. </p>
+<p>Que una web con Shockwave-Flash és difícilmente visible por gente
+con disminución visual por ejemplo, vale, y? Total, hay millones de
+personas en el tercer mundo que directamente no pueden acceder a
+Internet.</p>
+<p>Más que titular “25 errores comunes en los desarrollos Web”
+consideraria más correcto algo así como “25 ejemplos para mejorar la
+usabilidad en la web”</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9759">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/c21ffcdf4c2988203119c2c5e49dea95.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong>Alex</strong><br><a href="#comment-9759" title="">Septiembre 25th, 2003 at 12:13 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Iban,
+así como tú escribes Belleza con “V” y yo puedo dar por entendido que
+estás hablando de “Belleza” con los estándares sucede lo mismo, hay
+convenciones que pueden NO ser respetadas pero para una mejor
+“convivencia” sería bueno que todos (o casi) siguiéramos esas pautas
+que le ahorrarán dinero a los clientes, facilitarán la comunicación y
+el flujo del tráfico en Internet.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9760">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>Jorge</strong><br><a href="#comment-9760" title="">Septiembre 25th, 2003 at 12:22 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>¿En el error nº 18 (metas) podrías poner un par de ejemplos con LINK?</p>
+<p>Un saludo y muy buen artículo</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9761">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>gibson</strong><br><a href="#comment-9761" title="">Septiembre 25th, 2003 at 12:35 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Me encantó el artículo <img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/icon_smile.gif" alt=":-)" class="wp-smiley"> </p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9762">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5b928bc7fdd9c9b22bce80d26f3419d2.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://bulletrain.net/" rel="external nofollow" class="url">charlie</a></strong><br><a href="#comment-9762" title="">Septiembre 25th, 2003 at 12:39 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Iban,
+ya hablaremos de que “no todo en la web ha de ser usabilidad” cuando
+todas las páginas sean accesibles por encima de otra cosa… la verdad es
+que no se incide suficiente en este aspecto, y por eso hay tanta
+chapuza de web.</p>
+<p>Y no se trata de que la usabilidad esté por encima de todo, es
+simplemente uno de los pilares del buen diseño, junto a una estructura
+sólida y un aspecto visual atractivo. Creo que observando esto no se
+queda fuera nada importante, ¿no?</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9763">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/e3ec7ac5eeb5aba6287c3483efd70dae.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.sdelavega.tk/" rel="external nofollow" class="url">Salva</a></strong><br><a href="#comment-9763" title="">Septiembre 25th, 2003 at 12:44 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Increible
+comentario Diego, he guardado la página para tenerla como referencia.
+Sería muy utíl que hicieras esta guía imprimible (un pdf o algo asi).</p>
+<p>GRacias por esto. Un saludo.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9764">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/048b70db3e2793954919e9f03a1af792.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.conceptualcomunicacion.com/" rel="external nofollow" class="url">natzan</a></strong><br><a href="#comment-9764" title="">Septiembre 25th, 2003 at 2:00 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>cuando encontre esta web, me di cuenta que habia calidad</p>
+<p>ahora veo con este post tan preparado ques cierto y que la gente que lo lleva se lo curra.</p>
+<p>gracias por cada dia de post publicado</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9765">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/f53bca87b871c1181128164cd14b40fc.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong>Rubén Araiza</strong><br><a href="#comment-9765" title="">Septiembre 25th, 2003 at 2:01 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Creo
+que tu artículo es bueno, sin embargo tus conocimientos te hacen un
+tanto engreído y criticas el trabajo de otras personas como si no
+tuvieran oportunidad de encontrarse en la etapa de aprender a hacer
+buenos sitios. Supongo que un días despertaste y tu cabeza era la
+biblia de la red y nunca pasaste por los frames y las tablas… más
+humildad amigo, hará que leerte sea agradable. Hablas como el Dios del
+web y obviamente no es asi.</p>
+<p>Coincido contigo en el uso limpio del código y el CSS, pero no todo
+en la vida es llegar a las masas, hay sitios personales, o no se,
+enfocados a mercados más específicos, donde el uso del flash por ejem.
+es imprescindible. Además dejas por un lado los de las personas. Talvez
+en tu región el internet no llegue a velocidades aceptables, pero hay
+otras regiones donde es posible cargarle más la mano al contenido
+sobretodo multimedia, y como en todo no se le puede dar gusto a todos
+los internautas.</p>
+<p>2Advanced… mmmm… es evidente que el trabajo que tu desempeñas
+(porque lo he visto) y el que realizan ellos es muy diferente, y como
+dije antes, es muy fácil sentarse a criticar hacia abajo, incluso hacia
+arriba en tu caso.</p>
+<p>La banda ancha es una realidad que cada vez llega más lejos y en
+gran medida es porque los mismos usuarios la demandan asi que pienso
+que en algunos años no será gran problema unos cuantos bytes de más.</p>
+<p>Se que eres un usuario hardcore del CSS y de los sitios planos.<br>
+Bueno. No todo en el mundo es CSS y sitios planos, ni me voy totalmente
+por un sitio hecho 100% en flash ni me voy por un sitio totalmente
+plano.</p>
+<p>Los excesos siempre son malos, prefiero ser híbrido.</p>
+<p>Saludos desde México.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9766">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/d2c7e7b5f697c27ed3e104df6414c694.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://blog.betobeto.com/" rel="external nofollow" class="url">beto</a></strong><br><a href="#comment-9766" title="">Septiembre 25th, 2003 at 2:06 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Sobre
+tu punto #11 (los popups), estoy total y absolutamente de acuerdo, pero
+también hasta qué punto podemos venderle esa idea a los clientes, que
+muchas veces más bien demandan ese tipo de cosas? Es cierto, uno puede
+argumentar con el cliente, pero a veces no vale la pena enfrascarse en
+una guerra inútil de la que al final llegamos a la conclusión de que
+mejor le damos los dichosos popups y ya, que se dejen de joder…</p>
+<p>Por otra parte, se me ocurren muchas ideas y sugerencias para el web
+de mi banco, que como casi todos, están hechos sobre la idea de que IE
+en Windows es el único navegador que existe…</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9767">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/69a466e9ae8fe06890670dfb6ca3e25a.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.joseoliveras.net/" rel="external nofollow" class="url">jose oliveras</a></strong><br><a href="#comment-9767" title="">Septiembre 25th, 2003 at 9:13 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Muy interesante. Hace tiempo que estoy interesado en las METAS, un articulillo no vendría mal, no?</p>
+<p> <img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9768">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9768" title="">Septiembre 25th, 2003 at 9:49 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Sergi gracias, en mi ejemplo sobran más cosas todavía, créeme con eso sobra para demostrar que se podía (sin mucho esfuerzo)</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9769">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9769" title="">Septiembre 25th, 2003 at 10:34 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Jorge dice:</p>
+<p>bq. ¿En el error nÂº 18 (metas) podrías poner un par de ejemplos con LINK?</p>
+<p>Puedes revisar el código fuente de esta página con ejemplos,
+bastante completos, hay elementos @@ ordenados, de autor, glosario,
+privacy, de todo.</p>
+<p>Más documentación sobre los elementos “link en el sitio del W3C
+(links in
+HTML)”:http://www.w3.org/TR/html401/struct/links.html#edef-LINK.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9770">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9770" title="">Septiembre 25th, 2003 at 10:54 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>bq.
+Creo que tu artículo es bueno, sin embargo tus conocimientos te hacen
+un tanto engreído y criticas el trabajo de otras personas como si no
+tuvieran oportunidad de encontrarse en la etapa de aprender a hacer
+buenos sitios.</p>
+<p>Creo que no entiendes, esta gente, no debería hacer sitios web, dado
+que se malgasta el dinero. Entiendes o te llamo por teléfono y te lo
+explico hablando. Esta gente no tendria que aprender nada, antes de
+hacer un sitio ya debería saber lo que está haciendo.</p>
+<p>¿Acaso dejarías a una persona que no sabe nada hacer un edificio?
+Ãla, venga hazte un edificio, total estas aprendiendo, y si todo ha
+salido mal y el eficio sale, como estabas aprendiendo te lo perdonamos.</p>
+<p>Por favor. Para aprender, existen otros métodos.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9771">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/6d91bd6205b1c5e44fb4833a32febc6b.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.4colors.net/" rel="external nofollow" class="url">4Colors</a></strong><br><a href="#comment-9771" title="">Septiembre 25th, 2003 at 12:42 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Excelente trabajo que hace sonrojar a más de uno… entre los cuales me incluyo haciéndome míos algunos errores.<br>
+Muchas gracias.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9772">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9772" title="">Septiembre 25th, 2003 at 12:46 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Yo también me sonrojo, no cabe dudas, pero hay que ser cruel y aceptarlo.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9773">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/53e153caad72c780ab5033eacd7a5030.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong>rolando</strong><br><a href="#comment-9773" title="">Septiembre 25th, 2003 at 5:19 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Hola</p>
+<p>interesante tu articulo pero debo decirte que desde siempre veo mal
+tu pagina, no se si sera el navegador, uso una mac G4 y el cuerpo de
+contenido siempre esta debajo del menu, aunque centrado, que puede ser?</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9774">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9774" title="">Septiembre 25th, 2003 at 6:02 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Yo
+te explico por qué, relativamente no me he puesto a solucionar los
+problemas de compatibilidad entre navegadores, solo me he limitado a
+programarlo basado en los estándares, cuando tenga tiempo publicaré una
+versión más compatible entre navegadores.</p>
+<p>Tampoco sé en qué navegador visualizas la página, en Mac puedo ver
+las cosas bien en Safari, Camino, Mozilla. IE para Mac no soporta CSS
+del todo bien.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9775">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong><a href="http://meddle.dzygn.com/" rel="external nofollow" class="url">Sergi</a></strong><br><a href="#comment-9775" title="">Septiembre 25th, 2003 at 6:41 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Diego, de nada.</p>
+<p>Por cierto, veo que alguna gente no se toma demasiado bien los
+articulos que ultimamente van saliendo por aqui (Diego, estas en racha,
+eh mamon?). Quizas lo que hace falta es un poco de cultura de
+autocritica, y menos susceptibilidades a la hora de encajar criticas.
+Diego es el primero en criticarse, admitiendo que va adoptando sus
+enseñanzas sobre la marcha y que aun no tiene todo arreglado, sobretodo
+en cuanto a presentacion (pequeños detalles de presentacion en
+distintos navegadores). Pero es de los pocos que puede hablar con
+propiedad sobre arquitectura de la informacion, puesto que es evidente
+que de esto sabe un rato. </p>
+<p>Señores, dejen de mirarse el ombligo. Porque la gente de correos o
+administracion no tengan ni puta idea de hacer webs no quiere decir que
+no podamos hacer un repaso de como se debe o no se debe hacer, y
+adaptar esas enseñanzas para una mejora de nuestras webs. Es una clase
+magistral, en los dos sentidos de la palabra, quizas algo dura, pero
+sin dudas necesaria, de los pasos a seguir para hacer las cosas comme
+il faut. </p>
+<p>Lo dicho, Diego tio, tu a lo tuyo, ya dejaran de llorar. Si quieren,
+y si no pues alla ellos, que se queden en el internet de 1998.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9776">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/338cea79c0e67bedbf72f0af5b4878bb.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://albertobastos.bublegum.net/" rel="external nofollow" class="url">alberto bastos</a></strong><br><a href="#comment-9776" title="">Septiembre 25th, 2003 at 6:53 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Es
+un gran documento digno de encontrarse en cualquier recogida de
+tutoriales y consejos web, yo mismo me aplicaré algunas correcciones en
+cuánto vuelva a trastear en mis páginas.</p>
+<p>Pero creo que se cae en lo de siempre: si Pepe quiere hacer una
+página personal donde enseñar fotos de su perro, no quiere decir que
+Pepe sea un desarrollador.</p>
+<p>Eso sí, totalmente de acuerdo con que sitios como BBVA o Correos deberían ser algo más que “páginas web”.</p>
+<p>Pero, ¿no es cierto que no todos los conductores son pilotos de
+rallies, ni todos los usuarios informáticos son ingenieros? Pues lo
+mismo, hombre…</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9777">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9777" title="">Septiembre 25th, 2003 at 7:03 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>De
+hecho me agrada esto por que no he mencionado ninguna página personal,
+solo páginas web corporativas, donde se supone que todos aportamos
+dinero en alguna forma.</p>
+<p>Si Juan hace su página sin estándares, mala suerte, no puedo con el,
+tampoco tiene la culpa, ni debe molestarse en mi… aunque el mundo seria
+mejor si hubiera conciencia.</p>
+<p>Quien quiere aprende…</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9778">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>Arrikitano</strong><br><a href="#comment-9778" title="">Septiembre 25th, 2003 at 9:31 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Este artículo no lo puedo ver en el internet explorer. ..y no es coña.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9779">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong><a href="http://meddle.dzygn.com/" rel="external nofollow" class="url">Sergi</a></strong><br><a href="#comment-9779" title="">Septiembre 25th, 2003 at 10:48 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Diego,
+puede ser debido a que los dos enlaces siguientes son demasiado largos
+y hacen que crezca en anchura el contenido, como no cabe, baja TODO por
+debajo del menu izquierdo, pero me juego algo a que Arrikitano puede
+ver el post ahi debajo. Los links:<br>
+<a href="http://www.elpais.es/secciones/" rel="nofollow">http://www.elpais.es/secciones/</a> politica/el_psoe_confirma_la_ruptura_definitiva.php<br>
+<a href="http://www.minid.net/archivos/categorias" rel="nofollow">http://www.minid.net/archivos/categorias</a> /internet/idiotas_en_el_espacio.php</p>
+<p>(los he roto para que no pase lo mismo de nuevo)</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9780">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/f9084916fed1ee2e7bf6282971df6f7e.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong>palksueto</strong><br><a href="#comment-9780" title="">Septiembre 25th, 2003 at 11:02 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Me parece un trabajo excelente, lo he leído todo y aun quisiera saber como carajos sabes tanto?!<br>
+Te felicito man</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9781">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/1507c8b2ad7c538a54e886afa581ca10.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.elquintogato.net/" rel="external nofollow" class="url">quintogato</a></strong><br><a href="#comment-9781" title="">Septiembre 26th, 2003 at 5:40 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>He rellenado tu test y tengo 25 puntos, menos mal que no engaño (/robo) a nadie más que a mí mismo.</p>
+<p>Efectívamente es un auténtico tutorial y un ejemplo de objetividad llamando a las cosas por su nombre.</p>
+<p>gracias</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9782">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9782" title="">Septiembre 26th, 2003 at 9:58 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Ya
+está era la URL de El Pais una muy larga con ampersands… y puede que la
+parte de los códigos también obstruya, quizás tambien no es culpa mía
+que Internet Explorer visualice las cosas así.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9783">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong><a href="http://www.sferazero.com/" rel="external nofollow" class="url">AlmaOscura</a></strong><br><a href="#comment-9783" title="">Septiembre 26th, 2003 at 11:49 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Error 6: URL matemáticas, casi imposibles de entender y recordar.</p>
+<p>Ya hablaremos cuando tengas:<br>
+- una página en PHP, ASP ó JSP donde no puedas pasar los datos vía POST y tengas (por la razón que sea) que pasarlos vía GET.<br>
+- el envío sea vía POST y la url deba terminar en main.php o similar,
+pero no puede indicar qué tema o asunto es en la URL, ya que tienes que
+pasarle parámetros a la página para que muestre algo.<br>
+En muchos casos, no se puede hacer como dices. Y más cuando trabajas
+con bases de datos muy grandes. El tamaño del ftp con todos los temas o
+asuntos (cada uno con su archivo .php , .asp,…) puede ser inmenso,
+mientras que con la base de datos se reduce el tiempo de carga y el
+tamaño del ftp (main.php?id=4, p.e.).<br>
+En ningún momento digo que se deba meter URL que llegen a completar los 255 carácteres, pero que en ocasiones es necesario.<br>
+Algo que comparto contigo, son los sitios que usan el identificador de
+sesión vía GET, y el chorizo es impresionante. Debería ser resuelto de
+otro modo.</p>
+<p>Error 8: Olvidarse de la semántica, los documentos son una pila de información sin clasificarÂ</p>
+<p>Personalmente, hay veces que no se puede sustituir una tabla por una
+capa (esto es criticable, y tal vez me equivoque, pero es mi opinión).</p>
+<p>Error 25: Archivos multimedia, PDF, etc.<br>
+         Otra de las locuras es abusar de los archivos multimedia<br>
+         para representar datos en la Web, es casi insano tener 400 <br>
+         PDFs en un sitio Web, cuando esos archivos pueden estar <br>
+         hechos en HTML, el PDF no fue hecho para reemplazar al <br>
+         HTML, no se mezquinen con estas tecnologías.</p>
+<p>Hay veces que los documentos no deben ser modificados y por ello se
+usa el PDF en lugar de HTML, sobre todo documentación oficial
+imprimible, y que tal copia pueda tener algún valor como tal.<br>
+Quitando eso, no tiene mucho sentido usar PDF.</p>
+<p>Más cosas,…</p>
+<p>          mini-d:<br>
+          Creo que no entiendes, esta gente, no debería hacer sitios <br>
+          web, dado que se malgasta el dinero. Entiendes o te llamo <br>
+          por teléfono y te lo explico hablando. Esta gente no tendria <br>
+          que aprender nada, antes de hacer un sitio ya debería <br>
+          saber lo que está haciendo.</p>
+<p>No te lo niego (que no deberían hacer sitios web ‘cobrando’), pero
+yo haciendo páginas webs (no remuneradas) he aprendido (muchas cosas,
+sobre todo de programación en php) con lo que he podido mejorar mi
+trabajo (remunerado).<br>
+Cuando tú aprendiste a usar las CSS (y empezaste a trabajar como
+diseñador web), sabías perfectamente como funcionaban en cualquier
+navegador (ahora estoy en la Universidad y con el IE6, esto sale justo
+debajo del listado de weblogs de Barcelona…), ¿verdad? Tu sitio web
+funciona en ‘cualquier’ navegador y sabías que todo iba a funcionar
+como tú querías. Y por tanto no has aprendido nada, y no debes hacerlo
+porque antes de ponerte ya lo sabías, ¿no? No hay que ser tan
+intrasigente, ni engreido como comentan arriba. </p>
+<p>Yo, a veces también lo soy, cuando oigo que algunas empresas
+‘diseñan’ páginas web, modificando mínimamente el php-nuke o script
+similar -MT? <img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/icon_wink.gif" alt=";)" class="wp-smiley"> -  y cobran cifras desmesuradas por un trabajo mínimo, me pongo negro.<br>
+El diseño de una página web -que sea algo más complejo que css y html-
+debe conllevar un desarrollo web (sea php, asp, o lenguaje elegido a
+razón del uso de una bd), no la adaptación de un script editado por una
+tercera persona. Además de obtener miles de páginas iguales (y empieza
+a ocurrir con el MT).</p>
+<p>Aparte de lo comentado, el resto del artículo me parece genial y me
+ha ayudado a perfilar algunas cosas para un posible weblog que quiero
+hacer (editado por mi, of course), y para realizar algunos cambios en
+mi sitio web.<br>
+Te felicito por el articulo.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9784">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9784" title="">Septiembre 26th, 2003 at 12:02 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>AlmaOscura y a cualquiera.</p>
+<p>Hay que tener la mente fuera de control para pensar que yo, he
+nacido y ya sabía estas cosas. Las he aprendido, del mismo método que
+tu lo has hecho. Pero bueno el esfuerzo que uno debe poner en estos
+ámbitos trae consigo un montón de ventajas.</p>
+<p>Tómalo o dejálo… yo pongo los conocimientos, las explicaciones, las criticas con fundamentos, y la gente se ofende!</p>
+<p>Yo escribo las cosas para que todo el mundo aprenda o saque su
+conclusión, si luego quieres usar tablas o no, problema tuyo, pero
+cuando yo voy a un cliente siempre le digo lo mismo y le enumero todo
+el trabajo mal hecho por el anterior, punto por punto, sabes como queda
+la reputación del anterior al que le hizo la página? Pues no muy guay
+que digamos.</p>
+<p>En los negocios, la reputación puede importar más que 1000 euros que
+se te esfuman en menos de un mes. La reputación te puede quedar de por
+vida.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9785">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong><a href="http://www.sferazero.com/" rel="external nofollow" class="url">AlmaOscura</a></strong><br><a href="#comment-9785" title="">Septiembre 26th, 2003 at 12:32 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>A
+ver, creo que tus articulos sobre diseño web son de lo mejor que he
+leido por la red, sin duda. Pero hay ocasiones que son algo ‘rectos’ en
+lo que se ‘tiene que’ hacer. Hay excepciones.</p>
+<p>Lo sé, toca las pelotas que simplemente llegue alguien y critique tu
+trabajo. Si me he pasado con mi comentario, lo lamento. Pero solo he
+hablado de lo que tengo como experiencia (desarrollo en php y asp) y de
+lo que ‘creo’ que es. Más que nada para ‘complementar’ algunas cosas
+que dices. Repito, si he dicho algo que te haya molestado, lo lamento.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9786">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9786" title="">Septiembre 26th, 2003 at 12:36 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>No
+me molestan, lo que no entiendo es el foco de “enojo”. Está mal punto,
+te digo como mejorarlo, yo entiendo que mucha gente (como yo) hace las
+cosas sufridas, y pasan por procesos de tolerancia de clientes, etc.</p>
+<p>Pero mis ejemplos fueron claros, los que tienen presupuesto y que
+ofrecen un servicio bajo el nombre “calidad 100%” están tildados.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9787">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong><a href="http://meddle.dzygn.com/" rel="external nofollow" class="url">Sergi</a></strong><br><a href="#comment-9787" title="">Septiembre 26th, 2003 at 12:45 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Diego,
+hasta ahora te he defendido porque me ha parecido que decias lo
+correcto, puede que no siempre en la forma pero si en el contenido. No
+puedo estar de acuerdo contigo en lo de enumerar todo el trabajo mal
+hecho por el anterior. Podrias no hacerlo directamente, diciendo todo
+el trabajo bueno que tu puedes hacer, sin nombrar a los otros. O
+exponiendo la filosofia de este articulo, etc.</p>
+<p>AlmaOscura,<br>
+El problema de las URL se puede resolver muy facilmente en
+PHP/Apache/htaccess eso si, en Windows no creo que fuera tan facil,
+aunque creo que hay un modulo de reescritura de URLs, no estoy seguro.
+Da igual que trabajes con bbdd o no, se puede hacer. De hecho en mi
+weblog (lo siento hasta ahora no me habia promocionado pero tengo que
+dar un ejemplo practico) lo hago asi. Los enlaces permanentes se hacen
+al vuelo con titulo de mensaje o con fecha (con año y/o mes y/o dia).
+Tambien me he permitido el lujo de aprovechar la bbdd para ofrecer un
+sistema de comparacion de cadenas de las URL ( <a href="http://meddle.dzygn.com/weblog/cadenas/" rel="nofollow">http://meddle.dzygn.com/weblog/cadenas/</a>
+) , por si uno se equivoca al escribir la direccion. Repito, aqui no
+hay post, ni get ni leches. Todo PHP/Apache. Si yo puedo no veo porque
+una empresa con profesionales de esto no puede hacerlo.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9788">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong><a href="http://www.sferazero.com/" rel="external nofollow" class="url">AlmaOscura</a></strong><br><a href="#comment-9788" title="">Septiembre 26th, 2003 at 12:53 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Pues
+tendré que verlo, pero cuando la base de datos se hace muy extensa,
+esto puede hacer que la carga de la página aumente considerablemente.
+Otra posibilidad. </p>
+<p>Gracias.</p>
+<p>mini-d, no te mosquees. Tal vez haya errado en el ‘foco’ de mi
+comentario. Suele ocurrirme, digo las cosas pero fallo en la forma de
+decirlas…</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9789">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong><a href="http://meddle.dzygn.com/" rel="external nofollow" class="url">Sergi</a></strong><br><a href="#comment-9789" title="">Septiembre 26th, 2003 at 1:27 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>AlmaOscura,
+no hay retardos en la carga. Solamente le pides a la bbdd el id y el
+titulo, no todos los campos. Eso hace el proceso MUY rapido. Si alguien
+quiere info detallada podemos hablarlo, pero es basicamente eso, mas
+mod_rewrite mas explode de PHP.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9790">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/c21ffcdf4c2988203119c2c5e49dea95.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong>Alex</strong><br><a href="#comment-9790" title="">Septiembre 26th, 2003 at 1:43 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>bq y le enumero todo el trabajo mal hecho por el anterior …</p>
+<p>Coincido con Sergi, creo que por cuestiones de ética y por más odio
+o pena que a uno le provoque el trabajo mal hecho por otros, ante un
+cliente no se debería hablar mal de la competencia, sí podríamos
+sugerir las fallas hablando objetivamente del trabajo y me supongo que
+a eso apuntaba Diego, no?</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9791">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/f2d2880f3e148998f8e82753f1606d90.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.dr-leech.com.ar/" rel="external nofollow" class="url">Dr-Leech</a></strong><br><a href="#comment-9791" title="">Septiembre 26th, 2003 at 7:08 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Excelente trabajo, Diego..</p>
+<p>Muchas de estas cosas son las que vemos dia a dia y dan bronca.</p>
+<p>Te felicito… <br>
+Un abrazo..</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9792">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>Roman</strong><br><a href="#comment-9792" title="">Septiembre 27th, 2003 at 5:22 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Todo muy bonito profesor, pero… </p>
+<p>¿Por que aparece un un ENORME e INÚTIL trozo en blanco arriba de todas estas lecciones?</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9793">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>Roman</strong><br><a href="#comment-9793" title="">Septiembre 27th, 2003 at 5:31 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>En vuestra pagina, la U acentuada de mi post anterior en “INUTIL”, no ha sido aceptada correctamente.</p>
+<p>Creo cometes varios errores, que seguramente no has agregado a tu articulo.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9794">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/a456b6021fc24113207859baa701e662.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.tomedo.net/" rel="external nofollow" class="url">Tomedo</a></strong><br><a href="#comment-9794" title="">Septiembre 27th, 2003 at 8:28 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Román, compañero, eres el único de por aquí al que no se le leen los acentos, fíjate que los demàs los escribimos sin problemas.</p>
+<p>El pedaZo enrome en blanco que lees encima de este artículo es
+debido a que usas un navegador que no soporta estándares (yo por
+ejemplo tengo este mismo problema porque leo estos post desde
+FeedReader que usa el motor de IE para mostrar las páginas), puedes
+solucionarlo aumentando el tamaño de la ventana del navegador. Yo
+sinceramente prefería el diseño anterior de Minid, este de ahora lo
+encuentro demasiado líquido y genera el problema que tu comentas, pero
+Diego tiene su filosofía “crossbrowser” aplicada a todos aquellos
+navegadores que soporten estandares, no llega a ser crossbrowser, pero
+es coherente con los estándares, no puedo criticar nada a eso, sólo dar
+mi opinión pobrísima sobre el diseño (soy peor diseñador que nadie
+nacido o por nacer).</p>
+<p>Saludetes!</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9795">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>Roman</strong><br><a href="#comment-9795" title="">Septiembre 28th, 2003 at 2:59 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Tomeo:</p>
+<p>“La belleza está en los ojos de quien la contempla”</p>
+<p>
+Uso IE 6.02600 (para winXP) basado en NCSA Mosaic, pero en otros equipos también veo ese enorme bloque en blanco.</p>
+<p>La U acentuada es una mayúscula, por lo que podría haber un problema
+allí, con las benditas mayúsculas acentuadas, ya que veo el código
+“&amp;Uacute”.</p>
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+<p>Por lo de la definición de estandard. Para mí estandard es,
+lamentablemente, el IE, porque lo usa la mayoría de la gente. Lo demás
+son “normas establecidas”.</p>
+<p>Me parece si importante aplicar esas “normas” al momento de
+desarrollar páginas para personas con discapacidad visual, y que éstas
+sean compatibles con JAWS o cosas parecidas. Sólo por una cuestión de
+compatibilidad.</p>
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+<p>Otro tema que no se ha discutido aquí es que muchos diseñadores
+piensan que como el fondo blanco contrasta muy bonito con todos los
+colores es el más indicado para usar en la web… pues el fondo blanco me
+destruye la vista.</p>
+<p>
+Un saludo a todos, y esá de más decir que aprecio el esfuezo con que se está desarrollando este sitio.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9796">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9796" title="">Septiembre 30th, 2003 at 1:26 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Mmm
+podría hacer algo para el Feedreader, si el Feedreader se identificara
+como un AU(Agente de Usuario) Lector de posts, entonces, con hacer una
+pequeña plantilla que le de un formato apto para visualizar la web en
+cuanto ocupa el tamaño de sus ventanitas de Feedreader?</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9797">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9797" title="">Septiembre 30th, 2003 at 2:01 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>bq. En vuestra pagina, la U acentuada de mi post anterior en ÂINUTILÂ, no ha sido aceptada correctamente.</p>
+<p>Como la gran mayoría *no saben escribir 1 de los 800 códigos de
+HTML*, le he permitido a este sistema *que todo el mundo pueda comentar
+lo más natural posible*, de modo que si quiero escribir Ã, el sistema
+me lo convierte a la entidad Ú automáticamente, sin probabilidades de
+errores, si quiero escribir Ã&nbsp; Ã¨ Ã¬ Ã² Ã¹ Â Â el sistema lo
+comvierte por mí.</p>
+<p>Lo que antes nadie hacía (escribir un código) ahora me lo convierte
+el sistema, me libera mucho trabajo, y todo el mundo se ve beneficiado,
+o sea que cada tanto en tanto 1 persona escriba una entidad sin
+previsualizarla antes me parece más que una putada, gracioso.</p>
+<p>Un detalle importante de todo esto, es que veo que no eres precavido
+en a la hora de comentar, si hubieras hecho un “pre-visualizar”,
+lograrías darte cuenta que las entidades no funcionan… de hecho lo
+intuyo sabrías darte cuenta por que sabes escribir entidades.</p>
+<p>Lo mismo si alguien quiere escribir código HTML que no esté
+permitido como @@, o código de PHP, da igual, si previsualizas y vez
+que no funciona mejor para ti.</p>
+<p>Creo que *es un avance* permitirle al usuario poder escribir
+normalmente sobre todo si no tiene que recordar 40 códigos para
+escribir normalmente.</p>
+<p>Espero que eso te sirva de lección.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9798">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9798" title="">Septiembre 30th, 2003 at 2:15 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>bq.
+Me parece si importante aplicar esas ÂnormasÂ al momento de
+desarrollar páginas para personas con discapacidad visual, y que éstas
+sean compatibles con JAWS o cosas parecidas. Sólo por una cuestión de
+compatibilidad.</p>
+<p>Todas las páginas deberían ser accesibles a un mínimo nivel,
+recuerda eso, la gente con discapacidad es una persona igual a ti, con
+un defecto que nunca ha elegido tener, de modo que no tiene la culpa de
+no poder leer tus contenidos, páginas, o películas de Flash.</p>
+<p>Hay que hacer un sitio, con un método de trabajo sólido, una versión
+no 3 o 4 dependiendo el navegador y por sobre todo tiene que tener
+soporte y características de accesibilidad.</p>
+<p>¿Donde está el sentido sino? Se que hacerlo todo a muchos les
+cuesta, incluso si trabajas en un lugar donde te apresuran a terminar,
+a uno le encantaría poder ponerle accesskey a los todos los enlaces, o
+plantear la arquitectura de otra forma…</p>
+<p>Pero mejor expresarlo y comprenderlo a tener un concepto errado como el que acabas de dar…</p>
+<p>bq. Otro tema que no se ha discutido aquí es que muchos diseñadores
+piensan que como el fondo blanco contrasta muy bonito con todos los
+colores es el más indicado para usar en la webÂ pues el fondo blanco
+me destruye la vista.</p>
+<p>Hay estudios que indican que leer en pantalla no es ni saludable, ni
+tampoco muy preferido, de modo que ofreciendo soporte nativo para
+imprimir se agrega un valor añadido.</p>
+<p>De hecho, es preferible dejar un color blanco, si te molesta el
+blanco te recomiendo que leas esta sección de mi curso sobre cómo usar
+mozilla, puedes escoger el color de fondo para todas las páginas,
+incluso también te digo como “truco” que puedes bajar la brillantes de
+la pantalla con los botones que tienes debajo del tubo de la pantalla
+de tu monitor, eso hará que el blanco no sea muy luminoso y te
+destruya, además te permite calibrar los colores o la luminosidad a los
+niveles de tolerancia de tus ojos.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9799">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/7b00a75125a2b46f5a50a9bee28d29da.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.rinconmatematico.com/" rel="external nofollow" class="url">mario</a></strong><br><a href="#comment-9799" title="">Octubre 1st, 2003 at 7:34 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Tu
+artículo me ha resultado agradable y estimulante, y me animo a hacerte
+una consulta, aunque no sé si este es el lugar apropiado. <br>
+Estos ultimos días estuve cambiando mi index, y ahora, con una
+programación ingenua y seguramente defectuosa, he logrado que mi página
+valide CSS y XHTML 1.1 . <br>
+Todo razonablemente bien con Explorer desde Explorer 5.x , Mozilla,
+Netscape 7.1 (El Netscape 4.7 muestra una página en blanco ) y Opera
+7.11 (Opera 7.11 me produce un problemilla algo menor, menor comparado
+con el problema que estoy por plantearte). </p>
+<p>Pero… ahora vienen los peros: un usuario de Mac me dice que él no ve
+ni acentos ni caracteres especiales. Me pregunto qué es lo que estoy
+haciendo mal, y aunque los Mac no se llegan a mi sitio sino raramente
+(¿quizá por eso?), me sentiré más tranquilo si el tema de estos
+símbolos pudiese arreglarse. <br>
+Desde ya, te agradeceré si podés darme alguna orientación.<br>
+Muchas gracias. <br>
+Mario</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9800">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9800" title="">Octubre 2nd, 2003 at 9:26 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Pues
+si escribes con un Mac, tienes que utilizar un formato UTF-8 o UTF-16
+para los caracteres, pero de lo contrario, lo mejor es utilizar la
+tabla ASCII para realizar la conversión de todos los acentos.</p>
+<p>Por ejemplo, si escribes á → á. Y así sucesivamente con todos y cada uno de los que realmente necesitan cambiar.</p>
+<p>Lo otro que puede ser –que generalmente pasa, es que el usuario
+mismo haya hecho algo tonto y haya configurado la detección automática
+o haya tocado algo y todos los documentos terminen siendo leídos en
+otro formato que no sea el iso-8859-1 que tu has especificado.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9801">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>FlyMan</strong><br><a href="#comment-9801" title="">Octubre 2nd, 2003 at 7:52 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Exelentisimo trabajo… realmente formidable…. <br>
+Aunque creo que cada uno hace el trabajo como mas le guste… si hay algo
+que el arte o inclusive el diseño apoyan en lo absoluto es la
+CREATIVIDAD. Aveces es importante seguir estandares, Otras… nos podemos
+dar el gusto de mandarlos al carajo. al cabo no todos los objetivos son
+iguales…</p>
+<p>Saludos desde Argentina… </p>
+<p>Repito… TRABAJO EXELENTE….</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9802">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/41c9ae8d543e627ba414acaa5fda0a89.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.bgsupport.net/" rel="external nofollow" class="url">Juan José</a></strong><br><a href="#comment-9802" title="">Octubre 5th, 2003 at 2:41 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Excelente
+articulo, lo lei completo y todo el articulo esta en lo correcto, un
+jalon de orejas para los desarrolladores, felicidades y a poner en
+practica lo leido.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9803">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/b8960f14f9c32aa02fdbc4b6c8e23427.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong>FlyMan</strong><br><a href="#comment-9803" title="">Octubre 16th, 2003 at 5:36 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Necesito
+su ayuda diseñadores de pimera… Mi profesora de tesis nos dice que
+nuestro sitio necesita auditoria interna constante y de todo… Esta bien
+si es un sitio de mucha seguridad como ser tramites bancarios, o ese
+tipo de rollo… pero en un sitio donde no hay seguridad extrema… no se
+hace inutilmente mas pesado realizar registros en una base de datos de
+todo lo que se hace en el sitio ???</p>
+<p>Si es como digo necesito links y articulos como para “demostrarle”
+que nuestro sitio valorara mas la frescura y desempeño a un registro de
+cuantas veces nuestro usuario fue al baño mientras tenia nuestra pagina
+abierta…</p>
+<p>Gracias  a todos…</p>
+<p>Saludos desde Argentina</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9804">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9804" title="">Octubre 16th, 2003 at 6:03 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p> <img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/icon_smile.gif" alt=":)" class="wp-smiley"> No hay que mandar a la -mierda-, hay que demostrarle con lógica el porqué de cada elemento en una página.</p>
+<p>Haz un estudio de todas las cosas, luego vuelca las conclusiones en
+un informe, busca en la red sobre usabilidad en páginas y encontrarás
+muchos enlaces, también puedes leer cosas que he escrito aquí yendo a
+la “página de artículos”:/articulos/ </p>
+<p>Suerte.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9805">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/f3fe7a1b67d967c2bc954f7d3434f701.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong>nexus</strong><br><a href="#comment-9805" title="">Octubre 26th, 2003 at 10:30 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Interesante articulo, pero demasiado purista, pedante y engreido segun mi punto de vista. </p>
+<p>Yo no los llamaria “errores” y el uso de esos “errores” no implica una página mal diseñada.</p>
+<p>Unos cuantos comentarios a algunos de tus errores:</p>
+<p>bq. Error 1: Peso en la página</p>
+<p>Tienes razón, pero cuanto más avanzamos en comunicaciones, mas
+podemos bajarnos y al final el peso será despreciable en futuro. Si
+antes mi ms-dos ocupaba menos de 2mb, ahora mi windows-xp ocupa mas de
+1gb. <br>
+No digo que no sea importante, y que parte de esos 240kb que tienen
+algunos puedan ser mas que tediosos para algunos ordenadores, pero para
+otros no.</p>
+<p>Este error algun día sera despreciable.</p>
+<p>bq. Error 4: Títulos de página molestos y enigmáticos</p>
+<p>No siempre has de mostrar el contenido de la ventana (diselo a los
+pop-ups) ya que el titulo de la ventana es obligatorio. Lo que dices es
+de cajon, y si no se cumple es por otro motivo, y no creo que sea por
+descuido.</p>
+<p>bq. Error 5: Sin imágenes navegar una página es imposible</p>
+<p>Toma y si le pones flash, imposible.</p>
+<p>Pues si, y aunque haya un porcentaje que no le interese las imagenes
+o solo reciba contenidos (recomendado en PDA+GPRS), ese es bajo y
+despreciable para muchas empresas.</p>
+<p>bq. Error 6: URL matemáticas, casi imposibles de entender y recordar</p>
+<p>Yo creo que este error és mas que provocado, cuando manejas datos
+dinámicos. si todas las URL deberian ser entendibles, podrias acceder a
+partes de la web directamente que quiza no quisieras. Y con las
+peticiones GET, serian transparentes. Luego muchas de esos portales que
+citan se generan con portlets donde la maquinaria generadora de HTML y
+links se genera automatica por un motor y no depende del diseñador.
+Este error es mas que necesario en muchos portales.</p>
+<p>bq. Error 10: Documentos Web que son enemigos de la impresora</p>
+<p>La mayoría de paginas no son para imprimir, porque si así fuera
+tienes los contenidos en un xml y luego lo presentas en html, pdf, o
+formato que quieras segun el xsl-t que tengas.</p>
+<p>Que haya un boton de imprimir es porque la mayoria de usuarios no
+sabe que tiene una opcion de menu de imprimir, y ni sabe que es una
+barra de herramientas. Ademas con un boton le estas diciendo que esa
+pagina es imprimible. Aunque ciertamente muchas web lo hacen
+implementan muy mal.</p>
+<p>bq. Error 11: Ventanas emergentes, inútiles, sin sentido y no muy accesibles.</p>
+<p>Ese “tumor” a veces es necesario según que información quieras
+mostrar. Quiza la mayoria sean un “tumor”, pero descartarlas al 100% es
+demasiado…</p>
+<p>bq. Error 12: Instale Flash, o de lo contrario no podrá navegar el sitio Web</p>
+<p>Si una empresa solo dispone de diseñadores que saben de flash pero no de html… que agarras a lo que tienes.<br>
+A veces no es una opción erronea, sino la única.</p>
+<p>bq. Error 13: Javascript supera todas las tecnologías de …</p>
+<p>De acuerdo. Javascript moderado, sobretodo por la incompatibilidad con el navegador.</p>
+<p>bq. Javascript es tan bueno que lo utilizamos incluso como base de datos, ¡Ála!</p>
+<p>Pues a veces sí. Sobretodo si son datos que consultas mucho. Todo en exceso es malo pero no descartarlo a la primera</p>
+<p>bq. Error 15: HTML comentado, es igual a más peso en la página</p>
+<p>De acuerdo, pero a veces hay ofuscadores de codigo donde pueden
+hacer notaciones rarisimas inclusive para ofuscar el codigo html. Eso
+pesa más, pero a veces es interesante</p>
+<p>bq. Error 21: La Web no es la televisión</p>
+<p>Coño, quien paga manda</p>
+<p>bq. Error 22: Frames no, si us plau</p>
+<p>Pues van muy bien, ya te digo que las paginas web no son para
+imprimir! hay otros medios. Si no dispones de un servidor ASP,JSP,PHP…</p>
+<p>y si siempre que algo sea siempre visible, diferentes scrolls? que los usuarios muchas veces son muy simples.</p>
+<p>bq. Error 23: Formularios inaccesibles</p>
+<p>Degradación? Y si quieres validar los campos del formulario, como los haces, si quieres calcular la letra del NIF?<br>
+y si lo que envias por GET quieres convertirlo y encriptarlo (tal y
+como no hacia messenger y es por eso que enviaba el password a traves
+de GET a la vista de todo mundo??) Sin o dispones de javascript Ok. La
+mayoria de la gente tiene el javascript habilitado.</p>
+<p>Conclusión:</p>
+<p>* Mí web personal la haría tal y como dices.<br>
+* Una web para un cliente (te la pide un cliente) dependera de los
+recursos que te den. Desde el servidor web y de aplicaciones (puedes
+tener un simple servidor web con http, hasta un weblogic con porlets). <br>
+* El usuario a quien va dirigido. Normalmente todas las paginas van
+dirigidas al 100% de las personas, ni deberian. Deben estar enfocados
+al publico concreto. Como tu bien demuestras hacer paginas para muchos
+es barato y para todos es muy mas caro y quiza no compensa.<br>
+* Mi hermana que usa el frontpage sera mas barata que tú. Quiero
+decirte que aun no hemos llegado al punto que dices, porque a la
+mayoría empresas le interesa estar en web, pero no como han de estar. <br>
+* Por mucho que queramos cumplir estandares, eso es algo que hay que
+educar a los programadores y responsabilizar a los empresarios. Ellos
+ni se deberian enterar.</p>
+<p>Después…</p>
+<p>Muchos portales como elpais.es están generados automáticamente por
+motores tipo “portlets” dónde no hay programadores web, sino
+diseñadores y diseñadores de contenidos. Ese será el futuro y todo esto
+quedará como teoria. Todo el codigo debera ser destinado a
+automatizarse. Siempre hemos tenindo a ello (del assembler al visual
+basic)</p>
+<p>Vamos, que mientras los navegadores no se ciñan a los estandares y
+permitan infinidad de recursos alternativos y los plug-ins proliferen,
+el desarrollo web esta y estara coincionado al navegador mas usual
+(explorer), el plugin mas habitual (flash,reader), y no desde
+propiamente el desarrollo sino de desde el punto educativo.</p>
+<p>Todo se podría hacer mejor, pero a veces o no conviene, o no es
+imprescindible, o para que si algo ya funciona. Depende del contexto,
+social o politico de la empresa, el software que dispongamos y de la
+tecnologia que tengas utilizar (no puedes elegir), del tiempo que
+necesites y del conocimiento y experiencia de las personas.</p>
+<p>Eso sí, si todos fueramos como tu, otro gallo cantaria.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9806">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9806" title="">Octubre 27th, 2003 at 11:15 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Nexus, está claro que no has comprendido.</p>
+<p>Si las comunicaciones son buenas (dado que no lo son) ¿por qué debo
+bajarme 240 KB cuando puedo tranquilamente tener que bajar 50?</p>
+<p>Cuando comprendas la diferencia entre practicidad y diversión, es ahí cuando te planteas todo este tipo de desarrollos.</p>
+<p>bq. Muchos portales como elpais.es están generados automáticamente
+por motores tipo “portlets” dónde no hay programadores web, sino
+diseñadores y diseñadores de contenidos.</p>
+<p>Pues mala elección como diseñador te digo, no es bueno automatizar
+todo así, y dejar de lado puestos de trabajo tan importantes como
+programadores, por culpa del sentimiento fashion, la web está como está…</p>
+<p>bq. Todo se podría hacer mejor, pero a veces o no conviene, o no es imprescindible</p>
+<p>Con ese comentario, pues me ahorro mi opinión, tu has lo que te salga de los cojones, si quieres hacer las cosas mal, allá tu.</p>
+<p>Luego se ponen a llorar cuando les critican.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9807">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/a456b6021fc24113207859baa701e662.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.tomedo.net/" rel="external nofollow" class="url">Tomedo</a></strong><br><a href="#comment-9807" title="">Octubre 27th, 2003 at 12:26 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Estoy un 20% de acuerdo con Nexus y un 80% de acuerdo con minid. <br>
+El tema de las URLs entendibles no lo veo necesario, <a href="http://www.tienda.com/productos/" rel="nofollow">http://www.tienda.com/productos/</a><br>
+es la máxima legibilidad de URL que me apetece darle a mi catálogo de
+productos, el resto lo paso por post o get, no voy a hacer una página
+que diga pc_impresoras_scanners_lectores.php.<br>
+Para un site de artículos estáticos si, para una página de contenidos dinámicos no.</p>
+<p>Hay otras cosillas, pero creo que ya las hemos discutido… <img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+<p>Saludetes!</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9808">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9808" title="">Octubre 27th, 2003 at 12:28 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>bq.
+Pues van muy bien, ya te digo que las paginas web no son para imprimir!
+hay otros medios. Si no dispones de un servidor ASP,JSP,PHPÂ</p>
+<p>Pues estás equivocado, mira, una página bien hecha, con tener un CSS
+adaptado unicamente para imprimir y te ahorras trabajo de servidor, y
+de desarrollar una versión de página para cada sección.</p>
+<p>Te recomiendo aprender un poco lenguajes de servidor y sobre todo leer más libros de desarrollos.</p>
+<p>Un poco de conciencia no viene nada mal.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9809">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9809" title="">Octubre 27th, 2003 at 12:36 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Hay
+muchos sitios que han implementado URL bien formadas como el sitio de
+“diveintomark.org”:http://www.diveintomark.org y tienes otros ejemplo
+bonito que es “epinions.com”:http://www.epinions.com</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9810">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>nexus</strong><br><a href="#comment-9810" title="">Octubre 28th, 2003 at 1:16 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Nexus, está claro que no has comprendido.</p>
+<p>Si las comunicaciones son buenas (dado que no lo son) ¿por qué debo
+bajarme 240 KB cuando puedo tranquilamente tener que bajar 50?<br>
+&gt; Algun eso te va a dar igual.<br>
+&gt; A todos lo de que tienen windows les pasa. El SO aumenta de dimensiones… y que?<br>
+&gt; A medida que la gente se lanza a algo más de 56kbps, pues ese tipo de paginas proliferan</p>
+<p>Cuando comprendas la diferencia entre practicidad y diversión, es ahí cuando te planteas todo este tipo de desarrollos.<br>
+&gt; Tú mismo lo has dicho</p>
+<p>Muchos portales como elpais.es están generados automáticamente por
+motores tipo ÂgportletsÂh dónde no hay programadores web, sino
+diseñadores y diseñadores de contenidos.</p>
+<p>Pues mala elección como diseñador te digo, no es bueno automatizar
+todo así, &gt; Mala elección ???? Todo se deberia hacer como dices ????
+El desarrollo lo condiciona el entorno del proyecto.</p>
+<p>y dejar de lado puestos de trabajo tan importantes como
+programadores, por culpa del sentimiento fashion, la web está como
+estáÂc<br>
+&gt; Joer, si a mi me deja en el paro… pero el tiempo dirá, el
+programador sera un administrativo. Yo no estoy a favor pero esta es la
+realidad.</p>
+<p>Todo se podría hacer mejor, pero a veces o no conviene, o no es imprescindible</p>
+<p>Con ese comentario, pues me ahorro mi opinión, tu has lo que te salga de los cojones, si quieres hacer las cosas mal, allá tu.<br>
+&gt; Yo intento adecuar las cosas al entorno, no siempre se puede hacer como dices, tu mismo lo sabras.<br>
+&gt; supongo que tu no dependes de nadie y eres el rey, la mayoria tiene que maniobrar en una selva de decisiones incoherentes.</p>
+<p>Luego se ponen a llorar cuando les critican.<br>
+&gt; bueno, eso no lo sé.</p>
+<p>Pues van muy bien, ya te digo que las paginas web no son para
+imprimir! hay otros medios. Si no dispones de un servidor ASP,JSP,PHPÂc<br>
+&gt;Si ves hay un punto (que deberia ser punto y aparte) eso no iba ocn
+los documentos… quiza eso venia al uso de los frames que dices que para
+eso utiliza asp… pero no frames… y si no dispones de asp, que te
+queda??? <br>
+Alli voy a decir que en relación del contexto que te rodea lo haces de una o de otra manera.</p>
+<p>decias…<br>
+Yo escribo las cosas para que todo el mundo aprenda o saque su
+conclusión, si luego quieres usar tablas o no, problema tuyo, pero
+cuando yo voy a un cliente siempre le digo lo mismo y le enumero todo
+el trabajo mal hecho por el anterior, punto por punto, sabes como queda
+la reputación del anterior al que le hizo la página? Pues no muy guay
+que digamos.<br>
+&gt; joer si eres el rey. No hace falta repudiar al anterior. Además no sabes bajo que condiciones lo hizo.</p>
+<p>Creo que no entiendes, esta gente, no debería hacer sitios web, dado
+que se malgasta el dinero. Entiendes o te llamo por teléfono y te lo
+explico hablando. Esta gente no tendria que aprender nada, antes de
+hacer un sitio ya debería saber lo que está haciendo.<br>
+&gt; Eres el puto amo del w3c. <br>
+&gt; Se malgasta el dinero, y tanto, y aposta. En el proyecto grande al
+desarrollo se destina bien poco, sino diselos a lso del elpais.es (%
+entre desarrolles, consultores, proveedores, y jefes intermedios…)<br>
+&gt; Gracias a dios que a esa gente tan incompetente la llegan a contratar que de algo han de vivir.</p>
+<p>
+¿Acaso dejarías a una persona que no sabe nada hacer un edificio? Ála,
+venga hazte un edificio, total estas aprendiendo, y si todo ha salido
+mal y el eficio sale, como estabas aprendiendo te lo perdonamos.<br>
+&gt; Esto no es un edificio. Un edificio pasa por certificaciones,
+controles de calidad que evitan que alguien haga esas chapuzas.<br>
+&gt; El explorer no te valida ni el tag html. No se lo demas, pero creo
+que mejorariamos todos con navegadores mas estrictos y sobretodo en los
+navegadores mas utilizados por el usuario medio.</p>
+<p>
+Mientras a la empresa de turno le resulte un roll-of-inversion superior
+al 50% le dara igual como este hechoy que resultado tenga. Hay muchso
+que tragan y tu tienes la suerte de que no.</p>
+<p>Joer, si yo estoy contigo, pero no puedes pretender que todos
+pasemos por tu aro, cuando a veces la tecnologia de desarrollo ya se ha
+vendido y tu llegas ahí.</p>
+<p>De todas formas tu lo has dicho, pero deberias dejarlo mas claro:</p>
+<p>Cuando comprendas la diferencia entre practicidad y diversión, es ahí cuando te planteas todo este tipo de desarrollos.<br>
+En eso estoy totalmente de acuerdo.<br>
+Aunque supongas que no la comprendo.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9811">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>nexus</strong><br><a href="#comment-9811" title="">Octubre 28th, 2003 at 1:17 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Nexus, está claro que no has comprendido.</p>
+<p>Si las comunicaciones son buenas (dado que no lo son) ¿por qué debo
+bajarme 240 KB cuando puedo tranquilamente tener que bajar 50?<br>
+&gt; Algun eso te va a dar igual.<br>
+&gt; A todos lo de que tienen windows les pasa. El SO aumenta de dimensiones… y que?<br>
+&gt; A medida que la gente se lanza a algo más de 56kbps, pues ese tipo de paginas proliferan</p>
+<p>Cuando comprendas la diferencia entre practicidad y diversión, es ahí cuando te planteas todo este tipo de desarrollos.<br>
+&gt; Tú mismo lo has dicho</p>
+<p>Muchos portales como elpais.es están generados automáticamente por
+motores tipo ÂgportletsÂh dónde no hay programadores web, sino
+diseñadores y diseñadores de contenidos.</p>
+<p>Pues mala elección como diseñador te digo, no es bueno automatizar
+todo así, &gt; Mala elección ???? Todo se deberia hacer como dices ????
+El desarrollo lo condiciona el entorno del proyecto.</p>
+<p>y dejar de lado puestos de trabajo tan importantes como
+programadores, por culpa del sentimiento fashion, la web está como
+estáÂc<br>
+&gt; Joer, si a mi me deja en el paro… pero el tiempo dirá, el
+programador sera un administrativo. Yo no estoy a favor pero esta es la
+realidad.</p>
+<p>Todo se podría hacer mejor, pero a veces o no conviene, o no es imprescindible</p>
+<p>Con ese comentario, pues me ahorro mi opinión, tu has lo que te salga de los cojones, si quieres hacer las cosas mal, allá tu.<br>
+&gt; Yo intento adecuar las cosas al entorno, no siempre se puede hacer como dices, tu mismo lo sabras.<br>
+&gt; supongo que tu no dependes de nadie y eres el rey, la mayoria tiene que maniobrar en una selva de decisiones incoherentes.</p>
+<p>Luego se ponen a llorar cuando les critican.<br>
+&gt; bueno, eso no lo sé.</p>
+<p>Pues van muy bien, ya te digo que las paginas web no son para
+imprimir! hay otros medios. Si no dispones de un servidor ASP,JSP,PHPÂc<br>
+&gt;Si ves hay un punto (que deberia ser punto y aparte) eso no iba ocn
+los documentos… quiza eso venia al uso de los frames que dices que para
+eso utiliza asp… pero no frames… y si no dispones de asp, que te
+queda??? <br>
+Alli voy a decir que en relación del contexto que te rodea lo haces de una o de otra manera.</p>
+<p>decias…<br>
+Yo escribo las cosas para que todo el mundo aprenda o saque su
+conclusión, si luego quieres usar tablas o no, problema tuyo, pero
+cuando yo voy a un cliente siempre le digo lo mismo y le enumero todo
+el trabajo mal hecho por el anterior, punto por punto, sabes como queda
+la reputación del anterior al que le hizo la página? Pues no muy guay
+que digamos.<br>
+&gt; joer si eres el rey. No hace falta repudiar al anterior. Además no sabes bajo que condiciones lo hizo.</p>
+<p>Creo que no entiendes, esta gente, no debería hacer sitios web, dado
+que se malgasta el dinero. Entiendes o te llamo por teléfono y te lo
+explico hablando. Esta gente no tendria que aprender nada, antes de
+hacer un sitio ya debería saber lo que está haciendo.<br>
+&gt; Eres el puto amo del w3c. <br>
+&gt; Se malgasta el dinero, y tanto, y aposta. En el proyecto grande al
+desarrollo se destina bien poco, sino diselos a lso del elpais.es (%
+entre desarrolles, consultores, proveedores, y jefes intermedios…)<br>
+&gt; Gracias a dios que a esa gente tan incompetente la llegan a contratar que de algo han de vivir.</p>
+<p>
+¿Acaso dejarías a una persona que no sabe nada hacer un edificio? Ála,
+venga hazte un edificio, total estas aprendiendo, y si todo ha salido
+mal y el eficio sale, como estabas aprendiendo te lo perdonamos.<br>
+&gt; Esto no es un edificio. Un edificio pasa por certificaciones,
+controles de calidad que evitan que alguien haga esas chapuzas.<br>
+&gt; El explorer no te valida ni el tag html. No se lo demas, pero creo
+que mejorariamos todos con navegadores mas estrictos y sobretodo en los
+navegadores mas utilizados por el usuario medio.</p>
+<p>
+Mientras a la empresa de turno le resulte un roll-of-inversion superior
+al 50% le dara igual como este hechoy que resultado tenga. Hay muchso
+que tragan y tu tienes la suerte de que no.</p>
+<p>Joer, si yo estoy contigo, pero no puedes pretender que todos
+pasemos por tu aro, cuando a veces la tecnologia de desarrollo ya se ha
+vendido y tu llegas ahí.</p>
+<p>De todas formas tu lo has dicho, pero deberias dejarlo mas claro:</p>
+<p>Cuando comprendas la diferencia entre practicidad y diversión, es ahí cuando te planteas todo este tipo de desarrollos.<br>
+En eso estoy totalmente de acuerdo.<br>
+Aunque supongas que no la comprendo.</p>
+<p>Intenta hacer una web del tipo serviticket de la manera que dices y me llamas y me lo explicas.<br>
+Eso sí dejame que sea tu jefe y te ponga una serie de condiciones.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9812">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9812" title="">Octubre 28th, 2003 at 9:42 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Ergo,
+mira, no se cual es tu desempeño en la vida profesional, pero creo que
+no debes temer a que alguien te reemplaze, por que cuando alguien te
+reemplaza en algo es por que lamentablemente puede hacer lo mismo que
+tu y más.</p>
+<p>Eso pasa, pero bueno. A lo que voy es que, todos los proyectos
+tienen que tener si o si, un grupo de personas capacitadas, en cada
+área, esto de todas formas condiciona a que cada uno tenga una opinión
+distinta, fíjate que los diseñadores no tienen qué temer si hay un buen
+desarrollador web (que programe HTML y CSS Dios manda).</p>
+<p>Imaginate que elpais.es fuera hecho utilizando a varias personas capacitadas en su área, el resultado sería mucho mejor…</p>
+<p>Ya te digo, he participado en proyectos de esta escala, hice
+trabajos de consultorias, y realmente en el 90% no tienen objección,
+cosas tan simples de aprender, tanto tiempo que os podéis ahorrar…</p>
+<p>¿Entiendes?</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9813">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9813" title="">Octubre 28th, 2003 at 2:01 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Por
+cierto, si vas al navegador, en este mismo documento o en cualquier
+otro de esta web, observarás que se puede imprimir, sin necesidad de
+hacer un parseo extensivo de XML con XSLT, ni en el servidor ni en el
+cliente.</p>
+<p>Utilizo CSS con media: print, que es más útil para éstos casos y no
+tengo que gastar más ancho de banda, más KBytes en nuevas páginas.</p>
+<p>El código está a la vista, puedes ojearlo y aprender por tu cuenta como lo he hecho. Es relativamente fácil.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9814">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/be7a73679bc23cd3b9fa299af67412bf.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong>Marcos</strong><br><a href="#comment-9814" title="">Octubre 28th, 2003 at 3:09 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Muy bueno.. el análisis de los 25 errores comunes.</p>
+<p>Ejemplo incorrecto: página de mi empresa solo accesible mediante Flash: <a href="http://www.publicisdialog.es/" rel="nofollow">http://www.publicisdialog.es</a>.</p>
+<p>Ejemplo correcto: <a href="http://www.vulcan.com/" rel="nofollow">http://www.vulcan.com</a>,
+te da a elegir Flash o Html en su inicio ( no del todo correcto) y te
+crea una cookie que recuerda tu elección de página de inicio.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9815">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9815" title="">Octubre 28th, 2003 at 6:22 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Tomedo,
+no hace falta “crear” un nuevo documento
+impresoras_hp_tinta_modelo_330, eso si sabes como hacerlo, puedes
+hacerlo o con un api del IIS o con el mismo Apache server.</p>
+<p>En tal caso, tienes que pasarle como datos pequeñas cantidades de caracteres, un ejemplo aceptable:</p>
+<p>bc. /categoria/ordenadores/hp/pavilion/modelos-300?=all</p>
+<p>Aunque resumiendo, podrías lógicamente armar:</p>
+<p>bc. /categoria/ordenadores/hp/pavilion/modelos-300-all</p>
+<p>Y listo.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9816">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>Groucho</strong><br><a href="#comment-9816" title="">Noviembre 7th, 2003 at 1:43 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Error 19</p>
+<p>No estoy de acuerdo con tu apreciación acerca del “Mapa web”. El
+buscador es más usado para buscar palabras específicas (ej: quiero ver
+los articulos en los que se hable de css-3). Pero si quiero ir a la
+sección articulos, pasaré directamente por el mapa, en lugar de hacer
+una busqueda y leerme la descripción de los 8mil resultados en los que
+seguramente aparecera la palabra “articulo”.<br>
+Te hablo de esto porque es lo que he visto.</p>
+<p>La fórmula mágica: Buena arquitectura de la información + buen buscador + mapa web (bien jerarquizado).</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9817">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>carlos</strong><br><a href="#comment-9817" title="">Noviembre 11th, 2003 at 2:46 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Muy
+buenas, he estado leyendo este artículo y la verdad es que muchas de
+las cosas que dice (NO TODAS) me parecen muy acertadas, pero… tanto
+hablar de buenas presentaciones y resulta que la letra del artículo es
+casi ilegible y para que hablar del menú… soy incapaz de leer los
+enlaces… A lo mejor deberías echar un vistacillo a vuestro diseño.<br>
+Un saludo.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9818">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>carlos</strong><br><a href="#comment-9818" title="">Noviembre 11th, 2003 at 2:46 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Muy
+buenas, he estado leyendo este artículo y la verdad es que muchas de
+las cosas que dice (NO TODAS) me parecen muy acertadas, pero… tanto
+hablar de buenas presentaciones y resulta que la letra del artículo es
+casi ilegible y para que hablar del menú… soy incapaz de leer los
+enlaces… A lo mejor deberías echar un vistacillo a vuestro diseño.<br>
+Un saludo.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9819">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9819" title="">Noviembre 11th, 2003 at 3:50 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Me
+parece perfecto, te animo a que agrandes la tipografía al tamaño que
+desees, puedes hacerlo desde el navegador y esto lo soporta por defecto
+en todos los navegadores.</p>
+<p>El tamaño tipográfico es bastante grande son 13 píxeles, muy bueno para la lectura.</p>
+<p>Siempre está el que quiere más grande o más pequeño y bueno para eso están los controles de los navegadores.</p>
+<p>Por otra parte, los enlaces, tienen “tooltips” y están bastante
+legibles a nivel de URL, o sea, mirando las URLs puedes dicernir sobre
+el contenido que iras a ver.</p>
+<p>Saludos.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9820">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>roberto</strong><br><a href="#comment-9820" title="">Noviembre 12th, 2003 at 5:01 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>me
+ha gustado mucho el artículo, pero echo de menos algo de “bibliografía”
+por así decirlo, a veces eres muy categórico en tus afirmaciones pero
+no se en que te apoyas.<br>
+Por ejemplo, los metas inservibles, me ha llamado la atención, porque hace poco leí lo contrario. <br>
+Y no se como puedo saber si es cierto que google lo usa o no. <br>
+Muchas gracias</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9821">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>CyberGirl</strong><br><a href="#comment-9821" title="">Noviembre 13th, 2003 at 8:27 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Muy interesante el artículo (wow realmente me atrapo), por lo menos algo diferente en la web, claro, práctico y con buen humor <img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+<p>Me gustan las críticas a otros sitios, pero no encontre el pop-up
+mamarracho de administracion.es, bue.. pero encontre otras cosas que me
+asustaron ahhhhhhhhhhhhhhhhhhhhhhhhhh!!! </p>
+<p>saludos desde Argentina</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9822">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9822" title="">Noviembre 13th, 2003 at 12:31 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>¿Citas bibliográficas? Podría poner URLs que apunten a esos conceptos, pero esto se basa más en conocimiento propio.</p>
+<p>Si quieres leer más sobre el tema, escrito por otros autores, puedes
+darte una vuelta por las categorías de usabilidad y arquitectura de la
+información.</p>
+<p>La mayoría de la bibliografía puede ser encontrada en el sitio del W3C también.</p>
+<p>Saludos.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9823">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong><a href="http://andresrobalino.com/" rel="external nofollow" class="url">androbtech</a></strong><br><a href="#comment-9823" title="">Noviembre 15th, 2003 at 6:52 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Esta excelente el artículo pero Phyton?. No se escribe Python???</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9824">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/ad516503a11cd5ca435acc9bb6523536.png" class="avatar avatar-32 photo avatar-default" height="32" width="32">				<p>Escrito por <strong>CyberGirl</strong><br><a href="#comment-9824" title="">Noviembre 15th, 2003 at 7:59 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Hola denuevo, una pregunta técnica..<br>
+en la definición del lenguaje del documento cual es la diferenciancia
+de xml:lang=”es” y lang=”es”, no se define de igual manera que es en
+español? Gracias desde ya.. y disculpen la ignorancia <img src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/icon_sad.gif" alt=":(" class="wp-smiley"> </p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9825">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/5aace9aa096cf9cab332b06683b6a8c9.jpg" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://www.minid.net/" rel="external nofollow" class="url">mini-d</a></strong><br><a href="#comment-9825" title="">Noviembre 15th, 2003 at 3:34 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>La
+diferencia es dependiendo del DTD utilizado, si utilizas HTML, y pones
+en los elementos @xml:lang=”en”@ no validan, por que la propiedad
+@xml:lang@ es XML y no HTML, pero en cambio como estamos utilizando
+XHTML (mezcla híbrida de XML y HTML) estos deslices se permiten… ¿Para
+qué diras?</p>
+<p>Para que a futuro cercano el traspaso de XHTML a XML sea nada…</p>
+<p>Saludos.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9826">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/85c2b4a2f25a58f408a639c42f47fe99.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://c32.zero.org/" rel="external nofollow" class="url">c32</a></strong><br><a href="#comment-9826" title="">Noviembre 16th, 2003 at 5:44 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Buenos
+documentos, te felicito por el material super interesante. Podrias
+poner archivos de ejemplos para ir probando e ir uno corrigiendo
+algunas cosas de las que se hablan. </p>
+<p>Saludos</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9827">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/26d453f3641337d822df1cac4bdbfa8b.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong>Pancho</strong><br><a href="#comment-9827" title="">Noviembre 17th, 2003 at 9:15 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Ya que insistis tanto con los DTD, les recuerdo que este tag es necesario para que un html sea valido en w3.org:</p>
+<p>(Está listado como inválido)</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9828">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/f2635a298759ff5f5fb4263474c0eb59.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong><a href="http://unsignedblog.tk/" rel="external nofollow" class="url">DidE</a></strong><br><a href="#comment-9828" title="">Noviembre 21st, 2003 at 12:58 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Yo también veo el contenido de la página desplazado hacia abajo. Uso IE6.0.26 .</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9829">
+			<div class="autor-com">
+								<p>Escrito por <strong><a href="http://a.proletarium.org/post/475/" rel="external nofollow" class="url">A Proletarium Blog</a></strong><br><a href="#comment-9829" title="">Octubre 17th, 2004 at 12:00 am</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p><strong>URL accesibles </strong><br>
+Conocida discusión sobre las url’s accesibles. Llamamos a una URL
+accesible cuando es facil de recordar y es facil saber que vas a ver.
+Pero hasta donde llegar, veo muy a menudo como usuarios de Wordpress y
+antes los usuarios de Movable Type usaban e…</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9830">
+			<div class="autor-com">
+								<p>Escrito por <strong><a href="http://mexlord.reverzacreativa.net/weblog/index.php?p=83" rel="external nofollow" class="url">Ricardo Pelcastre web log » Lo que necesitan algunos webmasters</a></strong><br><a href="#comment-9830" title="">Octubre 17th, 2004 at 6:21 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>[...] or de contenidos, CMS, ya se sienten webmasters. Lo cierto es que les aconsejo un pequeÃÂ±o <a href="http://www.minid.net/archivos/categorias/articulos_de_minid/25_errores_comunes_en_los_desarrollos_web.php">articulo</a> sacado de minid.net. Espero y [...]</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+		<div class="comment-capsule" id="comment-9831">
+			<div class="autor-com">
+				<img alt="" src="Minid.net%20%BB%20Blog%20Archive%20%BB%2025%20errores%20comunes%20en%20los%20desarrollos%20Web_files/9024180e966b5f3cd1ef85f01b4e112e.png" class="avatar avatar-32 photo" height="32" width="32">				<p>Escrito por <strong>Victoria</strong><br><a href="#comment-9831" title="">Diciembre 19th, 2004 at 6:53 pm</a> </p>
+			</div>
+			
+			<div class="comment-text">
+								<p>Acabo
+de leer este artículo y quedé gratamente sorprendida al ver que aún
+quedan profesionales en este mundo tan complejo que es el de la
+creación de sitios web profesionales.</p>
+<p>Entre los comentarios de los lectores del artículo pude leer varias
+críticas y acusaciones, vi tildar al autor de âdemasiado purista,
+pedante y engreídoâ por algo tan simple como dominar el tema del
+artículo.</p>
+<p>Supongo que quienes así hicieran podrán tildar con calificativos
+similares lo que a continuación expongo, pero el hecho de que se
+ofendan no hace que el contenido se desmerezca sino que refuerzan el
+argumento, y es que en el mundo del desarrollo web (al igual que en el
+mundo de la ofimática o el mundo del uso de herramientas informáticas
+por parte de legos en la profesión) se ha olvidado el objetivo para dar
+importancia al medio. Puedo intentar exponer a qué me refiero, aunque
+me temo que la exposición no va a ser simple puesto que no lo es
+tampoco el tema.</p>
+<p>Uno de mis primeros trabajos utilizando programas informáticos fue
+el de composición de libros, y recuerdo que en esos tiempos (el ya
+remoto año 1984) se utilizaba para ello un programa denominado Ventura
+Publisher que constituía la pesadilla de más de un informático y más de
+un escritor. No fue un problema para mí, y no lo fue por un motivo muy
+simple, yo conocía muy bien el campo de aplicación del programa, el
+mundo editorial y la composición tradicional de libros. Conceptos como
+las medidas tipográficas (puntos, cíceros…) conceptos decorativos
+(filetes, viñetas,…) ya formaban parte de la profesión y Ventura
+Publisher sólo representaba una herramienta que simplificaba mi trabajo
+de forma espectacular.</p>
+<p>Con el tiempo apareció una filosofía de facilitar el acceso a todos
+de una serie de programas a bajo coste (bajo en comparación al coste de
+los programas profesionales) de modo que el uso de las herramientas
+informáticas se popularizara. Todos hemos utilizado en mayor o menor
+grado esas herramientas (Microsoft Word, Microsoft Excel, Microsoft
+Access,…) y algunas personas incluso llegan a un dominio de la
+herramienta espectacular que les permite preparar documentos para la
+imprenta con un aspecto muy profesional. Pero eso no implica
+necesariamente que sepan la base, esto es, que sepan del tratamiento de
+la información. Me he encontrado en innumerables ocasiones con gente
+capaz de redactar informes de más de 200 páginas en Microsoft Word de
+aspecto visual increíble pero que elaboraban a mano la tabla de
+contenidos por desconocer algo tan simple como la correcta
+clasificación de la información y utilizar para marcar el texto los
+estilos que incorpora este procesador de textos (que para lo modesto
+que es hay que ver la de cosas que puede hacer). Claro, estas personas
+tampoco aceptaban muy a gusto un cambio en el diseño tipográfico, ya
+que les representaba un esfuerzo enorme de ir a por cada pedacito de
+texto escrito y modificar sus propiedades de diseño a mano.</p>
+<p>En la web hemos ido asistiendo paulatinamente al mismo caso. Se da
+mucha más importancia al medio (la web) que a la información, se
+justifican actitudes del todo nocivas en pro de la presentación de la
+información en pantalla, y se justifica hacer mal las cosas con
+argumentos tales como âa quien le hace daño si yo compongo las
+páginas de forma incorrecta utilizando tablas para hacer que la página
+se muestre como yo quiero [en lugar de categorizar el texto según su
+valor semántico]â.</p>
+<p>Pues el primer perjudicado es el propio creador de la página, y el
+motivo es más que simple: la página puede ser un prodigio de diseño,
+pero generalmente tendrá un valor informativo escaso (si no nulo).</p>
+<p>Y no es porque la página no vaya a verse correctamente en una PDA o
+leerse correctamente por un navegador para invidentes, sino porque
+tampoco los robots de los buscadores (que en ese sentido son tan planos
+como los navegadores de las PDA o los navegadores para invidentes)
+podrán acceder correctamente a la información. Porque no se sabe qué
+importancia darle a un elemento que está marcado como &lt;font
+size=”12px” color=”red”&gt; aunque para un humano pueda sugerirnos que
+el uso de rojo implique importancia. De hecho la preocupación por estos
+temas ha impulsado tanto CSS como XML.</p>
+<p>Claro que siempre podemos alegar que estábamos siguiendo las
+instrucciones del cliente y desarrollábamos tal y como el cliente nos
+pedía pero… ¿un arquitecto permite a un cliente que le diga qué viga
+tiene que utilizar para soportar el peso del piso superior? ¿Un
+carpintero admite al cliente que le indique si tiene que utilizar cola
+o un tirafondos para unir dos piezas? Â¡No nos justifiquemos de ese
+modo!</p>
+<p>No nací enseñada (al igual que no nació enseñado el autor del
+artículo original), incluso cometí un error garrafal en la construcción
+de mi primer sitio (un trabajo para la universidad) utilizando una
+estructura de frames para poder formar la navegación. Pero desde
+entonces ha llovido lo suficiente como para permitirme lecturas
+interesantes en las que he aprendido, visitas a sitios interesantes a
+los que he mirado el código para ver cómo habían resuelto un
+determinado problema, incluso he participado profesionalmente en el
+desarrollo de sitos pequeños, medianos y grandes y coordinado proyectos
+de desarrollo incluido el desarrollo de herramientas de gestión de
+contenidos.</p>
+<p>Y de todo ello me queda un poso de experiencia (la mía propia) al
+igual que a todos nos debería dejar un poso de experiencia nuestra vida
+cotidiana. Y en esa experiencia he aprendido que los programadores no
+son las personas que deben coordinar un proyecto de sitio web (hasta
+hice la carrera de Informática de Gestión para comprobarlo), ni los
+diseñadores gráficos, ni el cliente. Todos ellos tienen hábitos y
+prejuicios heredados de sus experiencias previas, la mayoría de las
+cuales son nocivas para el desarrollo de sitios realmente buenos.</p>
+<p>Muchos programadores abogan por el uso de páginas dinámicas creadas
+a partir de bases de datos en el momento. Estoy de acuerdo en que
+resulta muy simple administrar, revisar y modificar el contenido de un
+sitio (especialmente si es extenso) cuando tenemos la información en
+una BBDD, pero debemos tener en cuenta el coste en tiempo de creación
+de la página, las peticiones entre servidores, y sobre todo la
+frecuencia de actualización de datos… ¿Es imposible un sistema basado
+en BBDD que sencillamente genere páginas estáticas HTML cuando se
+actualiza el contenido? Si el contenido del que hablamos es
+cotizaciones en bolsa seguramente hablamos de poco beneficio en tiempo,
+pero si hablamos de la mayoría de los sitios que actualmente se
+administran por BBDD seguramente veremos que muchos artículos que se
+publicaron ya no se han vuelto a modificar nunca más, y los comentarios
+de los usuarios, si bien al principio son más frecuentes, no justifican
+la creación on-the-fly de la página.</p>
+<p>Tampoco es frecuente considerar que nuestro conocimiento del mundo
+actual también se basa en prejuicios que heredamos. Es cierto que en
+los países subdesarrollados no es fácil el acceso a la web, pero
+también es cierto que está aumentando el parque informático gracias a
+la contribución de programas apoyados por ONGs e incluso a la
+iniciativa de algunos lugareños. En algunas zonas que tenemos
+consideradas como de absoluta miseria hay gente que estudia en la
+universidad, gente que se conecta a internet, e incluso algunos de los
+mejores profesionales que podemos encontrar en campos tan relativamente
+nuevos como la formación a distancia mediante la web (e-learning).
+Tómese como referencia para ello la India o Pakistán. Por cierto,
+además de disponer de un amplio espectro de tipo de conexión, también
+disponen de amplio espectro de ordenadores (desde modelos
+quasi-obsoletos de 486 hasta los más avanzados ordenadores en el
+mercado).</p>
+<p>Incluso en la Europa más desarrollada, el acceso a internet por
+banda ancha está limitada a las zonas que las operadoras de telefonía
+consideraron importantes, y núcleos de población con pocos habitantes
+(menos de 14.000) no tienen más remedio que recurrir a la línea
+telefónica básica (la opción económica) o a la conexión por satélite
+(no al alcance de todos).</p>
+<p>Y aún teniendo banda ancha, como ya se anticipó en el artículo, el
+uso que se hace de ese ancho de banda debe repartirse entre varias
+tareas (compartir archivos, correo, mensajería instantánea, compartir
+la conexión entre varios ordenadores de la red interna….). No es lícito
+obligar a una persona que quizás no tiene opción a utilizar más ancho
+de banda del que puede, pero tampoco es lícito obligar a una persona
+que quiere sacar el máximo provecho de su conexión a dejar de hacer
+algunas de esas tareas porque al cliente le pareció interesante tener
+una animación en la web.</p>
+<p>Nuestra obligación como profesionales está en transmitir al cliente
+lo perjudicial que para su negocio tiene la utilización de decoraciones
+tales como una animación flash cuando puede obtener muchas más ventajas
+ofreciendo un sitio accesible. También podemos ser sensatos, trabajar
+un poquito más, y montar la animación a base de imágenes en formato GIF
+animado cuyo bucle se detenga tras la animación (Â¡esto evita tener que
+instalar el flash!).</p>
+<p>Nuestra obligación como profesionales está en transmitir al cliente
+lo perjudicial que para su negocio tiene dejar de lado la información a
+favor de un diseño despampanante cuando los robots de los motores de
+búsqueda no podrán leer la información de su sitio. He visto sitios
+preciosos con CSS impresionantes que consiguen una presentación
+agradable, usable… a los que eliminamos la CSS y resultan legibles y
+navegables del mismo modo.</p>
+<p>Nuestra obligación como profesionales está en transmitir al cliente
+lo perjudicial que para su negocio tiene dejar de lado a cualquier
+cliente potencial porque no fueron suficientemente hábiles al calcular
+sus targets como para darse cuenta que el experto de referencia al que
+consultará una gran parte de su clientela potencial es un invidente,
+una persona que está tras una red de comunicaciones con poco ancho de
+banda, o simplemente una persona de 40 años con una deficiencia visual
+que hace que utilice fuentes extra-grandes (o su propia CSS, que
+algunos navegadores lo permiten) para ver los sitios.</p>
+<p>Mi obligación como profesional está en navegar con el cliente por un
+sitio de los que considera se aproxima a lo que quiere desactivando
+cookies, JavaScript e incluso poniendo mi propia CSS para que vea qué
+ocurre cuando sale de su ordenador, su empresa, su conexión y su
+entorno controlado. Navegar el sitio utilizando Lynx para que vea el
+verdadero valor de la información.</p>
+<p>¿Pero quien quiere ser profesional cuando el mundo entero aboga por
+lo fácil, lo rápido y obtener el máximo beneficio con el mínimo
+esfuerzo? ¿Quién quiere trabajar para crear un menú a base de código
+HTML de listas y utilizar CSS para darles el aspecto que queremos,
+cuando la opción más utilizada y disponible es un complicado JavaScript
+para poder cambiar el fondo de las celdas cuando el ratón pasa por
+encima y así poder hacer un menú que simule botones?</p>
+<p>La base de todo creo que, por desgracia, está en que vivimos en un
+entorno que premia el âcut-and-pasteâ sobre los conocimientos
+reales, que premia el desarrollo rápido e ineficiente sobre el
+desarrollo eficaz a largo plazo… eso sumado a que muchos aún no han
+entendido la importancia de la información por encima del diseño.</p>
+<p>Es mi humilde opinión, las conclusiones a que puedo llegar después
+de más de 25 años de profesión en el tratamiento de información en
+distintos medios, y como tal, rebatible y refutable.</p>
+<p>Agradezco a Diego su esfuerzo. No es nada sencillo trabajar
+altruistamente en algo tan complejo como compartir con los demás los
+conocimientos. Y sobre todo, no siempre sabe reconocérsele el mérito.</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+	
+	
+
+
+ 
+
+
+</div>
+	
+	</div>
+	
+	<div id="sidebar">
+		<h2>
+				Esta entrada fue escrita el Miércoles, Septiembre 24, 2003 a las 6:26 pm				y fue guardada en <a href="http://www.minid.net/category/internet/" title="Ver todas las entradas en Internet" rel="category tag">Internet</a>.
+
+									Los comentarios y los trackbacks están desactivados.
+
+				
+		</h2>
+	</div>
+	
+	<div class="clear"></div>
+
+	
+<hr>
+
+<div id="footer">
+<!-- If you'd like to support WordPress, having the "powered by" link somewhere on your blog is the best way; it's our only promotion or advertising. -->
+	<p>Copyright © 2009 Minid.net <em>&amp;</em> Diego Martín Lafuente. <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.0/deed.es" title="Lee las condiciones para utilizar algún que otro contenido de este sitio">Reconocimiento-NoComercial-SinObraDerivada 2.0</a></p>
+	
+	<p>Minid.net está orgullosamente desarrollado con <a href="http://wordpress.org/">WordPress</a><br><a href="http://www.minid.net/feed/">Entradas (RSS)</a>. 14 queries. 2.300 seconds.</p>
+</div>
+
+</div>
+
+		
+
+</body></html>

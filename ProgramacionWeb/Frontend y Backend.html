@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!-- saved from url=(0113)https://devcode.la/blog/frontend-y-backend/?utm_source=facebook&utm_medium=enlace&utm_campaign=fb-21-09-2016-11am -->
+<html lang="es_ES" class="wf-proximanova-n7-active wf-proximanova-n8-active wf-proximanova-n4-active wf-proximanova-n6-active wf-proximanova-n3-active wf-proximanova-n5-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Frontend y Backend</title>
+<link rel="stylesheet" href="./Frontend y Backend_files/monokai_sublime.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./Frontend y Backend_files/main.css">
+<style type="text/css">@font-face{font-family:'icomoon';src:url('https://s3-us-west-2.amazonaws.com/devcode/fonts/icomoon.eot?-1hf7z8');src:url('https://s3-us-west-2.amazonaws.com/devcode/fonts/icomoon.eot?#iefix-1hf7z8') format('embedded-opentype'),url('https://s3-us-west-2.amazonaws.com/devcode/fonts/icomoon.ttf?-1hf7z8') format('truetype'),url('https://s3-us-west-2.amazonaws.com/devcode/fonts/icomoon.woff?-1hf7z8') format('woff'),url('https://s3-us-west-2.amazonaws.com/devcode/fonts/icomoon.svg?-1hf7z8#icomoon') format('svg');font-weight:normal;font-style:normal;}</style>
+<link rel="icon" href="https://s3-us-west-2.amazonaws.com/devcode/img/favicon.ico" type="image/png">
+<meta name="title" content="Frontend y Backend">
+<meta name="description" itemprop="description" content="¿Cuál es la función de un frontend?, ¿cuál es la función de un backend?, ¿cuáles son las diferencias entre uno y otro?">
+<meta property="image" content="https://s3-us-west-2.amazonaws.com/devcode/media/blog/blog-frontendbackend.png">
+<link rel="canonical" href="https://devcode.la/blog/frontend-y-backend/">
+<link rel="publisher" href="https://plus.google.com/+DevCodela/">
+<meta property="fb:app_id" content="653827401318644">
+<meta property="og:site_name" content="DevCode Blog">
+<meta property="og:url" content="https://devcode.la/blog/frontend-y-backend/">
+<meta property="og:title" itemprop="name" content="Frontend y Backend">
+<meta property="og:description" content="¿Cuál es la función de un frontend?, ¿cuál es la función de un backend?, ¿cuáles son las diferencias entre uno y otro?">
+<meta property="og:image" itemprop="image" content="https://s3-us-west-2.amazonaws.com/devcode/media/blog/opengraph-blog-backendvsfrontend.png">
+<meta property="og:locale" content="es_ES">
+<meta property="og:type" content="article">
+<meta property="article:publisher" content="https://www.facebook.com/DevCodela">
+<meta property="article:section" content="DevCode">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@devcodela">
+<meta name="twitter:title" content="Frontend y Backend">
+<meta name="twitter:description" content="¿Cuál es la función de un frontend?, ¿cuál es la función de un backend?, ¿cuáles son las diferencias entre uno y otro?">
+<meta name="twitter:image:src" content="https://s3-us-west-2.amazonaws.com/devcode/media/blog/opengraph-blog-backendvsfrontend.png">
+ 
+<script src="./Frontend y Backend_files/cb=gapi.loaded_2" async=""></script><script type="text/javascript" async="" src="./Frontend y Backend_files/analytics.js.descarga"></script><script src="./Frontend y Backend_files/cb=gapi.loaded_1" async=""></script><script src="./Frontend y Backend_files/cb=gapi.loaded_0" async=""></script><script id="twitter-wjs" src="./Frontend y Backend_files/widgets.js.descarga"></script><script id="facebook-jssdk" src="./Frontend y Backend_files/sdk.js.descarga"></script><script async="" src="./Frontend y Backend_files/gtm.js.descarga"></script><script type="text/javascript" async="" src="./Frontend y Backend_files/amplitude-3.0.1-min.gz.js.descarga"></script><script async="" src="./Frontend y Backend_files/fbevents.js.descarga"></script><script>
+			!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+			n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+			document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+			fbq('init', '1188440254510070');
+			fbq('track', "PageView");
+			/* Pixel de Seguimiento Pago */
+			
+			
+			/* End Pixel Pago */
+			/* Pixel de Registrado usuario curso */
+			
+			
+			/* End Registrado usuario curso */
+		</script>
+<noscript>
+&lt;img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1188440254510070&amp;ev=PageView&amp;noscript=1"/&gt;
+</noscript>
+ 
+ 
+<script type="text/javascript">
+			var url = window.location.pathname;
+			(function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script");r.type="text/javascript";
+			r.async=true;r.src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-3.0.1-min.gz.js";
+			r.onload=function(){e.amplitude.runQueuedFunctions()};var i=t.getElementsByTagName("script")[0];
+			i.parentNode.insertBefore(r,i);function s(e,t){e.prototype[t]=function(){this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+			return this}}var o=function(){this._q=[];return this};var a=["add","append","clearAll","prepend","set","setOnce","unset"];
+			for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[];return this;
+			};var p=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"];
+			for(var l=0;l<p.length;l++){s(c,p[l])}n.Revenue=c;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId"];
+			function v(e){function t(t){e[t]=function(){e._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+			}}for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){e=(!e||e.length===0?"$default_instance":e).toLowerCase();
+			if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]};e.amplitude=n;
+			})(window,document);
+
+			amplitude.getInstance().init("0b1d52a0480b88160408fed8f2309d16",  null, {
+				saveEvents: true,
+				includeUtm: true,
+				includeReferrer: true,
+				batchEvents: true,
+			});
+			var eventProperties = {
+				'slug': '/blog/frontend-y-backend/'
+			};
+			amplitude.getInstance().logEvent('PageView', eventProperties);
+		</script>
+ 
+<style type="text/css">.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><style type="text/css">@font-face{font-family:tk-proxima-nova-n7;src:url(https://fonts.typekit.net/af/03034e/00000000000000003b9ad1b1/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7) format("woff2");font-weight:700;font-style:normal;}@font-face{font-family:tk-proxima-nova-n8;src:url(https://fonts.typekit.net/af/6b4e48/00000000000000003b9ad1b3/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8) format("woff2");font-weight:800;font-style:normal;}@font-face{font-family:tk-proxima-nova-n6;src:url(https://fonts.typekit.net/af/921f74/00000000000000003b9ad1bb/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6) format("woff2");font-weight:600;font-style:normal;}@font-face{font-family:tk-proxima-nova-n4;src:url(https://fonts.typekit.net/af/edab9a/00000000000000003b9ad1b9/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4) format("woff2");font-weight:400;font-style:normal;}@font-face{font-family:tk-proxima-nova-n3;src:url(https://fonts.typekit.net/af/015ec8/00000000000000003b9ad1b5/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3) format("woff2");font-weight:300;font-style:normal;}@font-face{font-family:tk-proxima-nova-n5;src:url(https://fonts.typekit.net/af/4980ad/00000000000000003b9ad1b7/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5) format("woff2");font-weight:500;font-style:normal;}</style><script type="text/javascript" async="" src="./Frontend y Backend_files/embed.js.descarga"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style><script type="text/javascript" charset="utf-8" async="" src="./Frontend y Backend_files/button.adb0849e84c310377153816f932c5b36.js.descarga"></script><style type="text/css">@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/03034e/00000000000000003b9ad1b1/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7) format("woff2");font-weight:700;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/6b4e48/00000000000000003b9ad1b3/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8) format("woff2");font-weight:800;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/921f74/00000000000000003b9ad1bb/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6) format("woff2");font-weight:600;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/edab9a/00000000000000003b9ad1b9/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4) format("woff2");font-weight:400;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/015ec8/00000000000000003b9ad1b5/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3) format("woff2");font-weight:300;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/4980ad/00000000000000003b9ad1b7/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5) format("woff2");font-weight:500;font-style:normal;}</style><style>.gc-bubbleDefault{background-color:transparent !important;text-align:left;padding:0 !important;margin:0 !important;border:0 !important;table-layout:auto !important}.gc-reset{background-color:transparent !important;border:0 !important;padding:0 !important;margin:0 !important;text-align:left}.pls-bubbleTop{border-bottom:1px solid #ccc !important}.pls-topTail,.pls-vertShimLeft,.pls-contentLeft{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif) !important}.pls-topTail{background-repeat:repeat-x !important;background-position:bottom !important}.pls-vertShim{background-color:#fff !important;text-align:right}.tbl-grey .pls-vertShim{background-color:#f5f5f5 !important}.pls-vertShimLeft{background-repeat:repeat-y !important;background-position:right !important;height:4px}.pls-vertShimRight{height:4px}.pls-confirm-container .pls-vertShim{background-color:#fff3c2 !important}.pls-contentWrap{background-color:#fff !important;position:relative !important;vertical-align:top}.pls-contentLeft{background-repeat:repeat-y;background-position:right;vertical-align:top}.pls-dropRight{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropR_3.png) !important;background-repeat:repeat-y !important;vertical-align:top}.pls-vert,.pls-tailleft,.pls-dropTR .pls-dropBR,.pls-dropBL,.pls-vert img{vertical-align:top}.pls-dropBottom{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropB_3.png) !important;background-repeat:repeat-x !important;width:100%;vertical-align:top}.pls-topLeft{background:inherit !important;text-align:right;vertical-align:bottom}.pls-topRight{background:inherit !important;text-align:left;vertical-align:bottom}.pls-bottomLeft{background:inherit !important;text-align:right}.pls-bottomRight{background:inherit !important;text-align:left;vertical-align:top}.pls-tailtop,.pls-tailright,.pls-tailbottom,.pls-tailleft{display:none;position:relative}.pls-tailbottom,.pls-tailtop,.pls-tailright,.pls-tailleft,.pls-dropTR,.pls-dropBR,.pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite_3.png) !important;background-repeat:no-repeat}.tbl-grey .pls-tailbottom,.tbl-grey .pls-tailtop,.tbl-grey .pls-tailright,.tbl-grey .pls-tailleft,.tbl-grey .pls-dropTR,.tbl-grey .pls-dropBR,.tbl-grey .pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite-grey.png) !important}.pls-tailbottom{background-position:-23px 0}.pls-confirm-container .pls-tailbottom{background-position:-23px -10px}.pls-tailtop{background-position:-19px -20px}.pls-tailright{background-position:0 0}.pls-tailleft{background-position:-10px 0}.pls-tailtop{vertical-align:top}.gc-bubbleDefault td{line-height:0;font-size:0}.pls-topLeft img,.pls-topRight img,.pls-tailbottom{vertical-align:bottom}.pls-bottomLeft img,.bubbleDropTR,.pls-dropBottomL img,.pls-dropBottom img,.pls-dropBottomR img,.pls-bottomLeft{vertical-align:top}.pls-dropTR{background-position:0 -22px}.pls-dropBR{background-position:0 -27px}.pls-dropBL{background-position:0 -16px}.pls-spacertop,.pls-spacerright,.pls-spacerbottom,.pls-spacerleft{position:static !important}.pls-spinner{bottom:0;position:absolute;left:0;margin:auto;right:0;top:0} </style><script src="./Frontend y Backend_files/alfie.f51946af45e0b561c60f768335c9eb79.js.descarga" async="" charset="UTF-8"></script></head>
+<body class="background__gray">
+<noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-N8F2KR" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	    })(window,document,'script','dataLayer','GTM-N8F2KR');</script>
+ 
+<header class="topnav topnav--white">
+<div class="topnav--white topnav--fixed">
+<div class="container">
+<div class="topnav__row row nowrap middle between">
+<a href="https://devcode.la/" class="logo row middle">
+<img src="./Frontend y Backend_files/logo.png" alt="">
+<span class="logo__texto"> DevCode</span>
+</a>
+<div class="row middle right">
+<nav class="topnav__menu">
+<a href="https://devcode.la/blog/frontend-y-backend/?utm_source=facebook&amp;utm_medium=enlace&amp;utm_campaign=fb-21-09-2016-11am#menu" class="topnav__toggle topnav__toggle-white">
+<span class="icon-menu"></span>
+</a>
+<ul class="topnav__ul row middle">
+<a href="https://devcode.la/blog/frontend-y-backend/?utm_source=facebook&amp;utm_medium=enlace&amp;utm_campaign=fb-21-09-2016-11am#" class="topnav__toggle topnav__close">
+<span class="icon-cross"></span>
+</a>
+<li class="topnav__item">
+<a href="https://devcode.la/cursos/">Cursos</a>
+</li>
+ 
+<li class="topnav__item">
+<a href="https://devcode.la/tutoriales/">Tutoriales</a>
+</li>
+<li class="topnav__item">
+<a href="https://devcode.la/blog/">Blog</a>
+</li>
+ 
+<li class="topnav__item">
+<a href="https://devcode.la/precios/">Precios</a>
+</li>
+<li class="topnav__item">
+<a data-toggle="modal" data-target="#loginModal" href="https://devcode.la/blog/frontend-y-backend/?utm_source=facebook&amp;utm_medium=enlace&amp;utm_campaign=fb-21-09-2016-11am#" role="button">Ingresar</a>
+</li>
+<li class="topnav__item">
+<a data-toggle="modal" data-target="#registroModal" href="https://devcode.la/blog/frontend-y-backend/?utm_source=facebook&amp;utm_medium=enlace&amp;utm_campaign=fb-21-09-2016-11am#" class="btn btn--outline-primary" role="button">Crear cuenta gratuita</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script>
+  window.notificationCount = parseInt('');
+</script>
+<article class="tutorial container">
+<header class="text-center">
+<h1>Frontend y Backend</h1>
+<div class="row middle center nowrap">
+<span>Por </span>
+<figure class="user_photo">
+<img src="./Frontend y Backend_files/picture">
+</figure>
+<span>Alexander Guevara Benites</span>
+</div>
+</header>
+<main class="tutorial__wrap row between top">
+<div class="tutorial__left">
+<figure class="tutorial__img_primary">
+<img src="./Frontend y Backend_files/blog-frontendbackend.png" alt="Frontend y Backend">
+</figure>
+<div class="tutorial__content">
+<p>¿Cuál es la función de un frontend?, ¿cuál es la función de un backend?, ¿cuáles son las diferencias entre uno y otro?</p>
+<p>En promedio cada uno de nosotros pasa más de 4 horas al día frente a un ordenador, durante las cuales interactuamos con un número “X” de páginas web. Ya sea por diversión o por trabajo, nuestros ojos se ven expuestos a colores, animaciones, imágenes y texto, algunos agradables y otros no tanto.</p>
+<p>No podemos negar que la web forma parte de nuestro día a día, aunque va más allá de los diseños agradables y animaciones bonitas que despiertan nuestros sentidos, pues por detrás encontramos una serie de tecnologías que hacen que la magia sea posible y que para el ojo muggle pasan desapercibidas. Estas tecnologías, cual caballero de la noche, se encargan de que todo funcione correctamente para que el usuario no tenga ningún problema al mandar una petición, consulta u obtener datos. Estamos hablando de los lados frontend y backend que se unen para cumplir un mismo objetivo: buscar la satisfacción del usuario.</p>
+<p>El Frontend se enfoca en el usuario, en todo con lo que podemos interactuar y lo que vemos mientras navegamos. Así como en una primera cita, nuestra web busca causar una buena impresión y agradar al usuario, para lo cual utiliza HTML, CSS y JAVASCRIPT. Buena experiencia de usuario, inmersión y usabilidad, son algunos de los objetivos que busca un buen frontend y hoy en día existen una gran variedad de frameworks, preprocesadores y librerías que nos ayudarán en esta tarea. ¡Conocerlos y usarlos correctamente es el reto a cumplir! Para un frontend la creatividad es el recurso más valioso, ya que tendrá que tomar fuentes, colores, imágenes y todos lo recursos de los cuales disponga para crear sitios agradables que se vean bien en todos los dispositivos y resoluciones.</p>
+<p>Por otro lado, tenemos el Backend enfocado en hacer que todo lo que está detrás de un sitio web funcione correctamente. Toma los datos, los procesa y los envía al usuario, además de encargarse de las consultas o peticiones a la Base de Datos, la conexión con el servidor, entre otras tareas que debe realizar en su día a día. Cuenta con una serie de lenguajes y herramientas que le ayudan a &nbsp;cumplir con su trabajo como PHP, Ruby, Python, JavaScript, SQL, MongoDb, MySQL, etc, estos son usados para crear sitios dinámicos. Como en muchos sitios la información se encuentra en constante cambio o actualización, una buena capacidad de respuesta y una velocidad óptima del sitio son responsabilidades que un backend debe de afrontar.</p>
+<p>Ya que entendimos las funciones de cada uno, podemos afirmar que ninguno de los dos lados es mejor o menos importante que el otro, pues se complementan con el fin de cumplir el mismo objetivo..</p>
+<p>En la actualidad encontramos Desarrolladores Frontend con conocimientos de Backend y viceversa, conocidos como Full Stack Developers, capaces de pensar como frontend o backend y si bien es un rol más completo, por lo general el nivel de conocimiento o especialización no llega a ser el mismo que el de un desarrollador puramente frontend o un desarrollador puramente backend, aunque claro que existen excepciones.</p>
+<p>¿Qué opinas al respecto? Si hemos dejado algún tema afuera, no dudes en mencionarlo para que podamos agregarlo. Déjanos tus opiniones en la caja de comentarios y no te olvides compartir este tutorial con tus amigos. También recuerda que en Devcode contamos con una gran variedad de cursos con los que podrás ampliar tus conocimientos sobre Frontend y Backend, puedes acceder a ellos dando click<strong> <a href="https://devcode.la/cursos/">aquí</a></strong>.</p>
+<p>Este fue kusillus, ¡hasta la próxima!</p>
+<p>&nbsp;</p>
+</div>
+<div class="tutorial__social">
+<h4>¿Te gustó el Blog?</h4>
+<span>Ayúdanos a llegar a más personas</span>
+<div class="tutorial__social_btn row center middle">
+<iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="./Frontend y Backend_files/tweet_button.289140617d6d66fbee36bb5f0535b846.es.html" style="position: static; visibility: visible; width: 70px; height: 20px;" data-url="https://devcode.la/tutoriales/frontend-y-backend/"></iframe>&nbsp;
+<div class="fb-like fb_iframe_widget" data-href="https://devcode.la/tutoriales/frontend-y-backend/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=653827401318644&amp;container_width=0&amp;href=https%3A%2F%2Fdevcode.la%2Ftutoriales%2Ffrontend-y-backend%2F&amp;layout=button_count&amp;locale=es_LA&amp;sdk=joey&amp;share=true&amp;show_faces=false"><span style="vertical-align: bottom; width: 159px; height: 20px;"><iframe name="f9aef0cf6d8cb8" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Frontend y Backend_files/like.html" style="border: none; visibility: visible; width: 159px; height: 20px;" class=""></iframe></span></div>&nbsp;
+<script type="IN/Share" data-url="https://devcode.la/tutoriales/frontend-y-backend/" data-counter="right"></script>&nbsp;
+<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1474501644082" name="I0_1474501644082" src="./Frontend y Backend_files/fastbutton.html" title="+1" data-gapiattached="true"></iframe></div>
+</div>
+</div>
+<div class="tutorial__author">
+<div class="row nowrap middle">
+<figure class="tutorial__author_photo">
+<img src="./Frontend y Backend_files/picture" alt="Alexander Guevara Benites">
+</figure>
+<div class="blog__user_text">
+<h4>Alexander Guevara Benites</h4>
+<p>Nymeria's father | Designer 3D | Pokemon Master | Videogame Lover</p>
+<a target="_blank" class="tutorial__author_twitter" href="https://twitter.com/kusillus">
+<span class="icon-twitter2"> @kusillus</span>
+</a>
+</div>
+</div>
+</div>
+<div class="blog__comment">
+<div id="disqus_thread"><iframe id="dsq-app1" name="dsq-app1" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Frontend y Backend_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 320px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe><iframe id="indicator-north" name="indicator-north" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 673px !important; border: none !important; overflow: hidden !important; top: 0px !important; min-width: 673px !important; max-width: 673px !important; position: fixed !important; z-index: 2147483646 !important; height: 29px !important; min-height: 29px !important; max-height: 29px !important; display: none !important;" src="./Frontend y Backend_files/saved_resource(1).html"></iframe><iframe id="indicator-south" name="indicator-south" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" style="width: 673px !important; border: none !important; overflow: hidden !important; bottom: 0px !important; min-width: 673px !important; max-width: 673px !important; position: fixed !important; z-index: 2147483646 !important; height: 29px !important; min-height: 29px !important; max-height: 29px !important; display: none !important;" src="./Frontend y Backend_files/saved_resource(2).html"></iframe></div>
+</div>
+</div>
+<aside class="tutorial__sidebar">
+<div class="tutorial__youtube">
+<h4>Siguenos en YouTube</h4>
+<div>
+<div id="___ytsubscribe_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 117px; height: 24px;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 117px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I1_1474501644088" name="I1_1474501644088" src="./Frontend y Backend_files/subscribe_embed.html" data-gapiattached="true"></iframe></div>
+</div>
+</div>
+<div class="tutorial__facebook">
+<h4>Siguenos en Facebook</h4>
+<div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/DevCode.la" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=653827401318644&amp;container_width=228&amp;href=https%3A%2F%2Fwww.facebook.com%2FDevCode.la&amp;layout=button_count&amp;locale=es_LA&amp;sdk=joey&amp;share=true&amp;show_faces=false"><span style="vertical-align: bottom; width: 186px; height: 20px;"><iframe name="fd1baea222c7f8" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Frontend y Backend_files/like(1).html" style="border: none; visibility: visible; width: 186px; height: 20px;" class=""></iframe></span></div>
+</div>
+<div class="tutorial__twitter">
+<h4>Siguenos en Twitter</h4>
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" title="Twitter Follow Button" src="./Frontend y Backend_files/follow_button.289140617d6d66fbee36bb5f0535b846.es.html" style="position: static; visibility: visible; width: 236px; height: 20px;" data-screen-name="devcodela"></iframe>
+</div>
+<div class="tutorial__recommend">
+<h4>Ultimos</h4>
+<ul>
+<li>
+<h3>
+<a href="https://devcode.la/tutoriales/frontend-y-backend/">Frontend y Backend</a>
+</h3>
+<span>21/09/2016</span>
+</li>
+<li>
+<h3>
+<a href="https://devcode.la/tutoriales/10-recursos-gratuitos-para-pagina-web/">10 recursos gratuitos para tu página web</a>
+</h3>
+<span>16/09/2016</span>
+</li>
+<li>
+<h3>
+<a href="https://devcode.la/tutoriales/quien-fue-david-packard/">¿Quién fue David Packard?</a>
+</h3>
+<span>07/09/2016</span>
+</li>
+</ul>
+</div>
+</aside>
+</main>
+</article>
+<aside class="blog__relational">
+</aside>
+<script src="./Frontend y Backend_files/jquery.js.descarga"></script>
+<script src="./Frontend y Backend_files/highlight.js.descarga"></script>
+<script>
+		var trackClickLinkDiaProgramador = function() {
+			amplitude.getInstance().logEvent('Clicked Link TopNav Dia del Programador', null, function() {
+				window.location='https://devcode.la/diadelprogramador/?utm_medium=navbar&utm_campaign=diaprogramadornavbar';
+			});
+		};
+		</script>
+<script>
+		$('pre').each(function(i, e){
+          hljs.highlightBlock(e);
+        });
+	</script>
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Frontend y Backend_files/P5DLcu0KGJB.html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=653827401318644&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript">
+	window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+	</script>
+<script src="./Frontend y Backend_files/platform.js.descarga" async="" defer="" gapi_processed="true">
+	  {lang: 'es-419'}
+	</script>
+<script type="text/javascript">
+	    /* * * CONFIGURATION VARIABLES * * */
+	    var disqus_shortname = 'devcodetv';
+
+	    /* * * DON'T EDIT BELOW THIS LINE * * */
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+<noscript>Please enable JavaScript to view the &lt;a href="https://disqus.com/?ref_noscript" rel="nofollow"&gt;comments powered by Disqus.&lt;/a&gt;</noscript>
+<script src="./Frontend y Backend_files/main.js.descarga"></script>
+<section id="loginModal" class="modal fade col middle" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-body">
+<h1 class="modal-title">Ingresar a DevCode</h1>
+<div class="login__socials">
+<a href="https://devcode.la/auth/facebook" class="login__facebook text-center">
+<span class="icon-facebook2"></span>
+<span>Ingresar con Facebook</span>
+</a>
+<a href="https://devcode.la/auth/twitter" class="login__twitter text-center">
+<span class="icon-twitter2"></span>
+<span>Ingresar con Twitter</span>
+</a>
+</div>
+<span>También puedes ingresar con tu email</span>
+<form class="login__form" method="POST" action="https://devcode.la/login">
+<div class="login__row">
+<input class="input login__input" type="email" placeholder="Email" name="email" autocorrect="off" autocapitalize="off" required="">
+</div>
+<div class="login__row">
+<input class="input" type="password" placeholder="Password" name="password" autocorrect="off" autocapitalize="off" required="">
+</div>
+<a href="https://devcode.la/recuperar/" class="login__recovery">
+<small>Olvidé mi contraseña</small>
+</a>
+<input class="btn btn--primary btn--big login__btn" type="submit" value="Ingresar">
+<a id="linkModalRegistro" href="https://devcode.la/registrar/" class="row center login__recovery">
+<small>¿No tienes cuenta? <b>Regístrate</b></small>
+</a>
+</form>
+</div>
+<div class="modal-footer">
+<span class="modal__close row center middle">Cerrar ventana</span>
+</div>
+</div>
+</div>
+</section>
+<section id="registroModal" class="modal fade col middle" tabindex="-1" role="dialog" aria-labelledby="registroModal">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<h1 class="modal-title">Regístrate a DevCode</h1>
+<div class="login__socials">
+<a href="https://devcode.la/auth/facebook" class="login__facebook text-center">
+<span class="icon-facebook2"></span>
+<span>Regístrate con Facebook</span>
+</a>
+<a href="https://devcode.la/auth/twitter" class="login__twitter text-center">
+<span class="icon-twitter2"></span>
+<span>Regístrate con Twitter</span>
+</a>
+</div>
+<span>También puedes registrarte con tu email</span>
+<form class="login__form" method="POST" action="https://devcode.la/registrar/">
+ 
+<div class="login__row">
+<input class="input login__input" type="email" placeholder="Email" name="email" value="">
+<small class="login__error"></small>
+</div>
+ 
+<input class="btn btn--primary btn--big login__btn" type="submit" value="Regístrate con email">
+<a id="linkModalLogin" href="https://devcode.la/ingresar/" class="row center login__recovery">
+<small>¿Ya tienes cuenta? <b>Ingresar</b></small>
+</a>
+</form>
+</div>
+<div class="modal-footer">
+<span class="modal__close row center middle">Cerrar ventana</span>
+</div>
+</div>
+</div>
+</section>
+<script src="./Frontend y Backend_files/bootstrap.min.js.descarga"></script>
+<script src="./Frontend y Backend_files/czi3lht.js.descarga"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<script>
+		$("#linkModalLogin").on("click", function(e){
+			e.preventDefault();
+			$('#registroModal').modal("hide");
+			$('#loginModal').modal({
+				keyboard: true,
+				show: true,
+			});
+		});
+		$("#linkModalRegistro").on("click", function(e){
+			e.preventDefault();
+			$('#loginModal').modal("hide");
+			$('#registroModal').modal({
+				keyboard: true,
+				show: true,
+			});
+		});
+		$(".modal__close").on('click', function(e){
+			e.preventDefault();
+			$('#loginModal').modal("hide");
+			$('#registroModal').modal("hide");
+		});
+	</script>
+
+
+<iframe name="oauth2relay525639941" id="oauth2relay525639941" src="./Frontend y Backend_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><iframe style="display: none;" src="./Frontend y Backend_files/saved_resource(3).html"></iframe><div style="display: block; visibility: hidden; position: absolute; width: 106px; left: -10000px; top: -10000px;"><table cellpadding="0" cellspacing="0" dir="ltr" style="width:106px;" frame="void" rules="none" class=" gc-bubbleDefault pls-container"><tbody><tr class="gc-reset"><td class="pls-topLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Frontend y Backend_files/border_3.gif"></td><td class="pls-topTail gc-reset"><img class="pls-tailbottom gc-reset" style="width:15px !important; height:9px !important; max-width: 15px !important; max-height: 9px !important;" src="./Frontend y Backend_files/spacer.gif"><img class="pls-spacerbottom gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Frontend y Backend_files/spacer.gif"></td><td class="pls-topRight gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Frontend y Backend_files/border_3.gif"></td></tr><tr class="gc-reset"><td class="pls-vertShimLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;" src="./Frontend y Backend_files/spacer.gif"></td><td class="pls-vertShim gc-reset"><img class="gc-reset" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;" src="./Frontend y Backend_files/spacer.gif"></td><td class="pls-vertShimRight gc-reset"><img class="pls-dropTR gc-reset" style="width:5px !important; height:4px !important; max-width: 5px !important; max-height: 4px !important;" src="./Frontend y Backend_files/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-contentLeft gc-reset"><img class="pls-tailright gc-reset" style="width:9px !important; height:15px !important; max-width: 9px !important; max-height: 15px !important;" src="./Frontend y Backend_files/spacer.gif"><img class="pls-spacerright gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Frontend y Backend_files/spacer.gif"></td><td class="pls-contentWrap gc-reset"><div class="goog-bubble-content gc-reset"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="margin:0px;position:absolute;z-index:1;border-style:none;outline:none;width:100px;" tabindex="0" vspace="0" width="100%" id="I0_1474501650492" name="I0_1474501650492" src="./Frontend y Backend_files/subscribe_embed(1).html"></iframe></div></td><td class="pls-dropRight gc-reset"><img class="pls-tailleft gc-reset" style="width:12px !important; height:19px !important; max-width: 12px !important; max-height: 19px !important;" src="./Frontend y Backend_files/spacer.gif"><img class="pls-spacerleft gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Frontend y Backend_files/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-bottomLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Frontend y Backend_files/border_3.gif"></td><td class="gc-reset"><table cellpadding="0" cellspacing="0" style="width:100%" class="gc-reset"><tbody><tr class="gc-reset"><td class="pls-vert gc-reset"><img class="pls-dropBL gc-reset" style="width:4px !important; height:5px !important; max-width: 4px !important; max-height: 5px !important;" src="./Frontend y Backend_files/spacer.gif"></td><td class="pls-dropBottom gc-reset"><img class="pls-tailtop gc-reset" style="width:19px !important; height:13px !important; max-width: 19px !important; max-height: 13px !important;" src="./Frontend y Backend_files/spacer.gif"><img class="pls-spacertop gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Frontend y Backend_files/spacer.gif"></td></tr></tbody></table></td><td class="pls-vert gc-reset"><img class="pls-dropBR gc-reset" style="width:5px !important; height:5px !important; max-width: 5px !important; max-height: 5px !important;" src="./Frontend y Backend_files/spacer.gif"></td></tr></tbody></table></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" src="./Frontend y Backend_files/saved_resource(4).html"></iframe></body></html>
