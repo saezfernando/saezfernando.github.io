@@ -1599,14 +1599,14 @@
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0 0 0.5em 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #787878;
 		font-weight: 400;
 		line-height: 1em;
-		margin: 0 0 1em 0;
+		margin: 0 0 0.3em 0;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1723,14 +1723,14 @@
 
 	header h2 + p {
 		font-size: 1.25em;
-		margin-top: -1em;
-		line-height: 1.5em;
+		
+		line-height: 1em;
 	}
 
 	header h3 + p {
 		font-size: 1.1em;
 		margin-top: -0.8em;
-		line-height: 1.5em;
+		line-height: 1em;
 	}
 
 	header h4 + p,
@@ -2572,7 +2572,7 @@
 	#main {
 		margin-left: 35%;
 		max-width: 54em;
-		padding: 8em 4em 4em 4em;
+		padding: 2em 4em 4em 4em;
 		width: calc(100% - 35%);
 	}
 
