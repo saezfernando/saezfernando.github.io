@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://assets-cdn.github.com">
+ 
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Fernando Saez</title>
+  
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+  <meta content="https://avatars1.githubusercontent.com/u/5618806?v=4&amp;s=400" property="og:image" /><meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="bmorelli25/Become-A-Full-Stack-Web-Developer" property="og:title" /><meta content="https://github.com/bmorelli25/Become-A-Full-Stack-Web-Developer" property="og:url" /><meta content="Become-A-Full-Stack-Web-Developer - Free resources for learning Full Stack Web Development" property="og:description" />
+
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MjA4ODk3NzUyOmMxZTA0YjMzYmNmZTdhNmVkYTI3ZmRjYjFmNzdjOTUxZDU0MTUwODljZTRiMjU3ZTg4NjU4NmRjMTUwZmQ0ODg=--9dca1170518d46e8458ae9def010ddd4b2ccb3bf">
+  <meta name="pjax-timeout" content="1000">
+  <link rel="sudo-modal" href="/sessions/sudo_modal">
+  <meta name="request-id" content="F83A:111E:4A3274E:78A380D:59CA4F1B" data-pjax-transient>
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient>
+  <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+  <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+  <meta name="google-analytics" content="UA-3769691-2">
+
+  <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="https://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url" /><meta content="F83A:111E:4A3274E:78A380D:59CA4F1B" name="octolytics-dimension-request_id" /><meta content="iad" name="octolytics-dimension-region_edge" /><meta content="iad" name="octolytics-dimension-region_render" /><meta content="5972642" name="octolytics-actor-id" /><meta content="saezfernando" name="octolytics-actor-login" /><meta content="f67fc6f1c3e062bb1f77da8c9d8808a8c1fe03ec71c4279c0e38a0841665bd4d" name="octolytics-actor-hash" />
+  <meta content="/&lt;user-name&gt;/&lt;repo-name&gt;" data-pjax-transient="true" name="analytics-location" />
+
+  <meta name="hostname" content="github.com">
+
+  <link href="https://github.com/bmorelli25/Become-A-Full-Stack-Web-Developer/commits/master.atom" rel="alternate" title="Recent Commits to Become-A-Full-Stack-Web-Developer:master" type="application/atom+xml">
+
+  <meta name="description" content="Página principal de Fernando Saez">
+  
+  
+  </head>
+
+  <body class="logged-in env-production">
+ 
+ <h1 id="tope" align="center">Pruebas de Software</h1>
+<h3>Tabla de Contenidos</h3>
+<ol>
+<li><strong><a href="#start-here">Inicio</a></strong></li>
+<li><strong><a href="#fundamentos">Fundamentos del Testing</a></strong></li>
+<li><strong><a href="#vyv">Validación y Verificación</a></strong></li>
+<li><strong><a href="#sqa">SQA</a></strong></li>
+<li><strong><a href="#estaticas">Pruebas Estáticas</a></strong></li>
+<li><strong><a href="#exploratorias">Pruebas Exploratorias</a></strong></li>
+<li><strong><a href="#tecnicas">Técnicas: Caja Blanca y Caja Negra</a></strong></li>
+<li><strong><a href="#automatizacion">Automatización de pruebas</a></strong></li>
+<li><strong><a href="#unitarias">Pruebas Unitarias</a></strong></li>
+<li><strong><a href="#integracion">Pruebas de Integración</a></strong></li>
+<li><strong><a href="#sistema">Pruebas de Sistema</a></strong></li>
+<li><strong><a href="#aceptacion">Pruebas de Aceptación</a></strong></li>
+<li><strong><a href="#regresion">Pruebas de Regresión</a></strong></li>
+
+
+<li><strong><a href="#dbunit">Pruebas en operaciones con BD</a></strong></li>
+
+
+<li><strong><a href="#libros">Libros gratuitos</a></strong></li>
+<li><strong><a href="#materiaULP">Material: Pruebas de Software (TDS) - ULP</a></strong></li>
+<li><strong><a href="#materiaUNSL">Material: Automatización de Pruebas - UNSL</a></strong></li>
+
+
+</ol>
+<hr>
+<h3 id="start-here">Inicio</h3>
+<p>
+"The software testing is the process of establishing confidence in that the program or system does what it should do." [Hetzel 73]
+</p>
+<p>
+"The software testing is the process of executing a program or system with the intention of finding errors.“ 
+[Myers 79]
+</p>
+<p>
+“The process of operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component”. [IEEE 90]
+</p>
+
+<p>Video YouTube - <a href="https://www.youtube.com/watch?v=goaZTAzsLMk">Fundamentos del Testing</a> <img width="20px" height="12px" src="..\images\ingles.png"></p>
+
+<hr>
+
+<h3 id="fundamentos">Fundamentos del Testing</h3>
+<ul>
+<li><a href="porque testing.docx">Porque realizar testing</a></li>
+<li><a href="https://actualidad.rt.com/actualidad/view/138158-catastrofes-programacion-culpa-software-computadora">Fallos del software famosos</a></li>
+<li><a href="https://josepablosarco.wordpress.com/2011/09/28/istqb-cap-1-fundamentos-del-testing-ii/">Principios del testing</a></li>
+<li><a href="">¿Quienes realizan Testing?</a></li>
+<li><a href="testing plan.docx">Plan de pruebas</a></li>
+<li><a href="">Ciclo de vida</a></li>
+<li><a href="proceso testing.docx">Gestión del proceso de pruebas</a></li>
+<li><a href="https://qanewsblog.com/2016/05/04/los-falsos-mitos-del-testing-i/">Mitos del testing</a></li>
+<li><a href="testing vocabulario.pdf">Vocabulario</a></li>
+</ul>
+<hr>
+
+<h3 id="vyv">Validación y Verificación</h3>
+<ul>
+<li>V&V:
+<ul>
+<li><a href="">Validación</a></li>
+<li><a href="">Verificación</a></li>
+<li>Video YouTube Complementario - <a href="https://www.youtube.com/watch?v=OFdMnUe9ZVo">V&V </a> <img width="20px" height="12px" src="..\images\ingles.png"> </li>
+</ul>
+</li>
+</ul>
+<a href="#tope"> <img width="25px" height="25px" src="..\images\flecha_arriba.jpg"></a>
+<hr>
+
+
+<h3 id="sqa">SQA</h3>
+<ul>
+<li><a href="http://www.sqaforums.com/forums/forum.php">Foro SQA</a> <img width="20px" height="12px" src="..\images\ingles.png"></li>
+<li><a href="QA.pdf">libro: SQA from theory to implementation - Daniel Galin</a> <img width="20px" height="12px" src="..\images\ingles.png"></li>
+</ul>
+<a href="#tope"> <img width="25px" height="25px" src="..\images\flecha_arriba.jpg"></a>
+<hr>
+
+<h3 id="estaticas">Pruebas Estáticas</h3>
+<ul>
+<li><a href="testing estaticas.docx">Revisiones e Inspecciones</a></li>
+</ul>
+<hr>
+
+<h3 id="exploratorias">Pruebas Exploratorias</h3>
+<ul>
+<li><a href="testing exploratorio.docx">Apunte: testing exploratorio</a></li>
+<li><a href="Testing Exploratorio Bach.pdf">Libro: Testing Exploratorio - Bach</a> <img width="20px" height="12px" src="..\images\ingles.png"></li>
+<li><a href="exploratory_testing_whittaker.pdf">Libro: Testing de software Exploratorio - Whittaker</a> <img width="20px" height="12px" src="..\images\ingles.png"></li>
+</ul>
+<a href="#tope"> <img width="25px" height="25px" src="..\images\flecha_arriba.jpg"></a>
+<hr>
+
+
+<h3 id="tecnicas">Testing de Caja Blanca y Caja Negra</h3>
+<ul>
+<li>Técnicas de Caja Blanca
+<ul>
+<li><a href="">Apunte de coberturas</a></li>
+<li><a href="diferentes tecnicas caja blanca.pdf">Paper: Diferentes técnicas de Caja Blanca</a><img width="20px" height="12px" src="..\images\ingles.png"></li>
+</ul>
+</li>
+<li>Técnicas de Caja Negra
+<ul>
+<li><a href="">Learn X in Y Minutes</a></li>
+<li><a href="">What CS Majors Should Know</a></li>
+</ul>
+</li>
+</li>
+</ul>
+<a href="#tope"> <img width="25px" height="25px" src="..\images\flecha_arriba.jpg"></a>
+<hr>
+
+
+<h3 id="automatizacion">Automatización de Pruebas</h3>
+<ul>
+<li><a href="">Porque automatizar las pruebas</a></li>
+<li><a href="">Cuando No automatizar</a></li>
+</ul>
+<a href="#tope"> <img width="25px" height="25px" src="..\images\flecha_arriba.jpg"></a>
+<hr>
+
+<h3 id="unitarias">Pruebas Unitarias</h3>
+<ul>
+<li><a href="">Pruebas Unitarias</a></li>
+<li><a href="">Aserciones</a></li>
+<li><a href="">Pruebas Dobles</a></li>
+<li><a href="#dbunit">Pruebas con BD</a></li>
+</ul>
+<a href="#tope"> <img width="25px" height="25px" src="..\images\flecha_arriba.jpg"></a>
+<hr>
+
+<h3 id="integracion">Pruebas de Integración</h3>
+<ul>
+<li><a href="">Estrategia Bottom-up</a></li>
+<li><a href="">Estrategia Tod-Down</a></li>
+</ul>
+<a href="#tope"> <img width="25px" height="25px" src="..\images\flecha_arriba.jpg"></a>
+<hr>
+
+<h3 id="sistema">Pruebas de Sistema</h3>
+<ul>
+<li><a href="">Pruebas de Performance</a></li>
+<li><a href="">Pruebas de Carga</a></li>
+<li><a href="">Pruebas de Volúmen</a></li>
+<li><a href="">Pruebas de Stress</a></li>
+<li><a href="">Pruebas de Recuperación</a></li>
+<li><a href="">Otras</a></li>
+</ul>
+<a href="#tope"> <img width="25px" height="25px" src="..\images\flecha_arriba.jpg"></a>
+<hr>
+
+<h3 id="aceptacion">Pruebas de Aceptación</h3>
+<ul>
+<li><a href="">Pruebas Alfa</a></li>
+<li><a href="">Pruebas Beta</a></li>
+</ul>
+<a href="#tope"> <img width="25px" height="25px" src="..\images\flecha_arriba.jpg"></a>
+<hr>
+
+<h3 id="regresion">Pruebas de Regresión</h3>
+<ul>
+<li><a href="">URL y URI</a></li>
+<li><a href="">HTTP</a></li>
+</ul>
+<a href="#tope"> <img width="25px" height="25px" src="..\images\flecha_arriba.jpg"></a>
+<hr>
+
+<h3 id="dbunit">Pruebas con Base de Datos</h3>
+<ul>
+<li>Lo importante
+<li><a href="">URL y URI</a></li>
+<li><a href="">HTTP</a></li>
+</ul>
+<a href="#tope"> <img width="25px" height="25px" src="..\images\flecha_arriba.jpg"></a>
+<hr>
+
+<h3 id="libros">Libros</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">Introducción a HTML - Oficial Mozilla Docs</a></li>
+<li><a href="http://www.html5tutorial.info">Tutorial HTML 5</a></li>
+<li><a href="https://www.w3schools.com/html/">HTML5 - w3schools</a></li>
+<li><a href="https://www.tutorialspoint.com/html5/html5_tutorial.pdf">Tutorial HTML 5 - PDF DOWNLOAD</a></li>
+</ul>
+<a href="#tope"> <img width="25px" height="25px" src="..\images\flecha_arriba.jpg"></a>
+<hr>
+
+<h3 id="libros">Artículos interesantes</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">Introducción a HTML - Oficial Mozilla Docs</a></li>
+<li><a href="http://www.html5tutorial.info">Tutorial HTML 5</a></li>
+<li><a href="https://www.w3schools.com/html/">HTML5 - w3schools</a></li>
+<li><a href="https://www.tutorialspoint.com/html5/html5_tutorial.pdf">Tutorial HTML 5 - PDF DOWNLOAD</a></li>
+</ul>
+<a href="#tope"> <img width="25px" height="25px" src="..\images\flecha_arriba.jpg"></a>
+<hr>
+
+
+<h3 id="libros">Páginas interesantes</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">Introducción a HTML - Oficial Mozilla Docs</a></li>
+<li><a href="http://www.html5tutorial.info">Tutorial HTML 5</a></li>
+<li><a href="https://www.w3schools.com/html/">HTML5 - w3schools</a></li>
+<li><a href="https://www.tutorialspoint.com/html5/html5_tutorial.pdf">Tutorial HTML 5 - PDF DOWNLOAD</a></li>
+</ul>
+<a href="#tope"> <img width="25px" height="25px" src="..\images\flecha_arriba.jpg"></a>
+<hr>
+
+
+<h3 id="materiaULP">Optativa: Pruebas de Software</h3>
+<ul>
+<li>
+<p>Software <a href="sublime">Sublime</a>,
+<a href="notepad++">Notepad++</a>
+</p>
+</li>
+<li>
+<p>Lirerías: <a href="internet">Junit</a>,
+<a href="notepad++">Selenium</a>
+</p>
+</li>
+<li>
+<p>Programa Académico: <a href="2018_programa_testing_ULP">Documento</a>,
+</p>
+</li>
+
+<li>
+<p>Unidad 1</p>
+<ul>
+<li><a href="materiaulp\2018_Diapo 1 Fundamentos de testing.ppt">Fundamentos del Testing</a></li>
+<li><a href="materiaulp\2018_Diapo 1 Fundamentos de testing.doc">Práctico 1</a></li>
+</ul>
+</li>
+
+<li>
+<p>Unidad 1B</p>
+<ul>
+<li><a href="materiaulp\2018_Diapo 1B Testing exploratorio.ppt">Testing Exploratorio</a></li>
+<li><a href="materiaulp\2018_Practico 1B Testing Exploratorio.doc">Práctico 1B</a></li>
+</ul>
+</li>
+
+
+<li>
+<p>Unidad 2</p>
+<ul>
+<li><a href="materiaulp\2018_Diapo 2 Pruebas de Caja Blanca.ppt">Pruebas Estructurales o Caja Blanca</a></li>
+<li><a href="materiaulp\2018_Practico 2 Pruebas de Caja Blanca.doc">Práctico 2</a></li>
+<li><a href="materiaulp\2018_Practico 2 Pruebas de Caja Blanca adicionales.doc">Práctico 2 Adicionales</a></li>
+</ul>
+</li>
+
+<li>
+<p>Unidad 3</p>
+<ul>
+<li><a href="materiaulp\2018_Diapo 3 Pruebas de Caja Negra.ppt">Pruebas Funcionales o Caja Negra</a></li>
+<li><a href="materiaulp\2018_Practico 3 Pruebas de Caja Negra.doc">Práctico 3</a></li>
+<li><a href="materiaulp\2018_Practico 3 Pruebas de Caja Negra adicionales.doc">Práctico 3 Adicionales</a></li>
+</ul>
+</li>
+
+<li>
+<p>Unidad 4</p>
+<ul>
+<li><a href="materiaulp\2018_Diapo 4 Pruebas Dinamicas.ppt">Automatización de pruebas</a></li>
+<li><a href="materiaulp\2018_Practico 4 Pruebas Dinamicas.doc">Práctico 4</a></li>
+</ul>
+</li>
+
+<li>
+<p>Unidad 5</p>
+<ul>
+<li><a href="materiaulp\2018_Diapo 5 Pruebas Unitarias.ppt">Pruebas Unitarias</a></li>
+<li><a href="materiaulp\2018_Practico 5 Pruebas Unitarias.doc">Práctico 5</a></li>
+<li><a href="materiaulp\2018_Practico 5 Pruebas Unitarias adicionales.doc">Práctico 5 Adicionales</a></li>
+</ul>
+</li>
+
+<li>
+<p>Unidad 6</p>
+<ul>
+<li><a href="materiaulp\2018_Diapo 6 Pruebas web.ppt">Pruebas Web</a></li>
+<li><a href="materiaulp\2018_Practico 6 Pruebas web.doc">Práctico 6</a></li>
+<li><a href="materiaulp\2018_Practico 6 Pruebas web.doc">Práctico 6 Adicionales</a></li>
+</ul>
+</li>
+
+<a href="#tope"> <img width="25px" height="25px" src="..\images\flecha_arriba.jpg"></a>
+<hr>
+
+
+
+
+  </body>
+</html>
+
